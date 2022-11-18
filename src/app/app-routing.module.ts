@@ -52,8 +52,7 @@ const routes: Routes = [
     // always scroll on top when navigating
     scrollPositionRestoration: 'top',
     useHash: Boolean(history.pushState) === false,
-    preloadingStrategy: PreloadAllModules,
-    relativeLinkResolution: 'legacy'
+    preloadingStrategy: PreloadAllModules
 })],
   exports: [RouterModule]
 })
