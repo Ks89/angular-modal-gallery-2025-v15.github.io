@@ -1,0 +1,94 @@
+<div class="container">
+
+  <h2 class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Description custom example</a>
+  </h2>
+  <p>Minimal modal gallery <b class="text-success">with a custom description.</b></p>
+  <p><b class="text-success">So imageText, numberSeparator and beforeTextDescription will be replaced with the
+    provided values, but the final description will be the value defined inside the <code>Image</code> object</b></p>
+  <br>
+
+  <h3>Live Demo</h3>
+  <br>
+  <button class="btn btn-primary btn-sm" (click)="openModal(313, 0)">Click to open modal gallery id=1 at index=0</button>
+  <br><br>
+
+  <section>
+    <h3>Code</h3>
+    <br>
+    <h4>Template</h4>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h4>Typescript</h4>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h3>Service inputs</h3>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+      <tr>
+        <th>Input</th>
+        <th>Value</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>images</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>currentImage</code></td>
+          <td>
+            <div><i>Value: </i><code>Image</code></div>
+            <div><b class="text-success"><code>Image</code> object to show</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>libConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>ModalLibConfig</code></div>
+            <div><b class="text-success"><code>ModalLibConfig</code> object to config the library. See below.</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h4>ModalLibConfig</h4>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+      <tr>
+        <th>Input</th>
+        <th>Value</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>currentImageConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>&#123; description: &#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, imageText: 'Look this image ', numberSeparator: ' of ', beforeTextDescription: ' => ' &#125; &#125;</code></div>
+            <div>Show a <b>CUSTOM description</b> (always visible)</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

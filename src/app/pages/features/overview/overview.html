@@ -1,0 +1,48 @@
+<div class="container d-flex flex-column">
+
+  <h2>Overview</h2>
+  <p>Despite its name, @ks89/angular-modal-gallery is more than for modal galleries, because I'm introducing new features every major release. In fact, It's composed by 3 main parts:</p>
+  <ul>
+    <li><strong>MODAL GALLERY</strong>: available injecting the <code>ModalGalleryService</code> in your component</li>
+    <li><strong>PLAIN GALLERY</strong>: available via <code>&lt;ks-plain-gallery&gt;&lt;/ks-plain-gallery&gt;</code></li>
+    <li><strong>CAROUSEL</strong>: available via <code>&lt;ks-carousel&gt;&lt;/ks-carousel&gt;</code></li>
+  </ul>
+  <br>
+
+  <h4>MODAL GALLERY</h4>
+  <p>It's the core part of this project and display a modal window with full screen images, buttons, the current image and optionally, also navigation dots and previews</p>
+  <div class="d-flex flex-row justify-content-center">
+    <img [src]="modalGalleryPath">
+  </div>
+  <br>
+  <ol>
+    <li>Current image</li>
+    <li>Side previews</li>
+    <li><a [routerLink]="['/features/upper-buttons']">Upper buttons</a></li>
+    <li><a [routerLink]="['/features/common']">Dots</a></li>
+    <li><a [routerLink]="['/features/previews']">Previews</a></li>
+    <li>Background (semi-transparent)</li>
+    <li><a [routerLink]="['/features/modal-gallery']">Modal gallery (the main component)</a></li>
+  </ol>
+  <p>For more info check <a [routerLink]="['/features/modal-gallery']">Modal gallery documentation</a></p>
+  <br>
+
+  <h4>PLAIN GALLERY</h4>
+  <p>It contains a list of clickable thumbnails to open modal gallery. Layouts are configurable and users could also use
+    a custom implementation to draw everything they want.</p>
+  <div class="d-flex flex-row justify-content-center">
+    <img [src]="plainGalleryPath">
+  </div>
+  <br>
+  <p>For more info check <a [routerLink]="['/features/plain-gallery']">Plain gallery documentation</a></p>
+  <br>
+
+  <h4>CAROUSEL</h4>
+  <p>It contains a list of scrollable images (full width or fixed width) also with previews. By default images scroll automatically.
+    Users can configure this component with many parameters, also they can project HTML content into the current carousel image.</p>
+  <div class="d-flex flex-row justify-content-center">
+    <img [src]="carouselPath">
+  </div>
+  <br>
+  <p>For more info check <a [routerLink]="['/features/carousel']">Carousel documentation</a></p>
+</div>

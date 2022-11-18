@@ -1,0 +1,90 @@
+<div id="migration" class="title">
+  <div class="container">
+    <h1>Migration guide</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <h2>How to upgrade?</h2>
+      <hr>
+
+      <section>
+        <h3>from 8.x.x to 9.x.x</h3>
+        <br>
+
+        <h4>Step 1 - upgrade @ks89/angular-modal-gallery to the latest 9.x.x version</h4>
+        <p>So, in your terminal run: <code>npm install --save @ks89/angular-modal-gallery@latest</code></p>
+
+        <br>
+        <h4>Step 2 - upgrade Angular and rxjs</h4>
+        <p>Use the latest version of Angular (with the recommended rxjs version). It must be Angular 13 or higher.</p>
+
+        <br>
+
+        <h4>Step 3 - remove the generic <code>LibConfig</code> interface, because no more exported.</h4>
+
+        <p>Choose the specific interfaces based on your needs</p>
+        <ul>
+          <li>in modal-gallery configuration use <code>ModalLibConfig</code></li>
+          <li>in plain-gallery configuration use <code>PlainLibConfig</code></li>
+          <li>in carousel configuration use <code>CarouselLibConfig</code></li>
+        </ul>
+
+        <br>
+
+        <h4>Step 4 - update plain-gallery</h4>
+        <ul>
+          <li>remove <code>AdvancedLayout</code> from PlainGallery, because already unused since v8.0.0</li>
+          <li>remove <code>[showGallery]="true"</code> input from plain-gallery HTML component, because it's unused</li>
+          <li>rename <code>(showImage)="..."</code> output into <code>(clickImage)="..."</code> output</li>
+        </ul>
+
+        <br>
+
+        <h4>Step 5 - update carousel</h4>
+        <ul>
+          <li>IE11 legacy mode has been removed from the library, because Angular doesn't support Internet Explorer 11 anymore.
+            So you have to remove <code>legacyIE11Mode: true</code> in your code</li>
+          <li>remove <code>[previewConfig]</code> and <code>[carouselConfig]</code> inputs from HTML, because replaced with a single <code>[config]="..."</code> like all other components of the library.
+            For more information check the <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-13">official example</a> and the
+            <a href="https://ks89.github.io/angular-modal-gallery-2021-v9.github.io/features/carousel">documentation page</a>.
+            Don't be scared, it's easies then you think. You only need to pass an object moving previews configuration inside it.</li>
+          <li>rename <code>(showImage)="..."</code> output into <code>(changeImage)="..."</code> output</li>
+        </ul>
+
+        <br>
+
+        <h4>Step 6 - <code>KeyboardEvent.keyCode</code> is no more supported</h4>
+        <p>If you are using custom keyCodes via <code>keyboardConfig</code> you have to migrate to the newer <code>KeyboardEvent.code</code></p>
+        <p>For more information, please check the <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code">MDN documentation here</a>.</p>
+
+        <p>As a quick example. Previously, you were using integer keyCodes:</p>
+        <pre>
+        keyboardConfig: &#123;
+          esc: 81, // Q keyCode
+          left: 40, // Arrow down keyCode
+          right: 38 // Arrow ip keyCode
+        &#125;
+        </pre>
+        <p>instead, starting from v9.0.0, you have to use the equivalent codes:</p>
+        <pre>
+        keyboardConfig: &#123;
+          esc: 'KeyQ',
+          left: 'ArrowDown',
+          right: 'ArrowUp'
+        &#125;
+        </pre>
+
+        <br>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+
+
+

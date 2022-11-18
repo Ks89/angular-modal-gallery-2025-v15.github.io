@@ -1,0 +1,85 @@
+<div class="container">
+
+  <h2 class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Carousel no infinite</a>
+  </h2>
+  <p>Carousel with infinite sliding disabled.</p>
+  <br>
+
+  <h3>Live Demo</h3>
+  <br>
+  <ks-carousel [id]="103" [images]="images" [config]="libConfig"></ks-carousel>
+  <br><br>
+
+  <section>
+    <h3>Code</h3>
+    <br>
+    <h4>Template</h4>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h4>Typescript</h4>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h3>Details</h3>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+      <tr>
+        <th>Input (.html)</th>
+        <th>Value (.ts)</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>images</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>config</code></td>
+          <td>
+            <div><i>Value: </i><code>CarouselLibConfig</code></div>
+            <div><b class="text-success"><code>CarouselLibConfig</code> object to config the library. See below.</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h4>CarouselLibConfig</h4>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+      <tr>
+        <th>Input</th>
+        <th>Value</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>carouselSlideInfinite</code></td>
+          <td>
+            <div><i>Value: </i><code>false</code></div>
+            <div>Infinite sliding is disable</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

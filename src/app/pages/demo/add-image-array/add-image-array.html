@@ -1,0 +1,65 @@
+<div class="container">
+
+  <h2 class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Add image to array</a>
+  </h2>
+  <p>Modal gallery example with a <b class="text-success">button to add new images.</b></p>
+  <br>
+
+  <h3>Live Demo <button class="btn btn-danger btn-sm" (click)="addRandomImage()">
+    <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add image</button>
+  </h3>
+  <br>
+  <button class="btn btn-primary btn-sm" (click)="openModal(301, 0)">Click to open modal gallery id=1 at index=0</button>
+  <br><br>
+
+  <section>
+    <h3>Code</h3>
+    <br>
+    <h4>Template</h4>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h4>Typescript</h4>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h3>Service inputs</h3>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>images</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>currentImage</code></td>
+          <td>
+            <div><i>Value: </i><code>Image</code></div>
+            <div><b class="text-success"><code>Image</code> object to show</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

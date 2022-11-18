@@ -1,0 +1,111 @@
+<div class="container">
+
+  <h2 class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Loading spinner types</a>
+  </h2>
+  <p>Modal gallery example with different types of loading spinners.</p>
+  <br>
+
+  <h3>Live Demos</h3>
+  <br>
+  <p>1. Type STANDARD</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(322, 0, 1)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+  <p>2. Type CIRCULAR</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(323, 0, 2)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+  <p>3. Type BARS</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(324, 0, 3)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+  <p>4. Type DOTS</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(325, 0, 4)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+  <p>5. Type CUBE_FLIPPING</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(326, 0, 5)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+  <p>6. Type CIRCLES</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(327, 0, 6)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+  <p>7. Type EXPLODING_SQUARES</p>
+  <button class="btn btn-primary btn-sm" (click)="openModal(328, 0, 7)">Open modal gallery id=1 at index=0</button>
+  <br><br>
+
+  <section>
+    <h3>Code</h3>
+    <br>
+    <h4>Template</h4>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h4>Typescript</h4>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h3>Service inputs</h3>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>from 1 to 7</code> (one for every instance in this example)</div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>images</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>currentImage</code></td>
+          <td>
+            <div><i>Value: </i><code>Image</code></div>
+            <div><b class="text-success"><code>Image</code> object to show</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>libConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>ModalLibConfig</code></div>
+            <div><b class="text-success"><code>ModalLibConfig</code> object to config the library. See below.</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h4>ModalLibConfig</h4>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>currentImageConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>&#123; loadingConfig: &#123; enable: true, type: 1 &#125; &#125;</code></div>
+            <div>It will show loading spinners of different types, based on the value of 'type' (number from 1 to 7, also available as LoadingType enum)</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

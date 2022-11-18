@@ -1,0 +1,96 @@
+<div class="container">
+
+  <h2 class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Description full custom example</a>
+  </h2>
+  <p>Minimal and simple modal gallery <b class="text-success">with a full custom text description and additional style.</b></p>
+  <p><b class="text-success">Description will be replaced with the provided text (plain text or also HTML).</b></p>
+  <br>
+
+  <h3>Live Demo</h3>
+  <br>
+  <button class="btn btn-primary btn-sm" (click)="openModal(314, 0)">Click to open modal gallery id=1 at index=0</button>
+  <br><br>
+
+  <section>
+    <h3>Code</h3>
+    <br>
+    <h4>Template</h4>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h4>Typescript</h4>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h3>Service inputs</h3>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+      <tr>
+        <th>Input</th>
+        <th>Value</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>images</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>currentImage</code></td>
+          <td>
+            <div><i>Value: </i><code>Image</code></div>
+            <div><b class="text-success"><code>Image</code> object to show</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>libConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>ModalLibConfig</code></div>
+            <div><b class="text-success"><code>ModalLibConfig</code> object to config the library. See below.</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h4>ModalLibConfig</h4>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>currentImageConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>&#123; description: &#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, customFullDescription: 'Custom full desc ',
+              style: &#123; bgColor: 'rgba(255,0,0,.5)', textColor: 'blue', marginTop: '3px', marginBottom: '0px',
+              marginLeft: '5px', marginRight: '5px', position: 'absolute', top: '0px', height: '125px'  &#125; &#125; &#125;</code></div>
+            <div>Show a <b>CUSTOM HTML description with additional style</b>
+              (remember to use always DescriptionStrategy.ALWAYS_VISIBLE when you want to use customFullDescription)</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

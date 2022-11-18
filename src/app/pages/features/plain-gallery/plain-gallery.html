@@ -1,0 +1,381 @@
+<div class="container">
+
+  <!-- TODO Add link to github sources -->
+  <h1 id="PlainGallery" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Plain Gallery</a>
+  </h1>
+  <p> Plain gallery contains a list of clickable thumbnails to open modal gallery.
+    Layouts are configurable and users could also use a custom implementation to draw everything they want.</p>
+  <br>
+
+  <h2>Live demo</h2>
+  <ks-plain-gallery [id]="600" [images]="images"
+                    (clickImage)="onShow(600, $event)"></ks-plain-gallery>
+  <br>
+  <br>
+
+  <h2>API</h2>
+
+  <p>To add plain gallery in your application, you simply need to add <code>&lt;ks-plain-gallery&gt;&lt;/ks-plain-gallery&gt;</code> in your component template file
+    and pass the mandatory inputs <code>id</code>, <code>images</code>.</p>
+  <p>The minimal plain gallery in your HTML file is:</p>
+
+  <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+  </codemirror>
+  <br>
+
+  <p>Then, in your Typescript component you have to init the images array with Image class instances and write the method to open modal gallery.</p>
+
+  <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+  </codemirror>
+  <br>
+
+  <p>To customize the plain gallery exploring all possibilities, see the table below to pass your configuration. To listen for plain gallery events, check the Output table.</p>
+  <p>To try more plain gallery live demos with custom configuration, please take a look at the <a routerLink="/demo">example section</a> of this website.</p>
+  <br>
+
+  <section>
+    <h2>Inputs</h2>
+    <table class="table table-hover table-sm">
+      <tbody>
+        <tr>
+          <td class="big-tds"><small><code>id</code></small></td>
+          <td>
+            <div>
+              <i>Type: </i><code>number</code>
+            </div>
+            <div>
+              A mandatory unique id >= 0 of the current gallery.
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="big-tds"><small><code>images</code></small></td>
+          <td>
+            <div>
+              <i>Type: </i><code><a [routerLink]="['/features/common']">Image[]</a></code>
+            </div>
+            <div>
+              The mandatory array of <code><a [routerLink]="['/features/common']">Image</a></code> objects, that represent both the thumb gallery and the
+              modal images. In fact, an <code><a [routerLink]="['/features/common']">Image</a></code> is an object with both thumb and
+              image source paths with other additional configuration parameters. For more info check <code><a [routerLink]="['/features/common']">Image</a></code>.
+              Please don't use <code>this.images.push(img)</code>, when you want to modify this array, instead re-assign it to trigger change detection.
+              For instance: <code>this.images = [...this.images, newImage]</code> to create a new array from the original with a new image at the end.
+            </div>
+            <div>
+              <b class="text-success">Attention: if you need to add the same image (same url) multiple times in the same plain gallery, you must append to the url a random but unique query param to prevent caching issues.
+                For more info, please read <a href="https://github.com/Ks89/angular-modal-gallery/issues/171">this issue</a>.</b>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="big-tds">
+            <div>
+              <small><code>config</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code>PlainLibConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+            </div>
+            <div>
+              <p>Interface to configure plain gallery.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Outputs</h2>
+    <table class="table table-hover table-sm">
+      <tbody>
+      <tr>
+        <td><small><code>clickImage</code></small></td>
+        <td>
+          <p>A <code>number</code> that represents the index of the clicked image.</p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <br>
+
+  <app-table-libconfig [showModalGallery]="false" [showPlainGallery]="true" [showCarousel]="false"></app-table-libconfig>
+  <br>
+
+  <app-table-image></app-table-image>
+
+  <h2 id="PlainImage" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainImage</a>
+  </h2>
+  <p>Interface that represent the optional plain image used to open modal image, clicking on it.</p>
+  <p>If you don't provide this object, @ks89/angular-modal-gallery will scale down the img path of modal image to display the thumbnail.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>img</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>Mandatory source path of the plain image.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>description</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>Optional description text. To ignore this feature, don't add this property.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>title</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
+            To ignore this feature, don't add this property.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>alt</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>Optional alt text. It sets 'alt' html's attribute, useful for accessibility purposes.
+            To ignore this feature, don't add this property.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>arialLabel</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
+            To ignore this feature, don't add this property.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="PlainGalleryConfig" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainGalleryConfig</a>
+  </h2>
+  <p>Interface to configure plain gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>strategy</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>PlainGalleryStrategy</code>
+        </div>
+        <div>
+          <p>Enum that represents the strategy used to show thumbnails. <code>PlainGalleryStrategy.ROW</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>layout</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>PlainGalleryLayout</code>
+        </div>
+        <div>
+          <p>It can be either <code>LineLayout</code> and <code>GridLayout</code> to configure the thumbnail's layout.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="PlainGalleryLayout" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainGalleryLayout</a>
+  </h2>
+  <p>Empty interface implemented by both <code>LineLayout</code> and <code>GridLayout</code>.</p>
+  <br>
+
+  <h2 id="LineLayout" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">LineLayout</a>
+  </h2>
+  <p>Class to configure a linear plain gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>breakConfig</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>BreakConfig</code>
+        </div>
+        <div>
+          <p>Object to configure length and wrap.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>justify</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>Represent the flexbox 'justify-content' property. For more info check <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">justify-content's doc at Mozilla</a></p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>size</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>Size</code>
+        </div>
+        <div>
+          <p>Object to change the size of thumbnails. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="GridLayout" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">GridLayout</a>
+  </h2>
+  <p>Class to configure a grid plain gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>breakConfig</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>BreakConfig</code>
+        </div>
+        <div>
+          <p>Object to configure length and wrap.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>size</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>Size</code>
+        </div>
+        <div>
+          <p>Object to change the size of thumbnails. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="BreakConfig" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">BreakConfig</a>
+  </h2>
+  <p>Interface to limit the number of items of the plain gallery or to fill other lines.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>length</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>number</code>
+        </div>
+        <div>
+          <p>Number of items to show. <code>-1</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>wrap</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>If <code>true</code>, images will wrap, otherwise not. This property correspond to css 'flex-wrap'. <code>false</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="AdvancedConfig" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">AdvancedConfig</a>
+  </h2>
+  <p>Interface to use &lt;a&gt; tags instead of &lt;img&gt; and to customize the css background property for thumbnails in plain gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+      <tr>
+        <td class="very-big-tds"><small><code>aTags</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>boolean</code>
+          </div>
+          <div>
+            <p>Is true, thumbnails will be &lt;a&gt; tags instead of &lt;img&gt;. false by default.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="very-big-tds"><small><code>additionalBackground</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>string</code>
+          </div>
+          <div>
+            <p>Value useful to change the css background property. '50% 50%/cover' by default.
+              For more info check <a href="https://www.w3schools.com/cssref/css3_pr_background.asp">background CSS3 property</a></p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <h2 id="PlainGalleryStrategy" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainGalleryStrategy</a>
+  </h2>
+  <p>Enum that represent the strategy used to show thumbnails in plain gallery. It can be one of these enum values:</p>
+  <br>
+  <ul>
+    <li><code>ROW</code>: to show thumbnails in a row horizontally</li>
+    <li><code>COLUMN</code>: to show thumbnails in a row vertically</li>
+    <li><code>GRID</code>: to show thumbnails in a grid</li>
+    <li><code>CUSTOM</code>: to show thumbnails with a custom logic</li>
+  </ul>
+
+</div>

@@ -1,0 +1,285 @@
+<h2 class="link clickable" *ngIf="showModalGallery">
+  <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalLibConfig</a>
+</h2>
+<h2 class="link clickable" *ngIf="showPlainGallery">
+  <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainLibConfig</a>
+</h2>
+<h2 class="link clickable" *ngIf="showCarousel">
+  <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">CarouselLibConfig</a>
+</h2>
+<p>The main objects to configure modal gallery, plain gallery and carousel.</p>
+<br>
+<div class="table-responsive">
+  <table class="table table-hover table-sm">
+    <tbody>
+      <tr *ngIf="showModalGallery || showCarousel">
+        <td><small><code>previewConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/previews']">PreviewConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>PreviewConfig</code>.</p>
+            <p>Interface to configure previews, for instance to choose either the number, visibility, arrows, sizes.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; visible: true, number: 4, arrows: true, clickable: true, width: 100 / 4 + '%', maxHeight: '200px', breakpoints: &#123; xSmall: 100, small: 100, medium: 150, large: 200, xLarge: 200 &#125; &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery || showCarousel">
+        <td><small><code>dotsConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/common']">DotsConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>DotsConfig</code>.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; visible: true &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery || showCarousel">
+        <td><small><code>slideConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>SlideConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>SlideConfig</code> to manage sliding features of modal-gallery and ....</p>
+            <p>Interface to enable infinite-sliding (you won't be able to navigate before both the first and after the last images) and to configure both side-previews and autoPlay.
+              By default, infinite sliding is disabled, side-previews are visible with <code>width: 100px</code> and <code>height: auto</code> and autoPlay is disabled.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; infinite: false, playConfig: &#123; autoPlay: true, interval: 5000, pauseOnHover: true &#125;, sidePreviews: &#123; show: true, size: &#123; width: '100px', height: 'auto' &#125; &#125; &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery || showPlainGallery || showCarousel">
+        <td><small><code>accessibilityConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/accessibility']">AccessibilityConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code><a [routerLink]="['/features/accessibility']">AccessibilityConfig</a></code>.</p>
+            <p>Interface to customize accessibility features, like alt, titles, aria-labels and so on. By default all texts are written in english.
+              This default config object is exported as KS_DEFAULT_ACCESSIBILITY_CONFIG.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p>It's an object with all default english accessibility values. Check <a [routerLink]="['/features/accessibility']">here for more information</a>.</p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery || showCarousel">
+        <td><small><code>keyboardServiceConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/keyboard-config']">KeyboardServiceConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>KeyboardServiceConfig</code>. Used to pass custom configuration to mousetrap to download images with keyboard shortcut, and also to disable
+              SSR in case you want to use SystemJS.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; shortcuts: ['ctrl+s', 'meta+s'], disableSsrWorkaround: false &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr *ngIf="showModalGallery">
+        <td><small><code>enableCloseOutside</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional property to close modal-gallery clicking on the semi-transparent background.</p>
+            <p>If true, you can click on the semi-transparent background of modal images to close it. <code>true</code> by default.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>true</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery">
+        <td><small><code>keyboardConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>KeyboardConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>KeyboardConfig</code>.</p>
+            <p>Interface to configure keyboard's buttons. All properties are optional and with default values. Check KeyboardConfig for more information.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery">
+        <td><small><code>currentImageConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>CurrentImageConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>CurrentImageConfig</code>.</p>
+            <p>Interface to configure current image in modal-gallery. For instance you can either disable navigation when you click on the current image (enabled by default),
+              or change descriptions, loading spinners or enable download features.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; invertSwipe: false, navigateOnClick: true, downloadable: false, loadingConfig: &#123;enable: true, type: LoadingType.STANDARD&#125;, description: &#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, imageText:
+              'Image ', numberSeparator: '/', beforeTextDescription: ' - ',
+              style: &#123; bgColor: 'rgba(0,0,0,.5)', textColor: 'white', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px' &#125; &#125; &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showModalGallery">
+        <td><small><code>buttonsConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/upper-buttons']">ButtonsConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>ButtonsConfig</code>.</p>
+            <p>Interface to choose which buttons to show and handle their behaviour.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; visible: true, strategy: ButtonsStrategy.DEFAULT &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr *ngIf="showPlainGallery">
+        <td><small><code>plainGalleryConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>PlainGalleryConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure <code>PlainGalleryConfig</code>.</p>
+            <p>Interface to configure thumbnails, for instance to change the layout. Furthermore, it's useful to write full custom layouts (for more info see official demos).</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; strategy: PlainGalleryStrategy.ROW, layout: this.defaultLayout, advanced: &#123; aTags: false, additionalBackground: '50% 50%/cover' &#125; &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr *ngIf="showCarousel">
+        <td><small><code>carouselConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>CarouselConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure the carousel, like to change sizes, hide some features and so on.</p>
+            <p>For more information, please see the CarouselConfig's section</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; maxWidth: '100%', maxHeight: '400px, showArrows: true, objectFit: 'cover',
+              keyboardEnable: true, modalGalleryEnable: false &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showCarousel">
+        <td><small><code>carouselImageConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>CarouselImageConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object to change current image of the carousel, like description or to invert the swipe direction.</p>
+            <p>For more information, please see the CarouselImageConfig's section</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; invertSwipe: false, description: &#123; strategy: DescriptionStrategy.ALWAYS_HIDDEN, imageText: 'Image ', numberSeparator: '/', beforeTextDescription: ' - ',
+              style: &#123; bgColor: 'rgba(0,0,0,.5)', textColor: 'white', marginTop: '0px', marginBottom: '0px', marginLeft: '0px', marginRight: '0px' &#125; &#125; &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showCarousel">
+        <td><small><code>carouselPreviewsConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>CarouselPreviewConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure previews, for instance to choose either the number, visibility, arrows, sizes.
+              If you want to know how to use this object, please check <a [routerLink]="['/features/previews']">PreviewsComponent</a>.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; visible: true, number: 4, arrows: true, clickable: true, width: 100 / 4 + '%', maxHeight: '200px', breakpoints: &#123; xSmall: 100, small: 100, medium: 150, large: 200, xLarge: 200 &#125;&#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showCarousel">
+        <td><small><code>carouselPlayConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>PlayConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to change the behaviour of auto-navigation, like autoPlay and interval in milliseconds.</p>
+            <p>For more information, please see the <a [routerLink]="['/features/common']">PlayConfig</a>'s section</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; autoPlay: true, interval: 5000, pauseOnHover: true &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showCarousel">
+        <td><small><code>carouselDotsConfig</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>DotsConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional object used to configure dots.</p>
+            <p>For more information, please see the <code><a [routerLink]="['/features/common']">DotsConfig</a></code>'s section</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>&#123; visible: true &#125;</small></p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="showCarousel">
+        <td><small><code>carouselSlideInfinite</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Optional property to configure infinite sliding of the carousel.</p>
+            <p>If true, carousel won't stop at the last image, but it will restart from the first image. <code>true</code> by default.</p>
+          </div>
+          <div>
+            <p>Default value:</p>
+            <p><small>true</small></p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
