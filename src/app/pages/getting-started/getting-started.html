@@ -78,9 +78,19 @@
                 <td>Yes</td>
               </tr>
               <tr>
-                <td><b>9.0.0 (recommended)</b></td>
-                <td><b>13.0.0</b></td>
-                <td><b>13.0.0</b></td>
+                <td><b>9.0.0</b></td>
+                <td>13.0.0</td>
+                <td>13.0.0</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>optional</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td><b>10.0.0 (recommended)</b></td>
+                <td><b>15.0.0</b></td>
+                <td><b>15.0.0</b></td>
                 <td><b>>=1.6.1</b></td>
                 <td><b>>=2.0.0</b></td>
                 <td><b>optional</b></td>
@@ -108,7 +118,7 @@
       <section class="container">
         <h2>Installation</h2>
         <p>Based on the table above, install the required dependencies.</p>
-        <p>For <strong>@ks89/angular-modal-gallery 9</strong> run</p>
+        <p>For <strong>@ks89/angular-modal-gallery 10</strong> run</p>
         <ul>
           <li><code>npm i --save @ks89/angular-modal-gallery@latest</code></li>
           <li><code>npm i --save @angular/cdk hammerjs mousetrap</code></li>
@@ -187,55 +197,13 @@
               &#125;,
         ...
         </pre>
-
-        <h3>Step 5: (optional) Only for SystemJS users</h3>
-        <p>If you are using angular-cli, skip this step.</p>
-        <p>In your SystemJS config file, after angular and @angular/cdk imports, add both map and packages to tell the System loader where to look for libraries:</p>
-        <pre>
-        map: &#123;
-          ...
-          'hammerjs'                 : 'node_modules/hammerjs',
-          'mousetrap'                : 'node_modules/mousetrap'
-          '@ks89'                    : 'node_modules/@ks89',
-          ...
-        &#125;
-
-        packages = &#123;
-          ...
-          'hammerjs'                    : &#123; main: 'hammer.js' &#125;,
-          'mousetrap'                   : &#123; main: 'mousetrap.js' &#125;,
-          '@ks89/angular-modal-gallery' : &#123; main: 'bundles/ks89-angular-modal-gallery.umd.min.js', defaultExtension: 'js' &#125;
-          ...
-        &#125;
-        </pre>
-        <br>
-        <p><b>All SystemJS users must add <code>disableSsrWorkaround: true</code> to the keyboardServiceConfig interface in this way:</b></p>
-        <pre>
-        const LIB_CONFIG: ModalLibConfig = &#123;
-          keyboardServiceConfig: &#123;
-            shortcuts: ['ctrl+s', 'meta+s'],
-            disableSsrWorkaround: true
-          &#125;
-        &#125;;
-
-        const dialogRef: ModalGalleryRef = this.modalGalleryService.open(&#123;
-          config: &#123;
-            id,
-            images: arrayOfImages,
-            currentImage: imageToShow,
-            LIB_CONFIG
-          &#125;
-        &#125;);
-      </pre>
-        <p><b><code>disableSsrWorkaround:true</code> will prevent errors at runtime with SystemJS.</b></p>
-
       </section>
       <br>
 
       <section id="examples" class="container">
         <h2>Official examples</h2>
         <ul>
-          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-13">angular-cli 13 (recommended)</a></li>
+          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-15">angular-cli 15 (recommended)</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-material">angular-cli with material</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/universal">angular-universal</a></li>
         </ul>
