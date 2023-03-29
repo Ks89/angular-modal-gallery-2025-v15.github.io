@@ -30,11 +30,6 @@ import { environment } from './environments/environment';
 
 import { hmrBootstrap } from './hmr';
 
-// ********************** angular-modal-gallery *****************************
-import 'hammerjs'; // Mandatory for angular-modal-gallery >= 3.x.x (`npm i --save hammerjs`)
-import 'mousetrap'; // Mandatory for angular-modal-gallery >= 3.x.x (`npm i --save mousetrap`)
-// **************************************************************************
-
 import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/mode/javascript/javascript';
 

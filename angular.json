@@ -47,8 +47,6 @@
               "node_modules/codemirror/lib/codemirror.js"
             ],
             "allowedCommonJsDependencies": [
-              "mousetrap",
-              "hammerjs",
               "codemirror",
               "@ks89/angular-modal-gallery",
               "@angularclass/hmr",

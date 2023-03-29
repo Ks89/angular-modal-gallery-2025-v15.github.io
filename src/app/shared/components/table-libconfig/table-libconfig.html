@@ -77,23 +77,6 @@
           </div>
         </td>
       </tr>
-      <tr *ngIf="showModalGallery || showCarousel">
-        <td><small><code>keyboardServiceConfig</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code><a [routerLink]="['/features/keyboard-config']">KeyboardServiceConfig</a></code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-            <p>Optional object used to configure <code>KeyboardServiceConfig</code>. Used to pass custom configuration to mousetrap to download images with keyboard shortcut, and also to disable
-              SSR in case you want to use SystemJS.</p>
-          </div>
-          <div>
-            <p>Default value:</p>
-            <p><small>&#123; shortcuts: ['ctrl+s', 'meta+s'], disableSsrWorkaround: false &#125;</small></p>
-          </div>
-        </td>
-      </tr>
-
 
       <tr *ngIf="showModalGallery">
         <td><small><code>enableCloseOutside</code></small></td>

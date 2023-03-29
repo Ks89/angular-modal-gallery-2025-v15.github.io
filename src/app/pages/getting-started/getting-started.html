@@ -88,21 +88,30 @@
                 <td>No</td>
               </tr>
               <tr>
-                <td><b>10.0.0 (recommended)</b></td>
-                <td><b>15.0.0</b></td>
-                <td><b>15.0.0</b></td>
-                <td><b>>=1.6.1</b></td>
-                <td><b>>=2.0.0</b></td>
+                <td><b>10.0.0</b></td>
+                <td>15.0.0</td>
+                <td>15.0.0</td>
+                <td>>=1.6.1</td>
+                <td>>=2.0.0</td>
+                <td>optional</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td><b>11.0.0 (recommended)</b></td>
+                <td><b>16.0.0</b></td>
+                <td><b>16.0.0</b></td>
+                <td><b>No</b></td>
+                <td><b>No</b></td>
                 <td><b>optional</b></td>
-                <td>No</td>
-                <td>No</td>
+                <td><b>No</b></td>
+                <td><b>No</b></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p>*not officially supported but they should work without issues.</p>
-
         <br>
         <p><b>If you are already using @ks89/angular-modal-gallery and you want to migrate to the latest release,
           check the <a [routerLink]="['/migration']">official guide</a>.</b></p>
@@ -118,11 +127,10 @@
       <section class="container">
         <h2>Installation</h2>
         <p>Based on the table above, install the required dependencies.</p>
-        <p>For <strong>@ks89/angular-modal-gallery 10</strong> run</p>
+        <p>For the latest version of <strong>@ks89/angular-modal-gallery</strong> run</p>
         <ul>
           <li><code>npm i --save @ks89/angular-modal-gallery@latest</code></li>
-          <li><code>npm i --save @angular/cdk hammerjs mousetrap</code></li>
-          <li><code>npm i --save-dev @types/hammerjs @types/mousetrap</code></li>
+          <li><code>npm i --save @angular/cdk</code></li>
         </ul>
 
         <p>Please note that if you need angular-modal-gallery versions 5 or 3, you must use the older npm package called <a href="https://www.npmjs.com/package/angular-modal-gallery">angular-modal-gallery</a> without @ks89 scope.</p>
@@ -136,19 +144,15 @@
       <section class="container">
         <h2>Update your project</h2>
         <p>Once finished to install dependencies, you need to follow some simple steps.</p>
-        <p>I consider only angular-cli projects. If you want to use <code>@angular/universal</code> or <code>SystemJS</code>, please check <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
+        <p>I consider only angular-cli projects. If you want to use <code>@angular/universal</code>, please check <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
 
         <h3>Step 1: Import dependencies</h3>
-        <p>Import <code>GalleryModule</code> and both <code>hammerjs</code> and <code>mousetrap</code>.</p>
+        <p>Import <code>GalleryModule</code>.</p>
         <pre>
-        import 'hammerjs';
-        import 'mousetrap';
         import &#123; GalleryModule &#125; from '@ks89/angular-modal-gallery';
         </pre>
         <p>Then list <code>GalleryModule</code> in your root module and any additional application modules that make use of the components in this library.</p>
         <pre>
-        import 'hammerjs';
-        import 'mousetrap';
         import &#123;GalleryModule&#125; from '@ks89/angular-modal-gallery';
         @NgModule(&#123;
           imports: [
@@ -175,7 +179,7 @@
         </pre>
 
         <h3>Step 3: (optional) update tsconfig file</h3>
-        <p>Add @types to tsconfig.json (in case on angular-cli 10 project it's called <code>tsconfig.base.json</code>) as follow:</p>
+        <p>Add @types to tsconfig.json (in case on angular-cli project it's called <code>tsconfig.base.json</code>) as follow:</p>
         <pre>
         &#123;
           ...
@@ -185,25 +189,13 @@
           &#125;
         &#125;
         </pre>
-
-        <h3>Step 4: (optional) update your angular.json</h3>
-        <p>If you are using Angular 10 or greater with angular-cli, update your angular.json to whitelist commonjs dependencies as follow:</p>
-        <pre>
-        "architect": &#123;
-          "build": &#123;
-            "options": &#123;
-              ...
-              "allowedCommonJsDependencies": ["mousetrap", "hammerjs", "@ks89/angular-modal-gallery"]
-              &#125;,
-        ...
-        </pre>
       </section>
       <br>
 
       <section id="examples" class="container">
         <h2>Official examples</h2>
         <ul>
-          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-15">angular-cli 15 (recommended)</a></li>
+          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-16">angular-cli 16 (recommended)</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-material">angular-cli with material</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/universal">angular-universal</a></li>
         </ul>

@@ -1,6 +1,5 @@
 import { FeaturesComponent } from './features.component';
 import { ModalGalleryComponent } from './modal-gallery/modal-gallery.component';
-import { KeyboardConfigComponent } from './keyboard-config/keyboard-config.component';
 import { PlainGalleryComponent } from './plain-gallery/plain-gallery.component';
 import { PreviewsComponent } from './previews/previews.component';
 import { UpperButtonsComponent } from './upper-buttons/upper-buttons.component';
@@ -19,7 +18,6 @@ export const FEATURES_COMPONENTS = [
   PlainGalleryComponent,
   PreviewsComponent,
   UpperButtonsComponent,
-  KeyboardConfigComponent,
   OverviewComponent,
   CarouselComponent
 ];

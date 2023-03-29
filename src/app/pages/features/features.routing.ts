@@ -2,7 +2,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ModalGalleryComponent } from './modal-gallery/modal-gallery.component';
 import { FeaturesComponent } from './features.component';
-import { KeyboardConfigComponent } from './keyboard-config/keyboard-config.component';
 import { PlainGalleryComponent } from './plain-gallery/plain-gallery.component';
 import { PreviewsComponent } from './previews/previews.component';
 import { UpperButtonsComponent } from './upper-buttons/upper-buttons.component';
@@ -24,8 +23,7 @@ export const routes: Routes = [
       { path: 'plain-gallery',           component: PlainGalleryComponent },
       { path: 'carousel',                component: CarouselComponent },
       { path: 'previews',                component: PreviewsComponent },
-      { path: 'upper-buttons',           component: UpperButtonsComponent },
-      { path: 'keyboard-config',         component: KeyboardConfigComponent }
+      { path: 'upper-buttons',           component: UpperButtonsComponent }
     ]
   }
 ];
