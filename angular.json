@@ -48,7 +48,6 @@
             ],
             "allowedCommonJsDependencies": [
               "codemirror",
-              "@ks89/angular-modal-gallery",
               "@angularclass/hmr",
               "@ks89/ngx-codemirror"
             ]
