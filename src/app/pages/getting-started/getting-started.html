@@ -26,6 +26,7 @@
                 <td>Font Awesome</td>
                 <td>IE11 support</td>
                 <td>Microsoft Edge (pre-chromium) support</td>
+                <td>LCP features</td>
               </tr>
               <tr>
                 <td><b>3.3.5</b></td>
@@ -36,6 +37,7 @@
                 <td>>= 4.0.0</td>
                 <td>Yes</td>
                 <td>Yes</td>
+                <td>No</td>
               </tr>
               <tr>
                 <td><b>5.7.1</b></td>
@@ -46,6 +48,7 @@
                 <td>optional</td>
                 <td>Yes</td>
                 <td>Yes</td>
+                <td>No</td>
               </tr>
               <tr>
                 <td><b>6.3.0</b></td>
@@ -56,6 +59,7 @@
                 <td>optional</td>
                 <td>Yes</td>
                 <td>Yes</td>
+                <td>No</td>
               </tr>
               <tr>
                 <td><b>7.2.5</b></td>
@@ -66,6 +70,7 @@
                 <td>optional</td>
                 <td>Yes</td>
                 <td>Yes</td>
+                <td>No</td>
               </tr>
               <tr>
                 <td><b>8.0.0</b></td>
@@ -76,6 +81,7 @@
                 <td>optional</td>
                 <td>Yes</td>
                 <td>Yes</td>
+                <td>No</td>
               </tr>
               <tr>
                 <td><b>9.0.0</b></td>
@@ -84,6 +90,7 @@
                 <td>>=1.6.1</td>
                 <td>>=2.0.0</td>
                 <td>optional</td>
+                <td>No</td>
                 <td>No</td>
                 <td>No</td>
               </tr>
@@ -96,9 +103,21 @@
                 <td>optional</td>
                 <td>No</td>
                 <td>No</td>
+                <td>No</td>
               </tr>
               <tr>
-                <td><b>11.0.0 (recommended)</b></td>
+                <td><b>11.0.0</b></td>
+                <td>16.0.0</td>
+                <td>16.0.0</td>
+                <td>No</td>
+                <td>No</td>
+                <td>optional</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td><b>11.1.0 (recommended)</b></td>
                 <td><b>16.0.0</b></td>
                 <td><b>16.0.0</b></td>
                 <td><b>No</b></td>
@@ -106,6 +125,7 @@
                 <td><b>optional</b></td>
                 <td><b>No</b></td>
                 <td><b>No</b></td>
+                <td><b>Yes</b></td>
               </tr>
             </tbody>
           </table>
@@ -121,6 +141,12 @@
       <section class="container">
         <h2>Supported Browsers</h2>
         <p>Starting from version 9.0.0 of this library, Internet Explorer 11 and legacy Microsoft Edge (pre-chromium) are not supported!</p>
+      </section>
+      <br>
+
+      <section class="container">
+        <h2>LCP Features</h2>
+        <p>Starting from version 11.1.0 of this library, you can set <code>loading</code> and <code>fetchpriority</code> attribute to <a [routerLink]="['/features/common']"><code>Image</code></a> and also defining <code>sources</code> for <a [routerLink]="['/features/modal-gallery']"><code>ModalImage</code></a></p>
       </section>
       <br>
 

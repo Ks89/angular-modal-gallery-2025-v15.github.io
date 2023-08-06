@@ -31,10 +31,32 @@
       <td><small><code>modal</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>ModalImage</code>
+          <i>Type: </i><a [routerLink]="['/features/modal-gallery']"><code>ModalImage</code></a>
         </div>
         <div>
           <p>Mandatory interface to configure the modal image.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>loading</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>'eager' | 'lazy'</code>
+        </div>
+        <div>
+          <p>Optional string to configure how the browser will load image. lazy by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>fetchpriority</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>'high' | 'low' | 'auto'</code>
+        </div>
+        <div>
+          <p>Optional string to configure the download's priority of the image (Chrome). auto by default.</p>
         </div>
       </td>
     </tr>
@@ -46,6 +68,39 @@
         </div>
         <div>
           <p>Optional interface to configure the thumbnail (or 'plain image').</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+
+  <h2 id="Source" class="link clickable">
+    <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Source</a>
+  </h2>
+  <p>Interface to configure optional sources for the modal image srcsets.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>srcset</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>The url of the cropped image</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>media</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>the media breakpoint for the srcset. es: '(max-width: 480px)'</p>
         </div>
       </td>
     </tr>
@@ -73,6 +128,7 @@
     </tr>
     </tbody>
   </table>
+  <br>
 
   <h2 id="Size" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">Size</a>

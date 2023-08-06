@@ -48,6 +48,7 @@ import { ModalAutoplayMinimalComponent } from './modal-autoplay-minimal/modal-au
 import { ModalAutoplayCustomComponent } from './modal-autoplay-custom/modal-autoplay-custom.component';
 import { PreviewsTemplateComponent } from './previews-template/previews-template.component';
 import { PreviewsTemplateAdditionalDataComponent } from './previews-template-additional-data/previews-template-additional-data.component';
+import { CarouselLcpComponent } from './carousel-lcp/carousel-lcp.component';
 
 export const routes: Routes = [
   {
@@ -112,7 +113,8 @@ export const routes: Routes = [
       {path: 'carousel-custom-previews', component: CarouselCustomPreviewsComponent},
       {path: 'carousel-with-description', component: CarouselWithDescriptionComponent},
       {path: 'carousel-outputs', component: CarouselOutputsComponent},
-      {path: 'carousel-breakpoints', component: CarouselBreakpointsComponent}
+      {path: 'carousel-breakpoints', component: CarouselBreakpointsComponent},
+      {path: 'carousel-lcp', component: CarouselLcpComponent},
     ]
   }
 ];
