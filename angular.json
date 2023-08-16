@@ -39,17 +39,11 @@
               "src/500.html"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/codemirror/lib/codemirror.css",
-              "node_modules/codemirror/theme/monokai.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/codemirror/lib/codemirror.js"
-            ],
+            "scripts": [],
             "allowedCommonJsDependencies": [
-              "codemirror",
-              "@angularclass/hmr",
-              "@ks89/ngx-codemirror"
+              "@angularclass/hmr"
             ]
           },
           "configurations": {
@@ -146,13 +140,9 @@
               "src/500.html"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/codemirror/lib/codemirror.css",
-              "node_modules/codemirror/theme/monokai.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/codemirror/lib/codemirror.js"
-            ]
+            "scripts": []
           }
         }
       }

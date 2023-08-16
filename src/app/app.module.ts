@@ -46,7 +46,6 @@ import { CoreModule } from './core/core.module';
 import { COMPONENTS } from './pages/components';
 import { AppComponent } from './app.component';
 
-import { CodemirrorModule } from '@ks89/ngx-codemirror';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -58,7 +57,6 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     AppRoutingModule,
 
-    CodemirrorModule,
     GalleryModule,
 
     CoreModule,

@@ -25,13 +25,13 @@
     exactly as the live demo above.
     So in the component HTML file you have to add this:</p>
 
-  <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+  <codemirror [content]="codeHtml" [language]="'html'">
   </codemirror>
   <br>
 
   <p>Then, in your Typescript component you have to init the images array with Image class instances and invoke the open method to show the modal gallery in this way:</p>
 
-  <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+  <codemirror [content]="codeTypescript" [language]="'typescript'">
   </codemirror>
   <br>
 

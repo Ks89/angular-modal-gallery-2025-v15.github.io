@@ -48,12 +48,6 @@ body {
 // *****************************************************************
 // *****************************************************************
 
-// force codemirror's height https://codemirror.net/demo/resize.html
-.CodeMirror {
-  border: 1px solid #eee;
-  height: auto !important;
-}
-
 .title {
   background-color: $color-primary;
   background: linear-gradient(135deg, $color-primary, $color-secondary);

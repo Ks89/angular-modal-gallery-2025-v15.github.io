@@ -22,13 +22,13 @@
   and pass the two mandatory inputs id and images.</p>
   <p>The minimal carousel in your HTML file is:</p>
 
-  <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+  <codemirror [content]="codeHtml" [language]="'html'">
   </codemirror>
   <br>
 
   <p>Then, in your Typescript component you have to init the images array with Image class instances. For instance</p>
 
-  <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+  <codemirror [content]="codeTypescript" [language]="'typescript'">
   </codemirror>
   <br>
 

@@ -30,9 +30,6 @@ import { environment } from './environments/environment';
 
 import { hmrBootstrap } from './hmr';
 
-import 'codemirror/mode/htmlmixed/htmlmixed';
-import 'codemirror/mode/javascript/javascript';
-
 if (environment.production) {
   enableProdMode();
 }

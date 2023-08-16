@@ -7,8 +7,6 @@ import { routing } from './demo.routing';
 import { DEMO_COMPONENTS } from './components';
 import { SharedModule } from '../../shared/shared.module';
 
-import { CodemirrorModule } from '@ks89/ngx-codemirror';
-
 // ********************** angular-modal-gallery *****************************
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 // **************************************************************************
@@ -19,7 +17,6 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     routing,
     SharedModule,
     FormsModule,
-    CodemirrorModule,
     GalleryModule
   ],
   declarations: [

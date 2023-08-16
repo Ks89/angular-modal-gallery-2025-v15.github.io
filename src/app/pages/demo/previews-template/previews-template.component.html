@@ -23,7 +23,7 @@
     <h3>Code</h3>
     <br>
     <h4>Template</h4>
-    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    <codemirror [content]="codeHtml" [language]="'html'">
     </codemirror>
     <br>
     <h4>Css</h4>
@@ -31,7 +31,7 @@
     </codemirror>
     <br>
     <h4>Typescript</h4>
-    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    <codemirror [content]="codeTypescript" [language]="'typescript'">
     </codemirror>
   </section>
 
@@ -84,8 +84,8 @@
             This template can take 2 template variables:
             <ul>
               <li><b>let-preview</b>: gives access to the <code>Image</code> associated with the preview</li>
-              <li><b>let-defaultTemplate</b>: gives access to the default template used to render the preview; 
-                helpful if the need is to wrap the preview with additional information. 
+              <li><b>let-defaultTemplate</b>: gives access to the default template used to render the preview;
+                helpful if the need is to wrap the preview with additional information.
                 Insert the default template with: <code>&lt;ng-container *ngTemplateOutlet="defaultTemplate"&gt;&lt;/ng-container&gt;</code>.
               </li>
             </ul></div>
@@ -115,5 +115,5 @@
       </tbody>
     </table>
   </section>
-  
+
 </div>

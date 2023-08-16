@@ -15,11 +15,11 @@
   <section>
     <h3>Code</h3>
     <h4>Template</h4>
-    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    <codemirror [content]="codeHtml" [language]="'html'">
     </codemirror>
     <br>
     <h4>Typescript</h4>
-    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    <codemirror [content]="codeTypescript" [language]="'typescript'">
     </codemirror>
   </section>
 

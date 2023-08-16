@@ -29,6 +29,7 @@ import { SidebarDemoComponent } from './sidebar-demo/sidebar-demo.component';
 import { SidebarFeaturesComponent } from './sidebar-features/sidebar-features.component';
 import { TableImageComponent } from './table-image/table-image.component';
 import { TableLibconfigComponent } from './table-libconfig/table-libconfig.component';
+import { CodemirrorComponent } from './codemirror/codemirror.component';
 
 export const SHARED_COMPONENTS = [
   NavbarComponent,
@@ -37,5 +38,6 @@ export const SHARED_COMPONENTS = [
   SidebarDemoComponent,
   SidebarFeaturesComponent,
   TableImageComponent,
-  TableLibconfigComponent
+  TableLibconfigComponent,
+  CodemirrorComponent
 ];
