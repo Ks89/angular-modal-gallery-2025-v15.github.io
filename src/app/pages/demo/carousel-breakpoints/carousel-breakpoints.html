@@ -34,11 +34,11 @@
     <h3>Code</h3>
     <br>
     <h4>Template</h4>
-    <codemirror [(ngModel)]="codeHtml2" [config]="configHtml">
+    <codemirror [content]="codeHtml2" [language]="'html'">
     </codemirror>
     <br>
     <h4>Typescript</h4>
-    <codemirror [(ngModel)]="codeTypescript2" [config]="configTs">
+    <codemirror [content]="codeTypescript2" [language]="'typescript'">
     </codemirror>
   </section>
 

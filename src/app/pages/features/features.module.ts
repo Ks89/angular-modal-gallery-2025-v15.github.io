@@ -7,11 +7,11 @@ import { routing } from './features.routing';
 import { FEATURES_COMPONENTS } from './components';
 import { SharedModule } from '../../shared/shared.module';
 
-import { CodemirrorModule } from '@ks89/ngx-codemirror';
-
 // ********************** angular-modal-gallery *****************************
 import { GalleryModule } from '@ks89/angular-modal-gallery';
 // **************************************************************************
+
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @NgModule({
   imports: [
@@ -19,8 +19,8 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
     routing,
     SharedModule,
     FormsModule,
-    CodemirrorModule,
-    GalleryModule
+    GalleryModule,
+    CodemirrorModule
   ],
   declarations: [
     FEATURES_COMPONENTS

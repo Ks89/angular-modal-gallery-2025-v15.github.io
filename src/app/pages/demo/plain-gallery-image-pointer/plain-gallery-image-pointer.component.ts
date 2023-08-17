@@ -50,7 +50,7 @@ export class PlainGalleryImagePointerComponent implements OnInit {
 
   codeHtml: string;
   codeTypescript: string;
-  codeSass: string;
+  codeScss: string;
 
   constructor(private uiService: UiService,
               private modalGalleryService: ModalGalleryService,
@@ -95,7 +95,7 @@ private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
   return image ? images.indexOf(image) : -1;
 }`;
 
-    this.codeSass = `$text-color: #FFF;
+    this.codeScss = `$text-color: #FFF;
   $background: rgba(0, 0, 0, .7);
 
   .my-app-custom-plain-container-row {
