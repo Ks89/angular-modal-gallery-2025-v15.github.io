@@ -10,17 +10,17 @@
 
       <section class="container">
         <h2>Dependencies</h2>
-        <p>Based on the table below, choose the right version of @ks89/angular-modal-gallery.</p>
-        <p>However, only the latest stable release of @ks89/angular-modal-gallery is supported. For this reason, I really suggest to always stay up-to-date with all your dependencies.</p>
+        <p>Based on the table below, choose the right version of &#64;ks89/angular-modal-gallery.</p>
+        <p>However, only the latest stable release of &#64;ks89/angular-modal-gallery is supported. For this reason, I really suggest to always stay up-to-date with all your dependencies.</p>
 
         <p>The supported versions are:</p>
         <div class="table-responsive">
           <table class="table table-hover">
             <tbody>
               <tr>
-                <td><b>@ks89/angular-modal-gallery</b></td>
+                <td><b>&#64;ks89/angular-modal-gallery</b></td>
                 <td>angular</td>
-                <td>@angular/cdk</td>
+                <td>&#64;angular/cdk</td>
                 <td>mousetrap</td>
                 <td>hammerjs</td>
                 <td>Font Awesome</td>
@@ -113,7 +113,7 @@
 
         <p>*not officially supported but they should work without issues.</p>
         <br>
-        <p><b>If you are already using @ks89/angular-modal-gallery and you want to migrate to the latest release,
+        <p><b>If you are already using &#64;ks89/angular-modal-gallery and you want to migrate to the latest release,
           check the <a [routerLink]="['/migration']">official guide</a>.</b></p>
       </section>
       <br>
@@ -127,13 +127,13 @@
       <section class="container">
         <h2>Installation</h2>
         <p>Based on the table above, install the required dependencies.</p>
-        <p>For the latest version of <strong>@ks89/angular-modal-gallery</strong> run</p>
+        <p>For the latest version of <strong>&#64;ks89/angular-modal-gallery</strong> run</p>
         <ul>
-          <li><code>npm i --save @ks89/angular-modal-gallery@latest</code></li>
-          <li><code>npm i --save @angular/cdk</code></li>
+          <li><code>npm i --save &#64;ks89/angular-modal-gallery&#64;latest</code></li>
+          <li><code>npm i --save &#64;angular/cdk</code></li>
         </ul>
 
-        <p>Please note that if you need angular-modal-gallery versions 5 or 3, you must use the older npm package called <a href="https://www.npmjs.com/package/angular-modal-gallery">angular-modal-gallery</a> without @ks89 scope.</p>
+        <p>Please note that if you need angular-modal-gallery versions 5 or 3, you must use the older npm package called <a href="https://www.npmjs.com/package/angular-modal-gallery">angular-modal-gallery</a> without &#64;ks89 scope.</p>
 
         <p>All default icons don't require font-awesome, so starting from angular-modal-gallery 5.0.0 font-awesome is optional.
           However, if you want to use custom button icons, you are free to use either your own css or font-awesome (versions 4 or 5).
@@ -144,17 +144,17 @@
       <section class="container">
         <h2>Update your project</h2>
         <p>Once finished to install dependencies, you need to follow some simple steps.</p>
-        <p>I consider only angular-cli projects. If you want to use <code>@angular/universal</code>, please check <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
+        <p>I consider only angular-cli projects. If you want to use <code>&#64;angular/universal</code>, please check <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
 
         <h3>Step 1: Import dependencies</h3>
         <p>Import <code>GalleryModule</code>.</p>
         <pre>
-        import &#123; GalleryModule &#125; from '@ks89/angular-modal-gallery';
+        import &#123; GalleryModule &#125; from '&#64;ks89/angular-modal-gallery';
         </pre>
         <p>Then list <code>GalleryModule</code> in your root module and any additional application modules that make use of the components in this library.</p>
         <pre>
-        import &#123;GalleryModule&#125; from '@ks89/angular-modal-gallery';
-        @NgModule(&#123;
+        import &#123;GalleryModule&#125; from '&#64;ks89/angular-modal-gallery';
+        &#64;NgModule(&#123;
           imports: [
             GalleryModule,
             ...],
@@ -168,7 +168,7 @@
         <h3>Step 2: Update global CSS</h3>
         <p>Update your global styles (CSS/SCSS/LESS) file adding this:</p>
         <pre>
-        @import "~@angular/cdk/overlay-prebuilt.css";
+        &#64;import "~&#64;angular/cdk/overlay-prebuilt.css";
         .ks-modal-gallery-backdrop &#123;
                   background: #000 !important;;
                   opacity: 0.85 !important;;
@@ -179,13 +179,13 @@
         </pre>
 
         <h3>Step 3: (optional) update tsconfig file</h3>
-        <p>Add @types to tsconfig.json (in case on angular-cli project it's called <code>tsconfig.base.json</code>) as follow:</p>
+        <p>Add &#64;types to tsconfig.json (in case on angular-cli project it's called <code>tsconfig.base.json</code>) as follow:</p>
         <pre>
         &#123;
           ...
           "compilerOptions": &#123;
             ...
-            "typeRoots": ["node_modules/@types"]
+            "typeRoots": ["node_modules/&#64;types"]
           &#125;
         &#125;
         </pre>

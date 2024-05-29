@@ -104,13 +104,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-modal-gallery-docs:build:production"
+              "buildTarget": "angular-modal-gallery-docs:build:production"
             },
             "development": {
-              "browserTarget": "angular-modal-gallery-docs:build:development"
+              "buildTarget": "angular-modal-gallery-docs:build:development"
             },
             "release": {
-              "browserTarget": "angular-modal-gallery-docs:build:release"
+              "buildTarget": "angular-modal-gallery-docs:build:release"
             }
           },
           "defaultConfiguration": "development"
@@ -118,7 +118,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-modal-gallery-docs:build"
+            "buildTarget": "angular-modal-gallery-docs:build"
           }
         },
         "test": {
