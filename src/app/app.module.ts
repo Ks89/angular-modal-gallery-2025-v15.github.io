@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2017-2023 Stefano Cappa
+ * Copyright (c) 2017-2024 Stefano Cappa
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 // ********************** angular-modal-gallery *****************************
 import { GalleryModule } from '@ks89/angular-modal-gallery'; // <----------------- angular-modal-gallery library import
@@ -48,26 +48,17 @@ import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-
-    GalleryModule,
-
-    CoreModule,
-    SharedModule,
-    RouterModule
-  ],
-  declarations: [
-    AppComponent,
-    COMPONENTS
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        COMPONENTS
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        GalleryModule,
+        CoreModule,
+        SharedModule,
+        RouterModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
