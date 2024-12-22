@@ -42,8 +42,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-buttons-custom-fa-page',
-  templateUrl: 'buttons-custom-fa.html'
+    selector: 'app-buttons-custom-fa-page',
+    templateUrl: 'buttons-custom-fa.html',
+    standalone: false
 })
 export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-add-image-array-page',
-  templateUrl: 'add-image-array.html'
+    selector: 'app-add-image-array-page',
+    templateUrl: 'add-image-array.html',
+    standalone: false
 })
 export class AddImageArrayComponent implements OnInit {
 

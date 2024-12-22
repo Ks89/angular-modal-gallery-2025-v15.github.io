@@ -31,9 +31,10 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-plain-gallery-page',
-  templateUrl: 'plain-gallery.html',
-  styleUrls: ['plain-gallery.scss']
+    selector: 'app-plain-gallery-page',
+    templateUrl: 'plain-gallery.html',
+    styleUrls: ['plain-gallery.scss'],
+    standalone: false
 })
 export class PlainGalleryComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

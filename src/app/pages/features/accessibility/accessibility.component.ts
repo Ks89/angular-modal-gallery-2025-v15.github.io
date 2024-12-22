@@ -28,9 +28,10 @@ import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-accessibility-page',
-  templateUrl: 'accessibility.html',
-  styleUrls: ['accessibility.scss']
+    selector: 'app-accessibility-page',
+    templateUrl: 'accessibility.html',
+    styleUrls: ['accessibility.scss'],
+    standalone: false
 })
 export class AccessibilityComponent implements OnInit {
 

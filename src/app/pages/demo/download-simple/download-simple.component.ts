@@ -37,8 +37,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-download-simple-page',
-  templateUrl: 'download-simple.html'
+    selector: 'app-download-simple-page',
+    templateUrl: 'download-simple.html',
+    standalone: false
 })
 export class DownloadSimpleComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

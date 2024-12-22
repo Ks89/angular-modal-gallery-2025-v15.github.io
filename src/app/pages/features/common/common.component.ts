@@ -28,9 +28,10 @@ import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-common-page',
-  templateUrl: 'common.html',
-  styleUrls: ['common.scss']
+    selector: 'app-common-page',
+    templateUrl: 'common.html',
+    styleUrls: ['common.scss'],
+    standalone: false
 })
 export class CommonComponent implements OnInit {
 

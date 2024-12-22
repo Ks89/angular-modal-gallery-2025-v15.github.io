@@ -31,8 +31,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { Image, ImageEvent } from '@ks89/angular-modal-gallery';
 
 @Component({
-  selector: 'app-carousel-outputs-page',
-  templateUrl: 'carousel-outputs.html'
+    selector: 'app-carousel-outputs-page',
+    templateUrl: 'carousel-outputs.html',
+    standalone: false
 })
 export class CarouselOutputsComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

@@ -41,9 +41,10 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-output-events-page',
-  templateUrl: 'output-events.html',
-  styleUrls: ['output-events.scss']
+    selector: 'app-output-events-page',
+    templateUrl: 'output-events.html',
+    styleUrls: ['output-events.scss'],
+    standalone: false
 })
 export class OutputEventsComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

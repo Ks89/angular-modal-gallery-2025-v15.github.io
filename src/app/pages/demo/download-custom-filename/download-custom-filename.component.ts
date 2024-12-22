@@ -41,8 +41,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-download-custom-filename-page',
-  templateUrl: 'download-custom-filename.html'
+    selector: 'app-download-custom-filename-page',
+    templateUrl: 'download-custom-filename.html',
+    standalone: false
 })
 export class DownloadCustomFilenameComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY].map(image => {

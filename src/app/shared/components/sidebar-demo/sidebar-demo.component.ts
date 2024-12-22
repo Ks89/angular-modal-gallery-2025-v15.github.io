@@ -26,9 +26,10 @@ import { Component, OnInit } from '@angular/core';
 import { Accordion, AccordionService } from '../../../core/services/services';
 
 @Component({
-  selector: 'app-sidebar-demo',
-  templateUrl: 'sidebar-demo.html',
-  styleUrls: ['sidebar-demo.scss']
+    selector: 'app-sidebar-demo',
+    templateUrl: 'sidebar-demo.html',
+    styleUrls: ['sidebar-demo.scss'],
+    standalone: false
 })
 export class SidebarDemoComponent implements OnInit {
   showCarousel = false;

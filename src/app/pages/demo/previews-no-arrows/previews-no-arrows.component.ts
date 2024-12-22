@@ -39,8 +39,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-no-arrow-page',
-  templateUrl: 'previews-no-arrows.html'
+    selector: 'app-previews-no-arrow-page',
+    templateUrl: 'previews-no-arrows.html',
+    standalone: false
 })
 export class PreviewsNoArrowsComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

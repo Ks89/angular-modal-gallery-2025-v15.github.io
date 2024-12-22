@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-carousel-features-disables-page',
-  templateUrl: 'carousel-features-disables.html'
+    selector: 'app-carousel-features-disables-page',
+    templateUrl: 'carousel-features-disables.html',
+    standalone: false
 })
 export class CarouselFeaturesDisablesComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

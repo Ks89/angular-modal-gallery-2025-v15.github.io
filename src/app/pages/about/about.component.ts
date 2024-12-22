@@ -27,9 +27,10 @@ import { Component, OnInit } from '@angular/core';
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
-  selector: 'app-about-page',
-  templateUrl: 'about.html',
-  styleUrls: ['about.scss']
+    selector: 'app-about-page',
+    templateUrl: 'about.html',
+    styleUrls: ['about.scss'],
+    standalone: false
 })
 
 export class AboutComponent implements OnInit {

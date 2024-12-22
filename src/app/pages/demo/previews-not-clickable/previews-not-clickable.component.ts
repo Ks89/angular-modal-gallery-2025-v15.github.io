@@ -36,8 +36,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-not-clickable-page',
-  templateUrl: 'previews-not-clickable.html'
+    selector: 'app-previews-not-clickable-page',
+    templateUrl: 'previews-not-clickable.html',
+    standalone: false
 })
 export class PreviewsNotClickableComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

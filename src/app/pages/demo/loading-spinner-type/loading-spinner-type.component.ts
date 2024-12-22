@@ -39,8 +39,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-loading-spinner-type-page',
-  templateUrl: 'loading-spinner-type.html'
+    selector: 'app-loading-spinner-type-page',
+    templateUrl: 'loading-spinner-type.html',
+    standalone: false
 })
 export class LoadingSpinnerTypeComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

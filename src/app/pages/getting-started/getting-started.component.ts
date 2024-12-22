@@ -29,9 +29,10 @@ import { Router } from '@angular/router';
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
-  selector: 'app-getting-started-page',
-  templateUrl: 'getting-started.html',
-  styleUrls: ['getting-started.scss']
+    selector: 'app-getting-started-page',
+    templateUrl: 'getting-started.html',
+    styleUrls: ['getting-started.scss'],
+    standalone: false
 })
 export class GettingStartedComponent implements OnInit {
 

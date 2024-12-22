@@ -41,8 +41,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-download-advanced-page',
-  templateUrl: 'download-advanced.html'
+    selector: 'app-download-advanced-page',
+    templateUrl: 'download-advanced.html',
+    standalone: false
 })
 export class DownloadAdvancedComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

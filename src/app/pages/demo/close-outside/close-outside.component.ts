@@ -38,8 +38,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-close-outside-page',
-  templateUrl: 'close-outside.html'
+    selector: 'app-close-outside-page',
+    templateUrl: 'close-outside.html',
+    standalone: false
 })
 export class CloseOusideComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

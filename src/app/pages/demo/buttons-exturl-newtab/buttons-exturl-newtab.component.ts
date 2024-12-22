@@ -40,8 +40,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { ButtonConfig } from '@ks89/angular-modal-gallery/lib/model/buttons-config.interface';
 
 @Component({
-  selector: 'app-buttons-exturl-newtab-page',
-  templateUrl: 'buttons-exturl-newtab.html'
+    selector: 'app-buttons-exturl-newtab-page',
+    templateUrl: 'buttons-exturl-newtab.html',
+    standalone: false
 })
 export class ButtonsExturlNewtabComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

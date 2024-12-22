@@ -41,8 +41,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { LoadingConfig } from '@ks89/angular-modal-gallery/lib/model/loading-config.interface';
 
 @Component({
-  selector: 'app-loading-spinner-disable-page',
-  templateUrl: 'loading-spinner-disable.html'
+    selector: 'app-loading-spinner-disable-page',
+    templateUrl: 'loading-spinner-disable.html',
+    standalone: false
 })
 export class LoadingSpinnerDisableComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

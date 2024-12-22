@@ -31,9 +31,10 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
-  selector: 'app-carousel-content-projection-page',
-  templateUrl: 'carousel-content-projection.html',
-  styleUrls: ['carousel-content-projection.scss']
+    selector: 'app-carousel-content-projection-page',
+    templateUrl: 'carousel-content-projection.html',
+    styleUrls: ['carousel-content-projection.scss'],
+    standalone: false
 })
 export class CarouselContentProjectionComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

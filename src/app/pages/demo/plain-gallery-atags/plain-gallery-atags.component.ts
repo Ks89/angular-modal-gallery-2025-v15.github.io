@@ -39,8 +39,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-plain-gallery-atags-page',
-  templateUrl: 'plain-gallery-atags.html'
+    selector: 'app-plain-gallery-atags-page',
+    templateUrl: 'plain-gallery-atags.html',
+    standalone: false
 })
 export class PlainGalleryAtagsComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

@@ -26,9 +26,10 @@ import { Component, Input } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 
 @Component({
-  selector: 'app-table-libconfig',
-  templateUrl: 'table-libconfig.html',
-  styleUrls: ['table-libconfig.scss']
+    selector: 'app-table-libconfig',
+    templateUrl: 'table-libconfig.html',
+    styleUrls: ['table-libconfig.scss'],
+    standalone: false
 })
 export class TableLibconfigComponent {
 

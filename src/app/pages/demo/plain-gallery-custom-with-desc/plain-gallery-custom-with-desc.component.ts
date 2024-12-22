@@ -36,9 +36,10 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-plain-gallery-custom-with-desc-page',
-  templateUrl: 'plain-gallery-custom-with-desc.html',
-  styleUrls: ['plain-gallery-custom-with-desc.scss']
+    selector: 'app-plain-gallery-custom-with-desc-page',
+    templateUrl: 'plain-gallery-custom-with-desc.html',
+    styleUrls: ['plain-gallery-custom-with-desc.scss'],
+    standalone: false
 })
 export class PlainGalleryCustomWithDescComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

@@ -27,9 +27,10 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../core/services/title.service';
 
 @Component({
-  selector: 'app-features-page',
-  templateUrl: 'features.html',
-  styleUrls: ['features.scss']
+    selector: 'app-features-page',
+    templateUrl: 'features.html',
+    styleUrls: ['features.scss'],
+    standalone: false
 })
 export class FeaturesComponent {
 

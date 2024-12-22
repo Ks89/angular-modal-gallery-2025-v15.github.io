@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-carousel-no-infinite-page',
-  templateUrl: 'carousel-no-infinite.html'
+    selector: 'app-carousel-no-infinite-page',
+    templateUrl: 'carousel-no-infinite.html',
+    standalone: false
 })
 export class CarouselNoInfiniteComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

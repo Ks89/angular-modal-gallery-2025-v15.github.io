@@ -31,8 +31,9 @@ import { IMAGES_RECT_SOURCES_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-carousel-lcp-page',
-  templateUrl: 'carousel-lcp.html'
+    selector: 'app-carousel-lcp-page',
+    templateUrl: 'carousel-lcp.html',
+    standalone: false
 })
 export class CarouselLcpComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_SOURCES_ARRAY];

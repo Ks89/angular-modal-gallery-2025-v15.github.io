@@ -28,9 +28,10 @@ import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-upper-buttons-page',
-  templateUrl: 'upper-buttons.html',
-  styleUrls: ['upper-buttons.scss']
+    selector: 'app-upper-buttons-page',
+    templateUrl: 'upper-buttons.html',
+    styleUrls: ['upper-buttons.scss'],
+    standalone: false
 })
 export class UpperButtonsComponent implements OnInit {
   constructor(private uiService: UiService,

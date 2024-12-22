@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-carousel-breakpoints',
-  templateUrl: 'carousel-breakpoints.html'
+    selector: 'app-carousel-breakpoints',
+    templateUrl: 'carousel-breakpoints.html',
+    standalone: false
 })
 export class CarouselBreakpointsComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

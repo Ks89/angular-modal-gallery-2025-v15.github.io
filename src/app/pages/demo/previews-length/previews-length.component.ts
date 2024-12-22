@@ -39,8 +39,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-length-page',
-  templateUrl: 'previews-length.html'
+    selector: 'app-previews-length-page',
+    templateUrl: 'previews-length.html',
+    standalone: false
 })
 export class PreviewsLengthComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

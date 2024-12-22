@@ -30,9 +30,10 @@ import { environment } from '../../../../environments/environment';
 const PATH = environment.imgPath;
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: 'navbar.html',
-  styleUrls: ['navbar.scss']
+    selector: 'app-navbar',
+    templateUrl: 'navbar.html',
+    styleUrls: ['navbar.scss'],
+    standalone: false
 })
 export class NavbarComponent {
   navbarHeight = '56px';

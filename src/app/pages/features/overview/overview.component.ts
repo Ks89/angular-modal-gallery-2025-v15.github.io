@@ -31,9 +31,10 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 const PATH = environment.imgPath;
 
 @Component({
-  selector: 'app-overview-page',
-  templateUrl: 'overview.html',
-  styleUrls: ['overview.scss']
+    selector: 'app-overview-page',
+    templateUrl: 'overview.html',
+    styleUrls: ['overview.scss'],
+    standalone: false
 })
 export class OverviewComponent implements OnInit {
   modalGalleryPath: string = PATH + '/assets/modalgallery.svg';

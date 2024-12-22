@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-carousel-no-autoplay-page',
-  templateUrl: 'carousel-no-autoplay.html'
+    selector: 'app-carousel-no-autoplay-page',
+    templateUrl: 'carousel-no-autoplay.html',
+    standalone: false
 })
 export class CarouselNoAutoplayComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

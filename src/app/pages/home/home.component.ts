@@ -36,8 +36,9 @@ import { environment } from '../../../environments/environment';
 const PATH = environment.imgPath;
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: 'home.html'
+    selector: 'app-home-page',
+    templateUrl: 'home.html',
+    standalone: false
 })
 export class HomeComponent implements OnInit {
 

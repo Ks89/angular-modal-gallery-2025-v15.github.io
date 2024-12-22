@@ -36,8 +36,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-same-images-page',
-  templateUrl: 'same-images.html'
+    selector: 'app-same-images-page',
+    templateUrl: 'same-images.html',
+    standalone: false
 })
 export class SameImagesComponent implements OnInit {
   images: Image[] = [...SAME_IMAGES];

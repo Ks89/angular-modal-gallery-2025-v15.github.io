@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-fixed-width-page',
-  templateUrl: 'carousel-fixed.html'
+    selector: 'app-fixed-width-page',
+    templateUrl: 'carousel-fixed.html',
+    standalone: false
 })
 export class CarouselFixedComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

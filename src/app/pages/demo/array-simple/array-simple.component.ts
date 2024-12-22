@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-array-simple-page',
-  templateUrl: 'array-simple.html'
+    selector: 'app-array-simple-page',
+    templateUrl: 'array-simple.html',
+    standalone: false
 })
 export class ArraySimpleComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

@@ -28,9 +28,10 @@ import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-description-page',
-  templateUrl: 'description.html',
-  styleUrls: ['description.scss']
+    selector: 'app-description-page',
+    templateUrl: 'description.html',
+    styleUrls: ['description.scss'],
+    standalone: false
 })
 export class DescriptionComponent implements OnInit {
 

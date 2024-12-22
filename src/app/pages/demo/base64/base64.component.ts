@@ -41,8 +41,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-base64-page',
-  templateUrl: 'base64.html'
+    selector: 'app-base64-page',
+    templateUrl: 'base64.html',
+    standalone: false
 })
 export class Base64Component implements OnInit {
 

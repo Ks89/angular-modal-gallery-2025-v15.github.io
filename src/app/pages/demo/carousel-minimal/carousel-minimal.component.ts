@@ -31,8 +31,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { Image } from '@ks89/angular-modal-gallery';
 
 @Component({
-  selector: 'app-carousel-minimal-page',
-  templateUrl: 'carousel-minimal.html'
+    selector: 'app-carousel-minimal-page',
+    templateUrl: 'carousel-minimal.html',
+    standalone: false
 })
 export class CarouselMinimalComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

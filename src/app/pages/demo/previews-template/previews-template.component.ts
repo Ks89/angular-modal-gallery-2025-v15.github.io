@@ -39,9 +39,10 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-template',
-  templateUrl: './previews-template.component.html',
-  styleUrls: ['./previews-template.component.scss']
+    selector: 'app-previews-template',
+    templateUrl: './previews-template.component.html',
+    styleUrls: ['./previews-template.component.scss'],
+    standalone: false
 })
 export class PreviewsTemplateComponent implements OnInit {
   @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;

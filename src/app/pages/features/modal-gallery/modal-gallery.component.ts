@@ -32,9 +32,10 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-modal-gallery-page',
-  templateUrl: 'modal-gallery.html',
-  styleUrls: ['modal-gallery.scss']
+    selector: 'app-modal-gallery-page',
+    templateUrl: 'modal-gallery.html',
+    styleUrls: ['modal-gallery.scss'],
+    standalone: false
 })
 export class ModalGalleryComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

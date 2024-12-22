@@ -40,8 +40,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-custom-size-page',
-  templateUrl: 'previews-custom-size.html'
+    selector: 'app-previews-custom-size-page',
+    templateUrl: 'previews-custom-size.html',
+    standalone: false
 })
 export class PreviewsCustomSizeComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

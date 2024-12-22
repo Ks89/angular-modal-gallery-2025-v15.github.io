@@ -32,8 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-carousel-with-description-page',
-  templateUrl: 'carousel-with-description.html'
+    selector: 'app-carousel-with-description-page',
+    templateUrl: 'carousel-with-description.html',
+    standalone: false
 })
 export class CarouselWithDescriptionComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

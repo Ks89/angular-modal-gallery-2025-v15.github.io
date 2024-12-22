@@ -40,8 +40,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-no-dots-and-previews-page',
-  templateUrl: 'no-dots-and-previews.html'
+    selector: 'app-no-dots-and-previews-page',
+    templateUrl: 'no-dots-and-previews.html',
+    standalone: false
 })
 export class NoDotsAndPreviewsComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

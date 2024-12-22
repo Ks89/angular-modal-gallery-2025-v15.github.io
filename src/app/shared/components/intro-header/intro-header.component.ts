@@ -29,9 +29,10 @@ import { environment } from '../../../../environments/environment';
 const PATH = environment.imgPath;
 
 @Component({
-  selector: 'app-intro-header',
-  templateUrl: 'intro-header.html',
-  styleUrls: ['intro-header.scss']
+    selector: 'app-intro-header',
+    templateUrl: 'intro-header.html',
+    styleUrls: ['intro-header.scss'],
+    standalone: false
 })
 export class IntroHeaderComponent {
 

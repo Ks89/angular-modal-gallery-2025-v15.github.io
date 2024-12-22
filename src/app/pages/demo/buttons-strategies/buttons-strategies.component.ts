@@ -41,8 +41,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-buttons-strategies-page',
-  templateUrl: 'buttons-strategies.html'
+    selector: 'app-buttons-strategies-page',
+    templateUrl: 'buttons-strategies.html',
+    standalone: false
 })
 export class ButtonsStrategiesComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

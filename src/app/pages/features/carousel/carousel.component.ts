@@ -32,9 +32,10 @@ import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-carousel-page',
-  templateUrl: 'carousel.html',
-  styleUrls: ['carousel.scss']
+    selector: 'app-carousel-page',
+    templateUrl: 'carousel.html',
+    styleUrls: ['carousel.scss'],
+    standalone: false
 })
 export class CarouselComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

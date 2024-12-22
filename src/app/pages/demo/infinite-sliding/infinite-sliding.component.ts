@@ -39,8 +39,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { SidePreviewsConfig } from '@ks89/angular-modal-gallery/lib/model/slide-config.interface';
 
 @Component({
-  selector: 'app-infinite-sliding-page',
-  templateUrl: 'infinite-sliding.html'
+    selector: 'app-infinite-sliding-page',
+    templateUrl: 'infinite-sliding.html',
+    standalone: false
 })
 export class InfiniteSlidingComponent implements OnInit {
 

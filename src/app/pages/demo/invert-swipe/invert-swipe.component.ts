@@ -38,8 +38,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
  import { CurrentImageConfig } from '@ks89/angular-modal-gallery/lib/model/current-image-config.interface';
 
 @Component({
-  selector: 'app-invert-swipe-page',
-  templateUrl: 'invert-swipe.html'
+    selector: 'app-invert-swipe-page',
+    templateUrl: 'invert-swipe.html',
+    standalone: false
 })
 export class InvertSwipeComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

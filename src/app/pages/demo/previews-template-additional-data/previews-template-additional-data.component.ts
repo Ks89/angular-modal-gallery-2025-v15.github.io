@@ -45,9 +45,10 @@ interface CustomModalImage extends ModalImage {
 }
 
 @Component({
-  selector: 'app-previews-template',
-  templateUrl: './previews-template-additional-data.component.html',
-  styleUrls: ['./previews-template-additional-data.component.scss']
+    selector: 'app-previews-template',
+    templateUrl: './previews-template-additional-data.component.html',
+    styleUrls: ['./previews-template-additional-data.component.scss'],
+    standalone: false
 })
 export class PreviewsTemplateAdditionalDataComponent implements OnInit {
   @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;

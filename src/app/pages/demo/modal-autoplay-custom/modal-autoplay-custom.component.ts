@@ -33,8 +33,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { SlideConfig } from '@ks89/angular-modal-gallery/lib/model/slide-config.interface';
 
 @Component({
-  selector: 'app-modal-autoplay-minimal-page',
-  templateUrl: 'modal-autoplay-custom.html'
+    selector: 'app-modal-autoplay-minimal-page',
+    templateUrl: 'modal-autoplay-custom.html',
+    standalone: false
 })
 export class ModalAutoplayCustomComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

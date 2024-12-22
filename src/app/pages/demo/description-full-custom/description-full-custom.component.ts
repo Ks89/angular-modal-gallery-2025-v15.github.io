@@ -39,9 +39,10 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-description-full-custom-page',
-  templateUrl: 'description-full-custom.html',
-  styleUrls: ['description-full-custom.scss']
+    selector: 'app-description-full-custom-page',
+    templateUrl: 'description-full-custom.html',
+    styleUrls: ['description-full-custom.scss'],
+    standalone: false
 })
 export class DescriptionFullCustomComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

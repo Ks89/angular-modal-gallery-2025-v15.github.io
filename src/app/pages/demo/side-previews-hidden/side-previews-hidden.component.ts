@@ -33,8 +33,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { SidePreviewsConfig, SlideConfig } from '@ks89/angular-modal-gallery/lib/model/slide-config.interface';
 
 @Component({
-  selector: 'app-side-previews-hidden-page',
-  templateUrl: 'side-previews-hidden.html'
+    selector: 'app-side-previews-hidden-page',
+    templateUrl: 'side-previews-hidden.html',
+    standalone: false
 })
 export class SidePreviewsHiddenComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

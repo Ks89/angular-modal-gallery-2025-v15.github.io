@@ -28,9 +28,10 @@ import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-previews-page',
-  templateUrl: 'previews.html',
-  styleUrls: ['previews.scss']
+    selector: 'app-previews-page',
+    templateUrl: 'previews.html',
+    styleUrls: ['previews.scss'],
+    standalone: false
 })
 export class PreviewsComponent implements OnInit {
 

@@ -25,8 +25,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-sidebar-features',
-  templateUrl: 'sidebar-features.html',
-  styleUrls: ['sidebar-features.scss']
+    selector: 'app-sidebar-features',
+    templateUrl: 'sidebar-features.html',
+    styleUrls: ['sidebar-features.scss'],
+    standalone: false
 })
 export class SidebarFeaturesComponent {}

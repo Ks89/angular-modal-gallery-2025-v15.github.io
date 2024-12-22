@@ -38,9 +38,10 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-plain-gallery-image-pointer-page',
-  templateUrl: 'plain-gallery-image-pointer.html',
-  styleUrls: ['plain-gallery-image-pointer.scss']
+    selector: 'app-plain-gallery-image-pointer-page',
+    templateUrl: 'plain-gallery-image-pointer.html',
+    styleUrls: ['plain-gallery-image-pointer.scss'],
+    standalone: false
 })
 export class PlainGalleryImagePointerComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

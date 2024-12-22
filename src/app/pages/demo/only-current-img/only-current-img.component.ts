@@ -43,8 +43,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { SidePreviewsConfig, SlideConfig } from '@ks89/angular-modal-gallery/lib/model/slide-config.interface';
 
 @Component({
-  selector: 'app-only-current-img-page',
-  templateUrl: 'only-current-img.html'
+    selector: 'app-only-current-img-page',
+    templateUrl: 'only-current-img.html',
+    standalone: false
 })
 export class OnlyCurrentImgComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

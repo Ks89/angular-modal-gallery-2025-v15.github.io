@@ -40,8 +40,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-plain-gallery-layouts-page',
-  templateUrl: 'plain-gallery-layouts.html'
+    selector: 'app-plain-gallery-layouts-page',
+    templateUrl: 'plain-gallery-layouts.html',
+    standalone: false
 })
 export class PlainGalleryLayoutsComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

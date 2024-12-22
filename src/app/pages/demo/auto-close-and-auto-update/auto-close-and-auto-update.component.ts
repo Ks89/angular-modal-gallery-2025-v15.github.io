@@ -40,8 +40,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-auto-close-and-auto-update-page',
-  templateUrl: 'auto-close-and-auto-update.html'
+    selector: 'app-auto-close-and-auto-update-page',
+    templateUrl: 'auto-close-and-auto-update.html',
+    standalone: false
 })
 export class AutoCloseAndAutoUpdateComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

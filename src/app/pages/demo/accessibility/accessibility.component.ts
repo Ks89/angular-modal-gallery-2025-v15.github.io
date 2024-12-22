@@ -36,8 +36,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 
 @Component({
-  selector: 'app-accessibility-page',
-  templateUrl: 'accessibility.html'
+    selector: 'app-accessibility-page',
+    templateUrl: 'accessibility.html',
+    standalone: false
 })
 export class AccessibilityComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
