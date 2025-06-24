@@ -93,13 +93,7 @@
     <table class="table table-hover table-sm">
       <tbody>
         <tr>
-          <td><small><code>clickImage</code></small></td>
-          <td>
-            <p>A <code>number</code> that represents the index of the clicked image.</p>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>show</code></small></td>
+          <td><small><code>changeImage</code></small></td>
           <td>
             <p>An <code>ImageEvent</code> right <b>after</b> the current image is changed.</p>
             <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number).</p>
@@ -132,6 +126,12 @@
               <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
               <li>result: <code>true</code></li>
             </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><small><code>clickImage</code></small></td>
+          <td>
+            <p>A <code>number</code> that represents the index of the clicked image to open modal-gallery (<code>modalGalleryEnable</code> in <code>CarouselConfig</code> must be <code>true</code>).</p>
           </td>
         </tr>
       </tbody>
