@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2017-2024 Stefano Cappa
+ * Copyright (c) 2017-2025 Stefano Cappa
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,18 +24,25 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image, ModalLibConfig, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService, PlayConfig } from '@ks89/angular-modal-gallery';
+import {
+  Image,
+  ModalLibConfig,
+  ModalGalleryConfig,
+  ModalGalleryRef,
+  ModalGalleryService,
+  PlayConfig,
+  SlideConfig
+} from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { SlideConfig } from '@ks89/angular-modal-gallery/lib/model/slide-config.interface';
 
 @Component({
-    selector: 'app-modal-autoplay-minimal-page',
-    templateUrl: 'modal-autoplay-custom.html',
-    standalone: false
+  selector: 'app-modal-autoplay-minimal-page',
+  templateUrl: 'modal-autoplay-custom.html',
+  standalone: false
 })
 export class ModalAutoplayCustomComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
