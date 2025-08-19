@@ -7,7 +7,7 @@
   "main": "src/main.ts",
   "homepage": "https://github.com/Ks89",
   "private": true,
-  "repository": "https://github.com/Ks89/angular-modal-gallery-2024-v13.github.io",
+  "repository": "https://github.com/Ks89/angular-modal-gallery-2025-v14.github.io",
   "engines": {
     "node": ">=20.14.0",
     "npm": ">=10.2.4"
@@ -23,7 +23,7 @@
     "build:dev:stats": "npm run build:dev -- --stats-json",
     "build:prod": "ng build --configuration=production --delete-output-path",
     "build:prod:stats": "npm run build:prod -- --stats-json",
-    "build:release": "ng build --configuration=release --base-href /angular-modal-gallery-2024-v13.github.io/ --deploy-url /angular-modal-gallery-2024-v13.github.io/",
+    "build:release": "ng build --configuration=release --base-href /angular-modal-gallery-2025-v14.github.io/ --deploy-url /angular-modal-gallery-2025-v14.github.io/",
     "clean": "npm cache verify && npm run clean:dist",
     "clean:dist": "rimraf dist",
     "clean:coverage": "rimraf coverage",
