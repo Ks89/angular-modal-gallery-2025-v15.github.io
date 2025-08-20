@@ -22,19 +22,19 @@
  * SOFTWARE.
  */
 /* You can add global styles to this file, and also import other style files */
-@import "theme";
-@import "variables";
-@import '../node_modules/bootstrap/scss/bootstrap';
-
-body {
-  font-family: 'Montserrat', sans-serif;
-}
+@use "theme" as *;
+@use "variables" as *;
+@use '../node_modules/bootstrap/scss/bootstrap';
 
 // *****************************************************************
 // *********** required by @ks89/angular-modal-gallery *************
 // *****************************************************************
 // ATTENTION: You have to install @angular/cdk to be able to use @ks89/angular-modal-gallery properly
-@import "@angular/cdk/overlay-prebuilt.css";
+@use "@angular/cdk/overlay-prebuilt.css" as *;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .ks-modal-gallery-backdrop {
   background: #000 !important;;

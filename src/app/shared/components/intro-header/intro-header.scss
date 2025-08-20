@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-@import "theme";
+@use "theme" as *;
 
 .intro-header {
   background-color: $color-primary;

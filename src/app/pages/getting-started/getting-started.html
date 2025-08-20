@@ -108,7 +108,7 @@
                 <td>No</td>
               </tr>
               <tr>
-                <td><b>12.0.0)</b></td>
+                <td><b>12.0.0</b></td>
                 <td>18.0.0</td>
                 <td>18.0.0</td>
                 <td>No</td>
@@ -118,9 +118,19 @@
                 <td>No</td>
               </tr>
               <tr>
-                <td><b>13.0.0 (recommended)</b></td>
+                <td><b>13.0.0</b></td>
                 <td>19.0.0</td>
                 <td>19.0.0</td>
+                <td>No</td>
+                <td>No</td>
+                <td>optional</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td><b>14.0.0 (recommended)</b></td>
+                <td>20.0.0</td>
+                <td>20.0.0</td>
                 <td>No</td>
                 <td>No</td>
                 <td>optional</td>
@@ -165,13 +175,34 @@
         <h2>Update your project</h2>
         <p>Once finished to install dependencies, you need to follow some simple steps.</p>
         <p>I consider only angular-cli projects. If you want to use <code>&#64;angular/universal</code>, please check <span class="link" (click)="onScrollTo('examples')">official examples</span>.</p>
-
+        <br>
         <h3>Step 1: Import dependencies</h3>
-        <p>Import <code>GalleryModule</code>.</p>
+        <p>If you are working on a modern project with <b>standalone components</b> you can import <code>GalleryModule</code> with <code>importProvidersFrom</code></p>
+        <p>Pass <code>appConfig</code> to <code>bootstrapApplication</code></p>
+        <pre>
+        bootstrapApplication(AppComponent, appConfig)
+          .catch((err) => console.error(err));
+        </pre>
+        <p>Then use <code>importProvidersFrom</code> to load <code>GalleryModule</code> in this way</p>
         <pre>
         import &#123; GalleryModule &#125; from '&#64;ks89/angular-modal-gallery';
+
+        export const appConfig: ApplicationConfig = &#123;
+          providers: [
+            provideBrowserGlobalErrorListeners(),
+            provideZoneChangeDetection(&#123; eventCoalescing: true &#125;),
+            provideRouter(routes),
+            importProvidersFrom(
+              // import GalleryModule. Install &#64;ks89/angular-modal-gallery first
+              GalleryModule
+            )
+          ]
+        &#125;;
         </pre>
-        <p>Then list <code>GalleryModule</code> in your root module and any additional application modules that make use of the components in this library.</p>
+
+
+        <p>Otherwise, if you are still working on a <b>module based project</b>, you have to list <code>GalleryModule</code> in your root module and any additional
+          application modules that make use of the components of this library.</p>
         <pre>
         import &#123;GalleryModule&#125; from '&#64;ks89/angular-modal-gallery';
         &#64;NgModule(&#123;
@@ -185,10 +216,11 @@
         export class AppModule &#123;&#125;
         </pre>
 
+
         <h3>Step 2: Update global CSS</h3>
         <p>Update your global styles (CSS/SCSS/LESS) file adding this:</p>
         <pre>
-        &#64;import "~&#64;angular/cdk/overlay-prebuilt.css";
+        &#64;use "~&#64;angular/cdk/overlay-prebuilt.css" as *;
         .ks-modal-gallery-backdrop &#123;
                   background: #000 !important;;
                   opacity: 0.85 !important;;
@@ -198,8 +230,12 @@
         &#125;
         </pre>
 
+        <p>Please not that <b>&#64;import has been deprecated</b>, so you have to use the new syntax <b>&#64;use ... as *</b>. For more info check
+          <a href="https://sass-lang.com/documentation/breaking-changes/import/">the official page here</a></p>
+        <br>
+
         <h3>Step 3: (optional) update tsconfig file</h3>
-        <p>Add &#64;types to tsconfig.json (in case on angular-cli project it's called <code>tsconfig.base.json</code>) as follow:</p>
+        <p>Add &#64;types to tsconfig.json (in case on angular-cli project it's called <code>tsconfig.json</code>) as follow:</p>
         <pre>
         &#123;
           ...
@@ -215,7 +251,7 @@
       <section id="examples" class="container">
         <h2>Official examples</h2>
         <ul>
-          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-19">angular-cli 19 (recommended)</a></li>
+          <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-20">angular-cli 20 (recommended)</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-material">angular-cli with material</a></li>
           <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/universal">angular-universal</a></li>
         </ul>

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-@import "theme";
+@use "theme" as *;
 
 td {
   min-width: 162px !important;
