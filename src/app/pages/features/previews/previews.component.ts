@@ -30,8 +30,7 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 @Component({
     selector: 'app-previews-page',
     templateUrl: 'previews.html',
-    styleUrls: ['previews.scss'],
-    standalone: false
+    styleUrls: ['previews.scss']
 })
 export class PreviewsComponent implements OnInit {
 

@@ -24,18 +24,22 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image } from '@ks89/angular-modal-gallery';
+import { Image, CarouselComponent as CarouselComponent_1 } from '@ks89/angular-modal-gallery';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+import { RouterLink } from '@angular/router';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
+import { TableLibconfigComponent } from '../../../shared/components/table-libconfig/table-libconfig.component';
+import { TableImageComponent } from '../../../shared/components/table-image/table-image.component';
 
 @Component({
     selector: 'app-carousel-page',
     templateUrl: 'carousel.html',
     styleUrls: ['carousel.scss'],
-    standalone: false
+    imports: [RouterLink, CarouselComponent_1, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
 })
 export class CarouselComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

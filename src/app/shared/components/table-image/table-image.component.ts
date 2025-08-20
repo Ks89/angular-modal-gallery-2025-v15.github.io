@@ -28,8 +28,7 @@ import { ViewportScroller } from '@angular/common';
 @Component({
     selector: 'app-table-image',
     templateUrl: 'table-image.html',
-    styleUrls: ['table-image.scss'],
-    standalone: false
+    styleUrls: ['table-image.scss']
 })
 export class TableImageComponent {
 

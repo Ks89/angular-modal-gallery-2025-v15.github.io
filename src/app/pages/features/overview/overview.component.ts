@@ -27,6 +27,7 @@ import { Component, OnInit } from '@angular/core';
 import { TitleService } from '../../../core/services/title.service';
 import { environment } from '../../../../environments/environment';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { RouterLink } from '@angular/router';
 
 const PATH = environment.imgPath;
 
@@ -34,7 +35,7 @@ const PATH = environment.imgPath;
     selector: 'app-overview-page',
     templateUrl: 'overview.html',
     styleUrls: ['overview.scss'],
-    standalone: false
+    imports: [RouterLink]
 })
 export class OverviewComponent implements OnInit {
   modalGalleryPath: string = PATH + '/assets/modalgallery.svg';

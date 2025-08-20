@@ -24,24 +24,18 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import {
-  Image, PlainLibConfig,
-  LineLayout,
-  ModalGalleryRef,
-  ModalGalleryService,
-  PlainGalleryConfig,
-  PlainGalleryStrategy
-} from '@ks89/angular-modal-gallery';
+import { Image, PlainLibConfig, LineLayout, ModalGalleryRef, ModalGalleryService, PlainGalleryConfig, PlainGalleryStrategy, PlainGalleryComponent } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-plain-gallery-atags-page',
     templateUrl: 'plain-gallery-atags.html',
-    standalone: false
+    imports: [PlainGalleryComponent, CodemirrorModule]
 })
 export class PlainGalleryAtagsComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

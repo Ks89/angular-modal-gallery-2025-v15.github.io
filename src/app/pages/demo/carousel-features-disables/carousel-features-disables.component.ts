@@ -24,17 +24,18 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { CarouselLibConfig, Image } from '@ks89/angular-modal-gallery';
+import { CarouselLibConfig, Image, CarouselComponent } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-carousel-features-disables-page',
     templateUrl: 'carousel-features-disables.html',
-    standalone: false
+    imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselFeaturesDisablesComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

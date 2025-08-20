@@ -14,16 +14,14 @@ import { GalleryModule } from '@ks89/angular-modal-gallery';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    routing,
-    SharedModule,
-    FormsModule,
-    GalleryModule,
-    CodemirrorModule
-  ],
-  declarations: [
-    FEATURES_COMPONENTS
-  ]
+    imports: [
+        CommonModule,
+        routing,
+        SharedModule,
+        FormsModule,
+        GalleryModule,
+        CodemirrorModule,
+        FEATURES_COMPONENTS
+    ]
 })
 export class FeaturesModule {}

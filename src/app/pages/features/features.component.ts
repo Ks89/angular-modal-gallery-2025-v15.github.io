@@ -25,12 +25,14 @@
 import { Component } from '@angular/core';
 
 import { TitleService } from '../../core/services/title.service';
+import { SidebarFeaturesComponent } from '../../shared/components/sidebar-features/sidebar-features.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-features-page',
     templateUrl: 'features.html',
     styleUrls: ['features.scss'],
-    standalone: false
+    imports: [SidebarFeaturesComponent, RouterOutlet]
 })
 export class FeaturesComponent {
 

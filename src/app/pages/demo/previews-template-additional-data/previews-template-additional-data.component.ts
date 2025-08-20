@@ -38,6 +38,8 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { NgTemplateOutlet, DatePipe } from '@angular/common';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 // Here, we extends ModalImage, but we could extend Image and/or PlainImage as well
 interface CustomModalImage extends ModalImage {
@@ -48,7 +50,7 @@ interface CustomModalImage extends ModalImage {
     selector: 'app-previews-template',
     templateUrl: './previews-template-additional-data.component.html',
     styleUrls: ['./previews-template-additional-data.component.scss'],
-    standalone: false
+    imports: [NgTemplateOutlet, CodemirrorModule, DatePipe]
 })
 export class PreviewsTemplateAdditionalDataComponent implements OnInit {
   @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;

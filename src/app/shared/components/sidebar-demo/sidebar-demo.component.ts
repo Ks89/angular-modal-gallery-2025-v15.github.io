@@ -24,12 +24,14 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Accordion, AccordionService } from '../../../core/services/services';
+import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar-demo',
     templateUrl: 'sidebar-demo.html',
     styleUrls: ['sidebar-demo.scss'],
-    standalone: false
+    imports: [NgIf, RouterLink]
 })
 export class SidebarDemoComponent implements OnInit {
   showCarousel = false;

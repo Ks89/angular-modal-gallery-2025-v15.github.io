@@ -40,11 +40,12 @@ import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 import { Subscription } from 'rxjs';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-buttons-custom-fa-page',
     templateUrl: 'buttons-custom-fa.html',
-    standalone: false
+    imports: [CodemirrorModule]
 })
 export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

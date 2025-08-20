@@ -30,8 +30,7 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 @Component({
     selector: 'app-accessibility-page',
     templateUrl: 'accessibility.html',
-    styleUrls: ['accessibility.scss'],
-    standalone: false
+    styleUrls: ['accessibility.scss']
 })
 export class AccessibilityComponent implements OnInit {
 

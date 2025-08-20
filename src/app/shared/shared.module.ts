@@ -5,17 +5,15 @@ import { RouterModule } from '@angular/router';
 import { SHARED_COMPONENTS } from './components/components';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    SHARED_COMPONENTS
-  ],
-  declarations: [
-    SHARED_COMPONENTS
-  ],
-  providers: [ ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        SHARED_COMPONENTS
+    ],
+    exports: [
+        SHARED_COMPONENTS
+    ],
+    providers: []
 })
 
 export class SharedModule {}

@@ -23,13 +23,14 @@
  */
 
 import { Component, Input } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
+import { ViewportScroller, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-table-libconfig',
     templateUrl: 'table-libconfig.html',
     styleUrls: ['table-libconfig.scss'],
-    standalone: false
+    imports: [NgIf, RouterLink]
 })
 export class TableLibconfigComponent {
 

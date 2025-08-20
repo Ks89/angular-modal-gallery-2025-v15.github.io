@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 
@@ -32,7 +32,7 @@ import { Metadata, UiService } from '../../core/services/ui.service';
     selector: 'app-getting-started-page',
     templateUrl: 'getting-started.html',
     styleUrls: ['getting-started.scss'],
-    standalone: false
+    imports: [RouterLink]
 })
 export class GettingStartedComponent implements OnInit {
 

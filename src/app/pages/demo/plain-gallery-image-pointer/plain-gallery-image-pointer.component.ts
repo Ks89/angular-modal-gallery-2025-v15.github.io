@@ -36,12 +36,14 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { NgFor, NgIf } from '@angular/common';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-plain-gallery-image-pointer-page',
     templateUrl: 'plain-gallery-image-pointer.html',
     styleUrls: ['plain-gallery-image-pointer.scss'],
-    standalone: false
+    imports: [NgFor, NgIf, CodemirrorModule]
 })
 export class PlainGalleryImagePointerComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

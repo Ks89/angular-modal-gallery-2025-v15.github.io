@@ -37,11 +37,12 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-loading-spinner-type-page',
     templateUrl: 'loading-spinner-type.html',
-    standalone: false
+    imports: [CodemirrorModule]
 })
 export class LoadingSpinnerTypeComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

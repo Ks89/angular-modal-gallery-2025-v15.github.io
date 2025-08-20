@@ -48,10 +48,7 @@ import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
 
-@NgModule({ declarations: [
-        AppComponent,
-        COMPONENTS
-    ],
+@NgModule({ declarations: [AppComponent],
     bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
@@ -60,5 +57,5 @@ import { RouterModule } from '@angular/router';
         GalleryModule,
         CoreModule,
         SharedModule,
-        RouterModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        RouterModule, COMPONENTS], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

@@ -38,11 +38,12 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-  selector: 'app-side-previews-hidden-page',
-  templateUrl: 'side-previews-hidden.html',
-  standalone: false
+    selector: 'app-side-previews-hidden-page',
+    templateUrl: 'side-previews-hidden.html',
+    imports: [CodemirrorModule]
 })
 export class SidePreviewsHiddenComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

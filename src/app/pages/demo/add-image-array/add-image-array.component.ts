@@ -30,11 +30,12 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-add-image-array-page',
     templateUrl: 'add-image-array.html',
-    standalone: false
+    imports: [CodemirrorModule]
 })
 export class AddImageArrayComponent implements OnInit {
 

@@ -25,6 +25,7 @@
 import { Component } from '@angular/core';
 
 import { environment } from '../../../../environments/environment';
+import { RouterLink } from '@angular/router';
 
 const PATH = environment.imgPath;
 
@@ -32,7 +33,7 @@ const PATH = environment.imgPath;
     selector: 'app-intro-header',
     templateUrl: 'intro-header.html',
     styleUrls: ['intro-header.scss'],
-    standalone: false
+    imports: [RouterLink]
 })
 export class IntroHeaderComponent {
 

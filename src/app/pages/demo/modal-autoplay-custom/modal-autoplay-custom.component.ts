@@ -38,11 +38,12 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-  selector: 'app-modal-autoplay-minimal-page',
-  templateUrl: 'modal-autoplay-custom.html',
-  standalone: false
+    selector: 'app-modal-autoplay-minimal-page',
+    templateUrl: 'modal-autoplay-custom.html',
+    imports: [CodemirrorModule]
 })
 export class ModalAutoplayCustomComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

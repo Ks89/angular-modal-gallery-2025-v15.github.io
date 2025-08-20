@@ -13,17 +13,15 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 // **************************************************************************
 
 @NgModule({
-  imports: [
-    CommonModule,
-    routing,
-    SharedModule,
-    FormsModule,
-    GalleryModule,
-    CodemirrorModule
-  ],
-  declarations: [
-    DEMO_COMPONENTS
-  ]
+    imports: [
+        CommonModule,
+        routing,
+        SharedModule,
+        FormsModule,
+        GalleryModule,
+        CodemirrorModule,
+        DEMO_COMPONENTS
+    ]
 })
 export class DemoModule {
 }

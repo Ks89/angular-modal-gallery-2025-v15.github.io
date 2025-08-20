@@ -26,15 +26,19 @@ import { Component, OnInit } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { Image, ModalGalleryRef, ModalGalleryService } from '@ks89/angular-modal-gallery';
+import { Image, ModalGalleryRef, ModalGalleryService, PlainGalleryComponent as PlainGalleryComponent_1 } from '@ks89/angular-modal-gallery';
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
+import { RouterLink } from '@angular/router';
+import { TableLibconfigComponent } from '../../../shared/components/table-libconfig/table-libconfig.component';
+import { TableImageComponent } from '../../../shared/components/table-image/table-image.component';
 
 @Component({
     selector: 'app-plain-gallery-page',
     templateUrl: 'plain-gallery.html',
     styleUrls: ['plain-gallery.scss'],
-    standalone: false
+    imports: [PlainGalleryComponent_1, CodemirrorModule, RouterLink, TableLibconfigComponent, TableImageComponent]
 })
 export class PlainGalleryComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

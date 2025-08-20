@@ -24,21 +24,19 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import {
-  Image,
-  ModalGalleryRef,
-  ModalGalleryService
-} from '@ks89/angular-modal-gallery';
+import { Image, ModalGalleryRef, ModalGalleryService, PlainGalleryComponent } from '@ks89/angular-modal-gallery';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 import { environment } from '../../../environments/environment';
+import { IntroHeaderComponent } from '../../shared/components/intro-header/intro-header.component';
+import { RouterLink } from '@angular/router';
 
 const PATH = environment.imgPath;
 
 @Component({
     selector: 'app-home-page',
     templateUrl: 'home.html',
-    standalone: false
+    imports: [IntroHeaderComponent, RouterLink, PlainGalleryComponent]
 })
 export class HomeComponent implements OnInit {
 

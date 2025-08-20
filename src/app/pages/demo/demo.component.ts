@@ -25,12 +25,14 @@
 import { Component } from '@angular/core';
 
 import { TitleService } from '../../core/services/title.service';
+import { SidebarDemoComponent } from '../../shared/components/sidebar-demo/sidebar-demo.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-demo-page',
     templateUrl: 'demo.html',
     styleUrls: ['demo.scss'],
-    standalone: false
+    imports: [SidebarDemoComponent, RouterOutlet]
 })
 export class DemoComponent {
 

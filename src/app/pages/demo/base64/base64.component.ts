@@ -39,11 +39,12 @@ import {
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
     selector: 'app-base64-page',
     templateUrl: 'base64.html',
-    standalone: false
+    imports: [CodemirrorModule]
 })
 export class Base64Component implements OnInit {
 

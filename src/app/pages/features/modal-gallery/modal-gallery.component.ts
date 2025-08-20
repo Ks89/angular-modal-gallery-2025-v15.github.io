@@ -30,12 +30,16 @@ import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+import { RouterLink } from '@angular/router';
+import { CodemirrorModule } from '@ks89/ngx-codemirror6';
+import { TableLibconfigComponent } from '../../../shared/components/table-libconfig/table-libconfig.component';
+import { TableImageComponent } from '../../../shared/components/table-image/table-image.component';
 
 @Component({
     selector: 'app-modal-gallery-page',
     templateUrl: 'modal-gallery.html',
     styleUrls: ['modal-gallery.scss'],
-    standalone: false
+    imports: [RouterLink, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
 })
 export class ModalGalleryComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
