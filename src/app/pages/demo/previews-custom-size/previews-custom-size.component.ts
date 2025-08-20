@@ -41,9 +41,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-previews-custom-size-page',
-    templateUrl: 'previews-custom-size.html',
-    imports: [CodemirrorModule]
+  selector: 'app-previews-custom-size-page',
+  templateUrl: 'previews-custom-size.html',
+  imports: [CodemirrorModule]
 })
 export class PreviewsCustomSizeComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
@@ -84,7 +84,7 @@ export class PreviewsCustomSizeComponent implements OnInit {
       } as PlainLibConfig
     } as ModalGalleryConfig) as ModalGalleryRef;
   }`;
-    }
+  }
 
   ngOnInit(): void {
     this.metaData();

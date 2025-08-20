@@ -116,11 +116,13 @@
         <h4>Step 5 - update carousel</h4>
         <ul>
           <li>IE11 legacy mode has been removed from the library, because Angular doesn't support Internet Explorer 11 anymore.
-            So you have to remove <code>legacyIE11Mode: true</code> in your code</li>
+            So you have to remove <code>legacyIE11Mode: true</code> in your code
+          </li>
           <li>remove <code>[previewConfig]</code> and <code>[carouselConfig]</code> inputs from HTML, because replaced with a single <code>[config]="..."</code> like all other components of the library.
             For more information check the <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-13">official example</a> and the
             <a href="https://ks89.github.io/angular-modal-gallery-2022-v10.github.io/features/carousel">documentation page</a>.
-            Don't be scared, it's easies then you think. You only need to pass an object moving previews configuration inside it.</li>
+            Don't be scared, it's easies then you think. You only need to pass an object moving previews configuration inside it.
+          </li>
           <li>rename <code>(showImage)="..."</code> output into <code>(changeImage)="..."</code> output</li>
         </ul>
 

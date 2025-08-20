@@ -9,14 +9,14 @@
   <br>
 
   <div class="my-app-custom-plain-container-with-desc">
-    <ng-container *ngFor="let img of images">
+    @for (img of images; track img.id) {
       <figure class="my-app-custom-image-with-desc">
         <img [src]="img.modal.img"
              (click)="openImageModalRowDescription(206, img)"/>
-        <figcaption class="description">{{img.modal.description ? img.modal.description : 'No description available'}}
+        <figcaption class="description">{{ img.modal.description ? img.modal.description : 'No description available' }}
         </figcaption>
       </figure>
-    </ng-container>
+    }
   </div>
 
   <br><br>
@@ -44,26 +44,26 @@
     <br>
     <table class="table table-hover table-sm">
       <thead>
-        <tr>
-          <th>Input (.html)</th>
-          <th>Value (.ts)</th>
-        </tr>
+      <tr>
+        <th>Input (.html)</th>
+        <th>Value (.ts)</th>
+      </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><code>id</code></td>
-          <td>
-            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
-            <div><b class="text-success">Unique id</b></div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>images</code></td>
-          <td>
-            <div><i>Value: </i><code>Image[]</code></div>
-            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
-          </td>
-        </tr>
+      <tr>
+        <td><code>id</code></td>
+        <td>
+          <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+          <div><b class="text-success">Unique id</b></div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>images</code></td>
+        <td>
+          <div><i>Value: </i><code>Image[]</code></div>
+          <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </section>

@@ -33,9 +33,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-carousel-custom-previews-page',
-    templateUrl: 'carousel-custom-previews.html',
-    imports: [CarouselComponent, CodemirrorModule]
+  selector: 'app-carousel-custom-previews-page',
+  templateUrl: 'carousel-custom-previews.html',
+  imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselCustomPreviewsComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

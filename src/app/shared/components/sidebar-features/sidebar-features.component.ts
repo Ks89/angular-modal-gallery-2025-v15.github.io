@@ -26,9 +26,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-sidebar-features',
-    templateUrl: 'sidebar-features.html',
-    styleUrls: ['sidebar-features.scss'],
-    imports: [RouterLink]
+  selector: 'app-sidebar-features',
+  templateUrl: 'sidebar-features.html',
+  styleUrls: ['sidebar-features.scss'],
+  imports: [RouterLink]
 })
-export class SidebarFeaturesComponent {}
+export class SidebarFeaturesComponent {
+}

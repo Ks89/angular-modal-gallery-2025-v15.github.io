@@ -32,9 +32,9 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-carousel-lcp-page',
-    templateUrl: 'carousel-lcp.html',
-    imports: [CarouselComponent, CodemirrorModule]
+  selector: 'app-carousel-lcp-page',
+  templateUrl: 'carousel-lcp.html',
+  imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselLcpComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_SOURCES_ARRAY];

@@ -37,9 +37,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-accessibility-page',
-    templateUrl: 'accessibility.html',
-    imports: [CodemirrorModule]
+  selector: 'app-accessibility-page',
+  templateUrl: 'accessibility.html',
+  imports: [CodemirrorModule]
 })
 export class AccessibilityComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

@@ -23,15 +23,16 @@
  */
 
 import { Component, OnInit } from '@angular/core';
-import { Accordion, AccordionService } from '../../../core/services/services';
-import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
+import { Accordion, AccordionService } from '../../../core/services/services';
+import { NgOptimizedImage } from '@angular/common';
+
 @Component({
-    selector: 'app-sidebar-demo',
-    templateUrl: 'sidebar-demo.html',
-    styleUrls: ['sidebar-demo.scss'],
-    imports: [NgIf, RouterLink]
+  selector: 'app-sidebar-demo',
+  templateUrl: 'sidebar-demo.html',
+  styleUrls: ['sidebar-demo.scss'],
+  imports: [RouterLink, NgOptimizedImage]
 })
 export class SidebarDemoComponent implements OnInit {
   showCarousel = false;

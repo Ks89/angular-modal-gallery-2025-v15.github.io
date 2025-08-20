@@ -22,20 +22,23 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 
 import { AccordionService } from './core/services/services';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: 'app.component.html',
-    standalone: false
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  imports: [NavbarComponent, RouterOutlet, FooterComponent]
 })
 export class AppComponent implements OnInit {
   title = 'app';
 
-  constructor(private router: Router, private accordionService: AccordionService) {}
+  constructor(private router: Router, private accordionService: AccordionService) {
+  }
 
   ngOnInit(): void {
     // at every refresh of this app, remove the accordion state from local storage

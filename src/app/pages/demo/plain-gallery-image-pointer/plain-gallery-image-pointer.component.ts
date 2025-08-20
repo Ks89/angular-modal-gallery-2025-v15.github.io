@@ -28,22 +28,19 @@ import {
   Image,
   ModalGalleryRef,
   ModalGalleryService,
-  PlainGalleryConfig,
-  PlainGalleryStrategy
 } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { NgFor, NgIf } from '@angular/common';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-plain-gallery-image-pointer-page',
-    templateUrl: 'plain-gallery-image-pointer.html',
-    styleUrls: ['plain-gallery-image-pointer.scss'],
-    imports: [NgFor, NgIf, CodemirrorModule]
+  selector: 'app-plain-gallery-image-pointer-page',
+  templateUrl: 'plain-gallery-image-pointer.html',
+  styleUrls: ['plain-gallery-image-pointer.scss'],
+  imports: [CodemirrorModule]
 })
 export class PlainGalleryImagePointerComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
@@ -63,23 +60,25 @@ export class PlainGalleryImagePointerComponent implements OnInit {
 
     this.codeHtml =
       `<div class="my-app-custom-plain-container-row">
-  <ng-container *ngFor="let img of images; let i = index">
-    <div *ngIf="i <= 2">
-      <a class="more" *ngIf="i==2" (click)="openImageModalRow(205, img)"> +{{images.length - 2 - 1}} more </a>
-      <img *ngIf="img.plain && img.plain.img; else noThumb"
-           class="my-app-custom-image-row"
-           [src]="img.plain.img"
-           (click)="openImageModalRow(205, img)"
-           [alt]="img.modal.description"/>
-
-      <ng-template #noThumb>
-        <img class="my-app-custom-image-row"
-             [src]="img.modal.img"
-             (click)="openImageModalRow(205, img)"
-             [alt]="img.modal.description"/>
-      </ng-template>
-    </div>
-  </ng-container>
+    @for (img of images; track img.id; let i = $index) {
+      @if (i <= 2) {
+        <!-- 2 is a fixed value that I'm using to display only two images -->
+        @if (i == 2) {
+          <a class="more" (click)="openImageModalRow(205, img)"> +{{ images.length - 2 - 1 }} more </a>
+        }
+        @if (img.plain && img.plain.img) {
+          <img class="my-app-custom-image-row"
+               [src]="img.plain.img"
+               (click)="openImageModalRow(205, img)"
+               [alt]="img.modal.description"/>
+        } @else {
+          <img class="my-app-custom-image-row"
+               [src]="img.modal.img"
+               (click)="openImageModalRow(205, img)"
+               [alt]="img.modal.description"/>
+        }
+      }
+    }
 </div>`;
 
     this.codeTypescript = `

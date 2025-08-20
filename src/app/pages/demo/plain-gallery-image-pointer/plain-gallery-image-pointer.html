@@ -8,23 +8,25 @@
   <h3>Live Demo</h3>
   <br>
   <div class="my-app-custom-plain-container-row">
-    <ng-container *ngFor="let img of images; let i = index">
-      <div *ngIf="i <= 2"> <!-- 2 is a fixed value that I'm using to display only two images -->
-        <a class="more" *ngIf="i==2" (click)="openImageModalRow(205, img)"> +{{images.length - 2 - 1}} more </a>
-        <img *ngIf="img.plain && img.plain.img; else noThumb"
-             class="my-app-custom-image-row"
-             [src]="img.plain.img"
-             (click)="openImageModalRow(205, img)"
-             [alt]="img.modal.description"/>
-
-        <ng-template #noThumb>
+    @for (img of images; track img.id; let i = $index) {
+      @if (i <= 2) {
+        <!-- 2 is a fixed value that I'm using to display only two images -->
+        @if (i == 2) {
+          <a class="more" (click)="openImageModalRow(205, img)"> +{{ images.length - 2 - 1 }} more </a>
+        }
+        @if (img.plain && img.plain.img) {
+          <img class="my-app-custom-image-row"
+               [src]="img.plain.img"
+               (click)="openImageModalRow(205, img)"
+               [alt]="img.modal.description"/>
+        } @else {
           <img class="my-app-custom-image-row"
                [src]="img.modal.img"
                (click)="openImageModalRow(205, img)"
                [alt]="img.modal.description"/>
-        </ng-template>
-      </div>
-    </ng-container>
+        }
+      }
+    }
   </div>
   <br><br>
 
@@ -51,26 +53,26 @@
     <br>
     <table class="table table-hover table-sm">
       <thead>
-        <tr>
-          <th>Input (.html)</th>
-          <th>Value (.ts)</th>
-        </tr>
+      <tr>
+        <th>Input (.html)</th>
+        <th>Value (.ts)</th>
+      </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><code>id</code></td>
-          <td>
-            <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
-            <div><b class="text-success">Unique id</b></div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>images</code></td>
-          <td>
-            <div><i>Value: </i><code>Image[]</code></div>
-            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
-          </td>
-        </tr>
+      <tr>
+        <td><code>id</code></td>
+        <td>
+          <div><i>Value: </i><code>NUMERIC UNIQUE ID</code></div>
+          <div><b class="text-success">Unique id</b></div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>images</code></td>
+        <td>
+          <div><i>Value: </i><code>Image[]</code></div>
+          <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </section>

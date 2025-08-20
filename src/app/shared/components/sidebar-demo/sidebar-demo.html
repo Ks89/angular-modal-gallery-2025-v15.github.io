@@ -2,10 +2,10 @@
   <h4>Examples</h4>
   <div class="menu-secondary">
     <div class="menu-title" (click)="onModalClick()">
-      <img src="./assets/up-chevron.svg" width="14" height="auto" [style.transform]="getModalClick()">
+      <img ngSrc="./assets/up-chevron.svg" width="14" height="7" [style.transform]="getModalClick()" alt="expand">
       <h5>Modal</h5>
     </div>
-    <ng-container *ngIf="showModal">
+    @if (showModal) {
       <h6 [routerLink]="['/demo/array-simple']">Minimal example</h6>
       <h6 [routerLink]="['/demo/output-events']">Output Events</h6>
       <h6 [routerLink]="['/demo/add-image-array']">Add image Array</h6>
@@ -49,26 +49,26 @@
 
       <h6 [routerLink]="['/demo/autoplay-minimal']">Autoplay minimal</h6>
       <h6 [routerLink]="['/demo/autoplay-custom']">Autoplay custom</h6>
-    </ng-container>
+    }
   </div>
   <div class="menu-secondary">
     <div class="menu-title" (click)="onPlainClick()">
-      <img src="./assets/up-chevron.svg" width="14" height="auto" [style.transform]="getPlainClick()">
+      <img ngSrc="./assets/up-chevron.svg" width="14" height="7" [style.transform]="getPlainClick()" alt="expand">
       <h5>Plain</h5>
     </div>
-    <ng-container *ngIf="showPlain">
+    @if (showPlain) {
       <h6 [routerLink]="['/demo/plain-layouts']">Plain layouts</h6>
       <h6 [routerLink]="['/demo/plain-atags']">Plain &lt;a&gt; tags</h6>
       <h6 [routerLink]="['/demo/plain-image-pointer']">Plain image pointer</h6>
       <h6 [routerLink]="['/demo/plain-custom-desc']">Plain custom with description</h6>
-    </ng-container>
+    }
   </div>
   <div class="menu-secondary">
     <div class="menu-title" (click)="onCarouselClick()">
-      <img src="./assets/up-chevron.svg" width="14" height="auto" [style.transform]="getCarouselClick()">
+      <img ngSrc="./assets/up-chevron.svg" width="14" height="7" [style.transform]="getCarouselClick()" alt="expand">
       <h5>Carousel</h5>
     </div>
-    <ng-container *ngIf="showCarousel">
+    @if (showCarousel) {
       <h6 [routerLink]="['/demo/carousel']">Carousel minimal</h6>
       <h6 [routerLink]="['/demo/carousel-content-projection']">Carousel content projection</h6>
       <h6 [routerLink]="['/demo/carousel-features-disable']">Carousel disable features</h6>
@@ -81,6 +81,6 @@
       <h6 [routerLink]="['/demo/carousel-outputs']">Carousel outputs</h6>
       <h6 [routerLink]="['/demo/carousel-breakpoints']">Carousel breakpoints</h6>
       <h6 [routerLink]="['/demo/carousel-lcp']">Carousel lcp</h6>
-    </ng-container>
+    }
   </div>
 </nav>

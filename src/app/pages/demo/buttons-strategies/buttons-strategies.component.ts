@@ -42,9 +42,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-buttons-strategies-page',
-    templateUrl: 'buttons-strategies.html',
-    imports: [CodemirrorModule]
+  selector: 'app-buttons-strategies-page',
+  templateUrl: 'buttons-strategies.html',
+  imports: [CodemirrorModule]
 })
 export class ButtonsStrategiesComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

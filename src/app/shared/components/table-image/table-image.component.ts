@@ -23,18 +23,11 @@
  */
 
 import { Component } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
-    selector: 'app-table-image',
-    templateUrl: 'table-image.html',
-    styleUrls: ['table-image.scss']
+  selector: 'app-table-image',
+  templateUrl: 'table-image.html',
+  styleUrls: ['table-image.scss']
 })
 export class TableImageComponent {
-
-  constructor(private viewPortScroller: ViewportScroller) {}
-
-  onScrollTo(tag: string) {
-    this.viewPortScroller.scrollToAnchor(tag);
-  }
 }

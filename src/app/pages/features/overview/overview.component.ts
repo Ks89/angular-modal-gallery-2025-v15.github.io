@@ -32,10 +32,10 @@ import { RouterLink } from '@angular/router';
 const PATH = environment.imgPath;
 
 @Component({
-    selector: 'app-overview-page',
-    templateUrl: 'overview.html',
-    styleUrls: ['overview.scss'],
-    imports: [RouterLink]
+  selector: 'app-overview-page',
+  templateUrl: 'overview.html',
+  styleUrls: ['overview.scss'],
+  imports: [RouterLink]
 })
 export class OverviewComponent implements OnInit {
   modalGalleryPath: string = PATH + '/assets/modalgallery.svg';

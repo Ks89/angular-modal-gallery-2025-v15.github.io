@@ -41,9 +41,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-side-previews-hidden-page',
-    templateUrl: 'side-previews-hidden.html',
-    imports: [CodemirrorModule]
+  selector: 'app-side-previews-hidden-page',
+  templateUrl: 'side-previews-hidden.html',
+  imports: [CodemirrorModule]
 })
 export class SidePreviewsHiddenComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

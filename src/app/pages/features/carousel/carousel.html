@@ -19,7 +19,7 @@
   <h2>API</h2>
 
   <p>To add carousel in your application, you must add <code>&lt;ks-carousel&gt;&lt;/ks-carousel&gt;</code> in your component template file
-  and pass the two mandatory inputs id and images.</p>
+    and pass the two mandatory inputs id and images.</p>
   <p>The minimal carousel in your HTML file is:</p>
 
   <ks-codemirror [content]="codeHtml" [language]="'html'">
@@ -40,50 +40,50 @@
     <h2>Inputs</h2>
     <table class="table table-hover table-sm">
       <tbody>
-        <tr>
-          <td class="big-tds"><small><code>id</code></small></td>
-          <td>
-            <div>
-              <i>Type: </i><code>number</code>
-            </div>
-            <div>
-              A mandatory unique id >= 0 of the current carousel.
-              Despite CarouselComponent doesn't use this value, it must be unique because a carousel can open a modal image
-              using <code><a [routerLink]="['/features/modal-gallery']">ModalGalleryService</a></code>.
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds"><small><code>images</code></small></td>
-          <td>
-            <div>
-              <i>Type: </i><code><a [routerLink]="['/features/common']">Image[]</a></code>
-            </div>
-            <div>
-              <p> The mandatory array of <code><a [routerLink]="['/features/common']">Image</a></code> objects, that represent both the thumb gallery and the
-                modal images. In fact, an <code><a [routerLink]="['/features/common']">Image</a></code> is an object with both thumb and
-                image source paths with other additional configuration parameters. For more info check <code><a [routerLink]="['/features/common']">Image</a></code>.</p>
-              <p class="warning">Carousel uses the image path assigned to the modal property in Image class. This is for historical reason and to provide a better integration with modal-gallery.</p>
-              <p>Please, don't use <code>this.images.push(img)</code> when you want to modify this array, instead re-assign it to trigger change detection.
+      <tr>
+        <td class="big-tds"><small><code>id</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>number</code>
+          </div>
+          <div>
+            A mandatory unique id >= 0 of the current carousel.
+            Despite CarouselComponent doesn't use this value, it must be unique because a carousel can open a modal image
+            using <code><a [routerLink]="['/features/modal-gallery']">ModalGalleryService</a></code>.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="big-tds"><small><code>images</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code><a [routerLink]="['/features/common']">Image[]</a></code>
+          </div>
+          <div>
+            <p> The mandatory array of <code><a [routerLink]="['/features/common']">Image</a></code> objects, that represent both the thumb gallery and the
+              modal images. In fact, an <code><a [routerLink]="['/features/common']">Image</a></code> is an object with both thumb and
+              image source paths with other additional configuration parameters. For more info check <code><a [routerLink]="['/features/common']">Image</a></code>.</p>
+            <p class="warning">Carousel uses the image path assigned to the modal property in Image class. This is for historical reason and to provide a better integration with modal-gallery.</p>
+            <p>Please, don't use <code>this.images.push(img)</code> when you want to modify this array, instead re-assign it to trigger change detection.
               For instance: <code>this.images = [...this.images, newImage]</code> to create a new array from the original with a new image at the end.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
-              <small><code>config</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code>CarouselLibConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-            </div>
-            <div>
-              <p>Interface to configure carousel gallery.</p>
-            </div>
-          </td>
-        </tr>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="big-tds">
+          <div>
+            <small><code>config</code></small>
+          </div>
+        </td>
+        <td>
+          <div>
+            <i>Type: </i><code>CarouselLibConfig</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+          </div>
+          <div>
+            <p>Interface to configure carousel gallery.</p>
+          </div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -92,48 +92,51 @@
     <h2>Outputs</h2>
     <table class="table table-hover table-sm">
       <tbody>
-        <tr>
-          <td><small><code>changeImage</code></small></td>
-          <td>
-            <p>An <code>ImageEvent</code> right <b>after</b> the current image is changed.</p>
-            <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number).</p>
-            <p>Everytime the current image changes, a new <code>ImageEvent</code> will be emitted.</p>
-            <ul>
-              <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
-              <li>result: <code>number</code> (index of an image. Not the index of the array, but incremented by 1)</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>firstImage</code></small></td>
-          <td>
-            <p>An <code>ImageEvent</code> right <b>after</b> that the FIRST image in
-              <code>images</code> is visible.</p>
-            <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number)</p>
-            <ul>
-              <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
-              <li>result: <code>true</code></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>lastImage</code></small></td>
-          <td>
-            <p>An <code>ImageEvent</code> right <b>after</b> that the LAST image in
-              <code>images</code> is visible.</p>
-            <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number)</p>
-            <ul>
-              <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
-              <li>result: <code>true</code></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>clickImage</code></small></td>
-          <td>
-            <p>A <code>number</code> that represents the index of the clicked image to open modal-gallery (<code>modalGalleryEnable</code> in <code>CarouselConfig</code> must be <code>true</code>).</p>
-          </td>
-        </tr>
+      <tr>
+        <td><small><code>changeImage</code></small></td>
+        <td>
+          <p>An <code>ImageEvent</code> right <b>after</b> the current image is changed.</p>
+          <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number).</p>
+          <p>Everytime the current image changes, a new <code>ImageEvent</code> will be emitted.</p>
+          <ul>
+            <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a
+              [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
+            <li>result: <code>number</code> (index of an image. Not the index of the array, but incremented by 1)</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>firstImage</code></small></td>
+        <td>
+          <p>An <code>ImageEvent</code> right <b>after</b> that the FIRST image in
+            <code>images</code> is visible.</p>
+          <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number)</p>
+          <ul>
+            <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a
+              [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
+            <li>result: <code>true</code></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>lastImage</code></small></td>
+        <td>
+          <p>An <code>ImageEvent</code> right <b>after</b> that the LAST image in
+            <code>images</code> is visible.</p>
+          <p>It contains an <code><a [routerLink]="['/features/common']">Action</a></code> enum and a result (boolean or number)</p>
+          <ul>
+            <li>action: either <code><a [routerLink]="['/features/common']">Action.NORMAL</a></code>, <code><a [routerLink]="['/features/common']">Action.CLICK</a></code>, <code><a
+              [routerLink]="['/features/common']">Action.KEYBOARD</a></code> or <code><a [routerLink]="['/features/common']">Action.SWIPE</a></code></li>
+            <li>result: <code>true</code></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>clickImage</code></small></td>
+        <td>
+          <p>A <code>number</code> that represents the index of the clicked image to open modal-gallery (<code>modalGalleryEnable</code> in <code>CarouselConfig</code> must be <code>true</code>).</p>
+        </td>
+      </tr>
       </tbody>
     </table>
   </section>
@@ -151,74 +154,74 @@
   <br>
   <table class="table table-hover table-sm">
     <tbody>
-      <tr>
-        <td><small><code>maxWidth</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>string</code>
-          </div>
-          <div>
-            <p>Maximum width of the carousel. It's used to set the CSS property maxWidth. '100%' (full width) by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>maxHeight</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>string</code>
-          </div>
-          <div>
-            <p>Maximum height of the carousel. It's used to set the CSS property maxHeight. '400px%' by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>showArrows</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>boolean</code>
-          </div>
-          <div>
-            <p>boolean to disable both left and right arrows. true by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>objectFit</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>string</code>
-          </div>
-          <div>
-            <p>CSS objectFit property. For more information check
+    <tr>
+      <td><small><code>maxWidth</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>Maximum width of the carousel. It's used to set the CSS property maxWidth. '100%' (full width) by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>maxHeight</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>Maximum height of the carousel. It's used to set the CSS property maxHeight. '400px%' by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>showArrows</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>boolean to disable both left and right arrows. true by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>objectFit</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code>
+        </div>
+        <div>
+          <p>CSS objectFit property. For more information check
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">Mozilla MDN web doc</a>.
             'cover' by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>keyboardEnable</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>boolean</code>
-          </div>
-          <div>
-            <p>boolean to disable keyboard navigation. true by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>modalGalleryEnable</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>boolean</code>
-          </div>
-          <div>
-            <p>boolean to enable clicks on the current image to open modal gallery. false by default.</p>
-          </div>
-        </td>
-      </tr>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>keyboardEnable</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>boolean to disable keyboard navigation. true by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>modalGalleryEnable</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>boolean to enable clicks on the current image to open modal gallery. false by default.</p>
+        </div>
+      </td>
+    </tr>
     </tbody>
   </table>
 

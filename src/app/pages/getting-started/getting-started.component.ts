@@ -29,16 +29,17 @@ import { Router, RouterLink } from '@angular/router';
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
-    selector: 'app-getting-started-page',
-    templateUrl: 'getting-started.html',
-    styleUrls: ['getting-started.scss'],
-    imports: [RouterLink]
+  selector: 'app-getting-started-page',
+  templateUrl: 'getting-started.html',
+  styleUrls: ['getting-started.scss'],
+  imports: [RouterLink]
 })
 export class GettingStartedComponent implements OnInit {
 
   constructor(private uiService: UiService,
               private router: Router,
-              private viewPortScroller: ViewportScroller) {}
+              private viewPortScroller: ViewportScroller) {
+  }
 
   ngOnInit(): void {
     this.metaData();

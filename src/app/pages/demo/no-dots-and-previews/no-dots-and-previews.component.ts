@@ -41,9 +41,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-no-dots-and-previews-page',
-    templateUrl: 'no-dots-and-previews.html',
-    imports: [CodemirrorModule]
+  selector: 'app-no-dots-and-previews-page',
+  templateUrl: 'no-dots-and-previews.html',
+  imports: [CodemirrorModule]
 })
 export class NoDotsAndPreviewsComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

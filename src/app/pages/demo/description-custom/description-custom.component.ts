@@ -42,10 +42,10 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-description-custom-page',
-    templateUrl: 'description-custom.html',
-    styleUrls: ['description-custom.scss'],
-    imports: [CodemirrorModule]
+  selector: 'app-description-custom-page',
+  templateUrl: 'description-custom.html',
+  styleUrls: ['description-custom.scss'],
+  imports: [CodemirrorModule]
 })
 export class DescriptionCustomComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

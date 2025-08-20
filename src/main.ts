@@ -22,31 +22,10 @@
  * SOFTWARE.
  */
 
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
 
-import { hmrBootstrap } from './hmr';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
-
-if (environment.hmr) {
-  // @ts-ignore
-  if (module[ 'hot' ]) {
-    // @ts-ignore
-    hmrBootstrap(module, bootstrap);
-  } else {
-    console.error('HMR is not enabled for webpack-dev-server!');
-    console.log('Are you using the --hmr flag for ng serve?');
-  }
-} else {
-  document.addEventListener('DOMContentLoaded', () => {
-    bootstrap().catch(err => console.error(err));
-  });
-}
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

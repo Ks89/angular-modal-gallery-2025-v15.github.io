@@ -32,10 +32,10 @@ import { Image, CarouselComponent } from '@ks89/angular-modal-gallery';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-carousel-content-projection-page',
-    templateUrl: 'carousel-content-projection.html',
-    styleUrls: ['carousel-content-projection.scss'],
-    imports: [CarouselComponent, CodemirrorModule]
+  selector: 'app-carousel-content-projection-page',
+  templateUrl: 'carousel-content-projection.html',
+  styleUrls: ['carousel-content-projection.scss'],
+  imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselContentProjectionComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

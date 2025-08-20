@@ -31,7 +31,7 @@ import {
   ModalGalleryRef,
   ModalGalleryService,
   PreviewConfig,
-  ModalImage,
+  ModalImage
 } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
@@ -47,10 +47,10 @@ interface CustomModalImage extends ModalImage {
 }
 
 @Component({
-    selector: 'app-previews-template',
-    templateUrl: './previews-template-additional-data.component.html',
-    styleUrls: ['./previews-template-additional-data.component.scss'],
-    imports: [NgTemplateOutlet, CodemirrorModule, DatePipe]
+  selector: 'app-previews-template',
+  templateUrl: './previews-template-additional-data.component.html',
+  styleUrls: ['./previews-template-additional-data.component.scss'],
+  imports: [NgTemplateOutlet, CodemirrorModule, DatePipe]
 })
 export class PreviewsTemplateAdditionalDataComponent implements OnInit {
   @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;
@@ -110,7 +110,7 @@ export class MyComponent implements OnInit {
   ngOnInit(): void {
     // when creating the Image array, use the CustomModalImage structure
     // to add the picture-specific data
-    this.images.push(new Image( 
+    this.images.push(new Image(
       imageId,
       {
         img: imageUrl,
@@ -120,8 +120,8 @@ export class MyComponent implements OnInit {
       // Thumbnail (aka 'plain' image)
       {
         img: thumbUrl,
-      } as PlainImage,    
-    );    
+      } as PlainImage,
+    );
   }
 
   openModal(id: number, imageIndex: number): void {
@@ -138,24 +138,24 @@ export class MyComponent implements OnInit {
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 }`;
-  const IMAGES_DATES = [
-    new Date(2022, 1, 13, 14, 15),
-    new Date(2022, 1, 15, 16, 30),
-    new Date(2022, 1, 16, 11, 0),
-    new Date(2022, 1, 20, 14, 15),
-    new Date(2022, 2, 2, 17, 0),
-    new Date(2022, 2, 10, 18, 0),
-    new Date(2022, 2, 13, 9, 0),
-    new Date(2022, 3, 3, 9, 30),
-  ];
+    const IMAGES_DATES = [
+      new Date(2022, 1, 13, 14, 15),
+      new Date(2022, 1, 15, 16, 30),
+      new Date(2022, 1, 16, 11, 0),
+      new Date(2022, 1, 20, 14, 15),
+      new Date(2022, 2, 2, 17, 0),
+      new Date(2022, 2, 10, 18, 0),
+      new Date(2022, 2, 13, 9, 0),
+      new Date(2022, 3, 3, 9, 30)
+    ];
 
-  this.images = IMAGES_ARRAY.map( (image, index) => {
-    return new Image(
-      image.id,
-      Object.assign({}, image.modal, { pictureDate: IMAGES_DATES[index]} ) as CustomModalImage,
-      image.plain,
-    )
-  })
+    this.images = IMAGES_ARRAY.map((image, index) => {
+      return new Image(
+        image.id,
+        Object.assign({}, image.modal, {pictureDate: IMAGES_DATES[index]}) as CustomModalImage,
+        image.plain
+      );
+    });
 
   }
 
@@ -170,10 +170,10 @@ export class MyComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         previewConfig: {
-          visible: true,
+          visible: true
         } as PreviewConfig
       } as PlainLibConfig,
-      previewsTemplate: this.previewsTemplate,
+      previewsTemplate: this.previewsTemplate
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

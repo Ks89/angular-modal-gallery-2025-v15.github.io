@@ -43,7 +43,7 @@ export class AccordionService {
 
   getAccordion(): Accordion | undefined {
     try {
-      return <Accordion>JSON.parse(getToken() as string);
+      return <Accordion> JSON.parse(getToken() as string);
     } catch {
       return undefined;
     }

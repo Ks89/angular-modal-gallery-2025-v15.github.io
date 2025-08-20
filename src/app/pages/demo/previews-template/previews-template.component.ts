@@ -30,7 +30,7 @@ import {
   ModalGalleryConfig,
   ModalGalleryRef,
   ModalGalleryService,
-  PreviewConfig,
+  PreviewConfig
 } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../../../shared/images';
@@ -41,10 +41,10 @@ import { NgTemplateOutlet } from '@angular/common';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-previews-template',
-    templateUrl: './previews-template.component.html',
-    styleUrls: ['./previews-template.component.scss'],
-    imports: [NgTemplateOutlet, CodemirrorModule]
+  selector: 'app-previews-template',
+  templateUrl: './previews-template.component.html',
+  styleUrls: ['./previews-template.component.scss'],
+  imports: [NgTemplateOutlet, CodemirrorModule]
 })
 export class PreviewsTemplateComponent implements OnInit {
   @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;
@@ -117,10 +117,10 @@ export class PreviewsTemplateComponent implements OnInit {
       currentImage: this.images[imageIndex],
       libConfig: {
         previewConfig: {
-          visible: true,
+          visible: true
         } as PreviewConfig
       } as PlainLibConfig,
-      previewsTemplate: this.previewsTemplate,
+      previewsTemplate: this.previewsTemplate
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

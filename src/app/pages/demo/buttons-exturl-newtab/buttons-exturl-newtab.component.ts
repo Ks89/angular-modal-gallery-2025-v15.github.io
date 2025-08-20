@@ -41,9 +41,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-buttons-exturl-newtab-page',
-    templateUrl: 'buttons-exturl-newtab.html',
-    imports: [CodemirrorModule]
+  selector: 'app-buttons-exturl-newtab-page',
+  templateUrl: 'buttons-exturl-newtab.html',
+  imports: [CodemirrorModule]
 })
 export class ButtonsExturlNewtabComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
@@ -114,7 +114,7 @@ export class ButtonsExturlNewtabComponent implements OnInit {
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 
-    metaData() {
+  metaData() {
     this.uiService.setMetaData({
       title: 'Demo buttons exturl newtab'
     } as Metadata);

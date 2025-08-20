@@ -36,10 +36,10 @@ import { TableLibconfigComponent } from '../../../shared/components/table-libcon
 import { TableImageComponent } from '../../../shared/components/table-image/table-image.component';
 
 @Component({
-    selector: 'app-modal-gallery-page',
-    templateUrl: 'modal-gallery.html',
-    styleUrls: ['modal-gallery.scss'],
-    imports: [RouterLink, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
+  selector: 'app-modal-gallery-page',
+  templateUrl: 'modal-gallery.html',
+  styleUrls: ['modal-gallery.scss'],
+  imports: [RouterLink, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
 })
 export class ModalGalleryComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

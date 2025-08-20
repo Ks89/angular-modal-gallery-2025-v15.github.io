@@ -41,9 +41,9 @@ import { Subscription } from 'rxjs';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-auto-close-and-auto-update-page',
-    templateUrl: 'auto-close-and-auto-update.html',
-    imports: [CodemirrorModule]
+  selector: 'app-auto-close-and-auto-update-page',
+  templateUrl: 'auto-close-and-auto-update.html',
+  imports: [CodemirrorModule]
 })
 export class AutoCloseAndAutoUpdateComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

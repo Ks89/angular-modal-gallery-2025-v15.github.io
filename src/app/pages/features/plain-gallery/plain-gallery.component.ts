@@ -35,10 +35,10 @@ import { TableLibconfigComponent } from '../../../shared/components/table-libcon
 import { TableImageComponent } from '../../../shared/components/table-image/table-image.component';
 
 @Component({
-    selector: 'app-plain-gallery-page',
-    templateUrl: 'plain-gallery.html',
-    styleUrls: ['plain-gallery.scss'],
-    imports: [PlainGalleryComponent_1, CodemirrorModule, RouterLink, TableLibconfigComponent, TableImageComponent]
+  selector: 'app-plain-gallery-page',
+  templateUrl: 'plain-gallery.html',
+  styleUrls: ['plain-gallery.scss'],
+  imports: [PlainGalleryComponent_1, CodemirrorModule, RouterLink, TableLibconfigComponent, TableImageComponent]
 })
 export class PlainGalleryComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

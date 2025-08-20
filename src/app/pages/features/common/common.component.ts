@@ -29,10 +29,10 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-common-page',
-    templateUrl: 'common.html',
-    styleUrls: ['common.scss'],
-    imports: [RouterLink]
+  selector: 'app-common-page',
+  templateUrl: 'common.html',
+  styleUrls: ['common.scss'],
+  imports: [RouterLink]
 })
 export class CommonComponent implements OnInit {
 

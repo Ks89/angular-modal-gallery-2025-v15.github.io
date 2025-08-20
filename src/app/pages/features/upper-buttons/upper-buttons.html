@@ -14,39 +14,39 @@
   <br>
   <table class="table table-hover table-sm">
     <tbody>
-      <tr>
-        <td><small><code>visible</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>boolean</code>
-          </div>
-          <div>
-            <p>If <code>false</code>, all buttons are hidden, otherwise not. true by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>strategy</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>ButtonsStrategy</code>
-          </div>
-          <div>
-            <p>Enum to decide which buttons are visible, based on some patterns (default, simple, advanced...). ButtonsStrategy.DEFAULT by default.</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>buttons</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>ButtonConfig[]</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-            <p>If you choose <code>ButtonsStrategy.CUSTOM</code> you can add your buttons to this array</p>
-          </div>
-        </td>
-      </tr>
+    <tr>
+      <td><small><code>visible</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code>
+        </div>
+        <div>
+          <p>If <code>false</code>, all buttons are hidden, otherwise not. true by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>strategy</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>ButtonsStrategy</code>
+        </div>
+        <div>
+          <p>Enum to decide which buttons are visible, based on some patterns (default, simple, advanced...). ButtonsStrategy.DEFAULT by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>buttons</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>ButtonConfig[]</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>If you choose <code>ButtonsStrategy.CUSTOM</code> you can add your buttons to this array</p>
+        </div>
+      </td>
+    </tr>
     </tbody>
   </table>
 
@@ -115,86 +115,86 @@
   <br>
   <table class="table table-hover table-sm">
     <tbody>
-      <tr>
-        <td><small><code>className</code></small></td>
-        <td>
-          <div>
-           <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-           <p>To specify the css class name with the icon (for instance, with Font Awesome, you can use 'fa fa-close')</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>size</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>Size</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-           <p>To choose the size of the button (if you are using fonts as icons please check 'fontSize').
-             <code>width: 30px</code> and <code>height auto</code> by default</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>fontSize</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-            <p>To specify the size of the font ('font-size' css property) if you are using a font as icon (for instance, with Font Awesome)</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>type</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>ButtonType</code>
-          </div>
-          <div>
-            <p>Enum to specify the type of the button. If you want to create a custom button, use <code>ButtonType.CUSTOM</code></p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>title</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-            <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
-              To ignore this feature, don't add this property</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>arialLabel</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-            <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
-              To ignore this feature, don't add this property</p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td><small><code>extUrlInNewTab</code></small></td>
-        <td>
-          <div>
-            <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
-          </div>
-          <div>
-            <p>To open in a new tab (instead of the current one) the url specified in extUrl property</p>
-          </div>
-        </td>
-      </tr>
+    <tr>
+      <td><small><code>className</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>To specify the css class name with the icon (for instance, with Font Awesome, you can use 'fa fa-close')</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>size</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>Size</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>To choose the size of the button (if you are using fonts as icons please check 'fontSize').
+            <code>width: 30px</code> and <code>height auto</code> by default</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>fontSize</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>To specify the size of the font ('font-size' css property) if you are using a font as icon (for instance, with Font Awesome)</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>type</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>ButtonType</code>
+        </div>
+        <div>
+          <p>Enum to specify the type of the button. If you want to create a custom button, use <code>ButtonType.CUSTOM</code></p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>title</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
+            To ignore this feature, don't add this property</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>arialLabel</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
+            To ignore this feature, don't add this property</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><small><code>extUrlInNewTab</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code><span class="badge rounded-pill bg-secondary float-end">optional</span>
+        </div>
+        <div>
+          <p>To open in a new tab (instead of the current one) the url specified in extUrl property</p>
+        </div>
+      </td>
+    </tr>
 
     </tbody>
   </table>

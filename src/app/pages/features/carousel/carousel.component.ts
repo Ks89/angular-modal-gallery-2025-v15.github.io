@@ -24,7 +24,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { Image, CarouselComponent as CarouselComponent_1 } from '@ks89/angular-modal-gallery';
+import { Image, CarouselComponent as CarouselComponentLib } from '@ks89/angular-modal-gallery';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -36,10 +36,10 @@ import { TableLibconfigComponent } from '../../../shared/components/table-libcon
 import { TableImageComponent } from '../../../shared/components/table-image/table-image.component';
 
 @Component({
-    selector: 'app-carousel-page',
-    templateUrl: 'carousel.html',
-    styleUrls: ['carousel.scss'],
-    imports: [RouterLink, CarouselComponent_1, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
+  selector: 'app-carousel-page',
+  templateUrl: 'carousel.html',
+  styleUrls: ['carousel.scss'],
+  imports: [RouterLink, CarouselComponentLib, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
 })
 export class CarouselComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];
@@ -58,7 +58,7 @@ export class CarouselComponent implements OnInit {
       `  <ks-carousel [id]="100" [images]="images"></ks-carousel>`;
 
     this.codeTypescript =
-`  images: Image[] = [
+      `  images: Image[] = [
      new Image(0, {
         img: '../assets/img1.jpg'
       })

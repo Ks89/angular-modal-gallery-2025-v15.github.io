@@ -33,9 +33,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-add-image-array-page',
-    templateUrl: 'add-image-array.html',
-    imports: [CodemirrorModule]
+  selector: 'app-add-image-array-page',
+  templateUrl: 'add-image-array.html',
+  imports: [CodemirrorModule]
 })
 export class AddImageArrayComponent implements OnInit {
 

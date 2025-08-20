@@ -42,9 +42,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-loading-spinner-disable-page',
-    templateUrl: 'loading-spinner-disable.html',
-    imports: [CodemirrorModule]
+  selector: 'app-loading-spinner-disable-page',
+  templateUrl: 'loading-spinner-disable.html',
+  imports: [CodemirrorModule]
 })
 export class LoadingSpinnerDisableComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

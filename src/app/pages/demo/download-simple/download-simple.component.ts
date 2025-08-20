@@ -38,9 +38,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-download-simple-page',
-    templateUrl: 'download-simple.html',
-    imports: [CodemirrorModule]
+  selector: 'app-download-simple-page',
+  templateUrl: 'download-simple.html',
+  imports: [CodemirrorModule]
 })
 export class DownloadSimpleComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

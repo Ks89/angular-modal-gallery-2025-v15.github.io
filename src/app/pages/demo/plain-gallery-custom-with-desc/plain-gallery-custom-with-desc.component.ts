@@ -34,14 +34,13 @@ import { IMAGES_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 import { Metadata, UiService } from '../../../core/services/ui.service';
-import { NgFor } from '@angular/common';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-plain-gallery-custom-with-desc-page',
-    templateUrl: 'plain-gallery-custom-with-desc.html',
-    styleUrls: ['plain-gallery-custom-with-desc.scss'],
-    imports: [NgFor, CodemirrorModule]
+  selector: 'app-plain-gallery-custom-with-desc-page',
+  templateUrl: 'plain-gallery-custom-with-desc.html',
+  styleUrls: ['plain-gallery-custom-with-desc.scss'],
+  imports: [CodemirrorModule]
 })
 export class PlainGalleryCustomWithDescComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
@@ -60,14 +59,14 @@ export class PlainGalleryCustomWithDescComponent implements OnInit {
 
     this.codeHtml =
       `<div class="my-app-custom-plain-container-with-desc">
-    <ng-container *ngFor="let img of images">
+    @for (img of images; track img.id) {
       <figure class="my-app-custom-image-with-desc">
         <img [src]="img.modal.img"
              (click)="openImageModalRowDescription(206, img)"/>
-        <figcaption class="description">{{img.modal.description ? img.modal.description : 'No description available'}}
+        <figcaption class="description">{{ img.modal.description ? img.modal.description : 'No description available' }}
         </figcaption>
       </figure>
-    </ng-container>
+    }
   </div>
 `;
 

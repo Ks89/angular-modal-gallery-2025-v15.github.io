@@ -22,38 +22,23 @@
  * SOFTWARE.
  */
 
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { GettingStartedComponent } from './pages/getting-started/getting-started.component';
+import { routes as featuresRoutes } from './pages/features/features.routes';
+import { routes as demoRoutes } from './pages/demo/demo.routes';
 import { MigrationComponent } from './pages/migration/migration.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'getting-started', component: GettingStartedComponent},
-
-  { path: 'features', loadChildren: () => import('./pages/features/features.module').then(m => m.FeaturesModule) },
-
-  { path: 'demo', loadChildren: () => import('./pages/demo/demo.module').then(m => m.DemoModule) },
-
+  {path: 'features', children: featuresRoutes},
+  {path: 'demo', children: demoRoutes},
   {path: 'migration', component: MigrationComponent},
-
   {path: 'about', component: AboutComponent},
-
   {path: '**', component: NotFoundComponent}
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    // always scroll on top when navigating
-    scrollPositionRestoration: 'top',
-    useHash: !Boolean(history.pushState),
-    preloadingStrategy: PreloadAllModules
-})],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}

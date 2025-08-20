@@ -23,24 +23,16 @@
  */
 
 import { Component, Input } from '@angular/core';
-import { ViewportScroller, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-table-libconfig',
-    templateUrl: 'table-libconfig.html',
-    styleUrls: ['table-libconfig.scss'],
-    imports: [NgIf, RouterLink]
+  selector: 'app-table-libconfig',
+  templateUrl: 'table-libconfig.html',
+  styleUrls: ['table-libconfig.scss'],
+  imports: [RouterLink]
 })
 export class TableLibconfigComponent {
-
   @Input() showModalGallery = true;
   @Input() showPlainGallery = true;
   @Input() showCarousel = true;
-
-  constructor(private viewPortScroller: ViewportScroller) {}
-
-  onScrollTo(tag: string) {
-    this.viewPortScroller.scrollToAnchor(tag);
-  }
 }

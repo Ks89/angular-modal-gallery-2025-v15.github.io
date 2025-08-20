@@ -23,16 +23,16 @@
  */
 
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 import { TitleService } from '../../core/services/title.service';
 import { SidebarDemoComponent } from '../../shared/components/sidebar-demo/sidebar-demo.component';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-demo-page',
-    templateUrl: 'demo.html',
-    styleUrls: ['demo.scss'],
-    imports: [SidebarDemoComponent, RouterOutlet]
+  selector: 'app-demo-page',
+  templateUrl: 'demo.html',
+  styleUrls: ['demo.scss'],
+  imports: [SidebarDemoComponent, RouterOutlet]
 })
 export class DemoComponent {
 

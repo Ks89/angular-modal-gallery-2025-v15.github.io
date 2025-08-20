@@ -40,9 +40,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-previews-length-page',
-    templateUrl: 'previews-length.html',
-    imports: [CodemirrorModule]
+  selector: 'app-previews-length-page',
+  templateUrl: 'previews-length.html',
+  imports: [CodemirrorModule]
 })
 export class PreviewsLengthComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

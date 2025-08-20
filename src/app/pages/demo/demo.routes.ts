@@ -1,4 +1,4 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { ArraySimpleComponent } from './array-simple/array-simple.component';
 import { DemoComponent } from './demo.component';
@@ -114,9 +114,7 @@ export const routes: Routes = [
       {path: 'carousel-with-description', component: CarouselWithDescriptionComponent},
       {path: 'carousel-outputs', component: CarouselOutputsComponent},
       {path: 'carousel-breakpoints', component: CarouselBreakpointsComponent},
-      {path: 'carousel-lcp', component: CarouselLcpComponent},
+      {path: 'carousel-lcp', component: CarouselLcpComponent}
     ]
   }
 ];
-
-export const routing = RouterModule.forChild(routes);

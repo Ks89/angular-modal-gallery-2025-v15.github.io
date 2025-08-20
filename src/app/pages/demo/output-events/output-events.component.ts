@@ -43,10 +43,10 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 import { JsonPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-output-events-page',
-    templateUrl: 'output-events.html',
-    styleUrls: ['output-events.scss'],
-    imports: [CodemirrorModule, JsonPipe]
+  selector: 'app-output-events-page',
+  templateUrl: 'output-events.html',
+  styleUrls: ['output-events.scss'],
+  imports: [CodemirrorModule, JsonPipe]
 })
 export class OutputEventsComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

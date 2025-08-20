@@ -33,9 +33,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-fixed-width-page',
-    templateUrl: 'carousel-fixed.html',
-    imports: [CarouselComponent, CodemirrorModule]
+  selector: 'app-fixed-width-page',
+  templateUrl: 'carousel-fixed.html',
+  imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselFixedComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

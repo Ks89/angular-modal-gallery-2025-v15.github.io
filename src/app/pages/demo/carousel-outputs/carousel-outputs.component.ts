@@ -32,9 +32,9 @@ import { Image, ImageEvent, CarouselComponent } from '@ks89/angular-modal-galler
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-carousel-outputs-page',
-    templateUrl: 'carousel-outputs.html',
-    imports: [CarouselComponent, CodemirrorModule]
+  selector: 'app-carousel-outputs-page',
+  templateUrl: 'carousel-outputs.html',
+  imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselOutputsComponent implements OnInit {
   images: Image[] = [...IMAGES_RECT_ARRAY];

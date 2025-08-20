@@ -25,16 +25,19 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
+
 import { environment } from '../../../../environments/environment';
-import { NgIf } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 const PATH = environment.imgPath;
 
 @Component({
-    selector: 'app-navbar',
-    templateUrl: 'navbar.html',
-    styleUrls: ['navbar.scss'],
-    imports: [NgIf]
+  selector: 'app-navbar',
+  templateUrl: 'navbar.html',
+  imports: [
+    NgOptimizedImage
+  ],
+  styleUrls: ['navbar.scss']
 })
 export class NavbarComponent {
   navbarHeight = '56px';
@@ -43,7 +46,7 @@ export class NavbarComponent {
   collapsed = false;
 
   constructor(private router: Router, breakpointObserver: BreakpointObserver) {
-    breakpointObserver.observe( ['(min-width: 990px)'])
+    breakpointObserver.observe(['(min-width: 990px)'])
       .subscribe(result => {
         if (result.matches) {
           console.log('min width 990px');

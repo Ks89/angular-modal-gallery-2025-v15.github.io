@@ -37,9 +37,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-same-images-page',
-    templateUrl: 'same-images.html',
-    imports: [CodemirrorModule]
+  selector: 'app-same-images-page',
+  templateUrl: 'same-images.html',
+  imports: [CodemirrorModule]
 })
 export class SameImagesComponent implements OnInit {
   images: Image[] = [...SAME_IMAGES];

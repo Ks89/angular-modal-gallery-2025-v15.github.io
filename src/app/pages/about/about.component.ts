@@ -27,14 +27,15 @@ import { Component, OnInit } from '@angular/core';
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
-    selector: 'app-about-page',
-    templateUrl: 'about.html',
-    styleUrls: ['about.scss']
+  selector: 'app-about-page',
+  templateUrl: 'about.html',
+  styleUrls: ['about.scss']
 })
 
 export class AboutComponent implements OnInit {
 
-  constructor(private uiService: UiService) {}
+  constructor(private uiService: UiService) {
+  }
 
   ngOnInit(): void {
     this.metaData();

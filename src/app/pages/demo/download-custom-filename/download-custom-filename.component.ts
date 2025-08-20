@@ -42,9 +42,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-download-custom-filename-page',
-    templateUrl: 'download-custom-filename.html',
-    imports: [CodemirrorModule]
+  selector: 'app-download-custom-filename-page',
+  templateUrl: 'download-custom-filename.html',
+  imports: [CodemirrorModule]
 })
 export class DownloadCustomFilenameComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY].map(image => {

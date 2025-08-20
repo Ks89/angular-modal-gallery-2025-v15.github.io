@@ -40,9 +40,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-loading-spinner-type-page',
-    templateUrl: 'loading-spinner-type.html',
-    imports: [CodemirrorModule]
+  selector: 'app-loading-spinner-type-page',
+  templateUrl: 'loading-spinner-type.html',
+  imports: [CodemirrorModule]
 })
 export class LoadingSpinnerTypeComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

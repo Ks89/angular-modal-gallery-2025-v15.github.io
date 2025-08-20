@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { ModalGalleryComponent } from './modal-gallery/modal-gallery.component';
 import { FeaturesComponent } from './features.component';
@@ -12,20 +12,19 @@ import { CommonComponent } from './common/common.component';
 import { DescriptionComponent } from './description/description.component';
 
 export const routes: Routes = [
-  { path: '',
+  {
+    path: '',
     component: FeaturesComponent,
     children: [
-      { path: '',                        component: OverviewComponent },
-      { path: 'common',                  component: CommonComponent },
-      { path: 'description',             component: DescriptionComponent },
-      { path: 'accessibility',           component: AccessibilityComponent },
-      { path: 'modal-gallery',           component: ModalGalleryComponent },
-      { path: 'plain-gallery',           component: PlainGalleryComponent },
-      { path: 'carousel',                component: CarouselComponent },
-      { path: 'previews',                component: PreviewsComponent },
-      { path: 'upper-buttons',           component: UpperButtonsComponent }
+      {path: '', component: OverviewComponent},
+      {path: 'common', component: CommonComponent},
+      {path: 'description', component: DescriptionComponent},
+      {path: 'accessibility', component: AccessibilityComponent},
+      {path: 'modal-gallery', component: ModalGalleryComponent},
+      {path: 'plain-gallery', component: PlainGalleryComponent},
+      {path: 'carousel', component: CarouselComponent},
+      {path: 'previews', component: PreviewsComponent},
+      {path: 'upper-buttons', component: UpperButtonsComponent}
     ]
   }
 ];
-
-export const routing = RouterModule.forChild(routes);

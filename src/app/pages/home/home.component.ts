@@ -34,9 +34,9 @@ import { RouterLink } from '@angular/router';
 const PATH = environment.imgPath;
 
 @Component({
-    selector: 'app-home-page',
-    templateUrl: 'home.html',
-    imports: [IntroHeaderComponent, RouterLink, PlainGalleryComponent]
+  selector: 'app-home-page',
+  templateUrl: 'home.html',
+  imports: [IntroHeaderComponent, RouterLink, PlainGalleryComponent]
 })
 export class HomeComponent implements OnInit {
 
@@ -76,7 +76,8 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor(private uiService: UiService,
-              private modalGalleryService: ModalGalleryService) {}
+              private modalGalleryService: ModalGalleryService) {
+  }
 
   ngOnInit(): void {
     this.metaData();
@@ -91,7 +92,7 @@ export class HomeComponent implements OnInit {
   }
 
   metaData() {
-    this.uiService.setMetaData( {
+    this.uiService.setMetaData({
       title: 'Home'
     } as Metadata);
   }

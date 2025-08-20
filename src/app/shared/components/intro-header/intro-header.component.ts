@@ -23,17 +23,17 @@
  */
 
 import { Component } from '@angular/core';
-
-import { environment } from '../../../../environments/environment';
 import { RouterLink } from '@angular/router';
+
+import { environment } from '../../../../environments/environment';
 
 const PATH = environment.imgPath;
 
 @Component({
-    selector: 'app-intro-header',
-    templateUrl: 'intro-header.html',
-    styleUrls: ['intro-header.scss'],
-    imports: [RouterLink]
+  selector: 'app-intro-header',
+  templateUrl: 'intro-header.html',
+  styleUrls: ['intro-header.scss'],
+  imports: [RouterLink]
 })
 export class IntroHeaderComponent {
 

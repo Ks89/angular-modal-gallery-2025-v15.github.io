@@ -43,9 +43,9 @@ import { Subscription } from 'rxjs';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-buttons-custom-fa-page',
-    templateUrl: 'buttons-custom-fa.html',
-    imports: [CodemirrorModule]
+  selector: 'app-buttons-custom-fa-page',
+  templateUrl: 'buttons-custom-fa.html',
+  imports: [CodemirrorModule]
 })
 export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
   images: Image[] = [...IMAGES_ARRAY];

@@ -27,12 +27,13 @@ import { Component, OnInit } from '@angular/core';
 import { Metadata, UiService } from '../../core/services/ui.service';
 
 @Component({
-    selector: 'app-migration-page',
-    templateUrl: 'migration.html',
-    styleUrls: ['migration.scss']
+  selector: 'app-migration-page',
+  templateUrl: 'migration.html',
+  styleUrls: ['migration.scss']
 })
 export class MigrationComponent implements OnInit {
-  constructor(private uiService: UiService) {}
+  constructor(private uiService: UiService) {
+  }
 
   ngOnInit(): void {
     this.metaData();

@@ -41,9 +41,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-modal-autoplay-minimal-page',
-    templateUrl: 'modal-autoplay-custom.html',
-    imports: [CodemirrorModule]
+  selector: 'app-modal-autoplay-minimal-page',
+  templateUrl: 'modal-autoplay-custom.html',
+  imports: [CodemirrorModule]
 })
 export class ModalAutoplayCustomComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

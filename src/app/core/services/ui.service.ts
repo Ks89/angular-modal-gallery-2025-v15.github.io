@@ -51,9 +51,9 @@ export class UiService {
     const title = config.title
       ? `${this.appTitle} - ${config.title}`
       : this.appTitle;
-    const url = config.url || 'https://www.stefanocappa.it/amg/v7';
+    const url = config.url || 'https://github.com/Ks89/angular-modal-gallery';
     const twitterProfile = '@ksks89';
-    const mainWebsite = 'www.stefanocappa.it';
+    const mainWebsite = 'https://github.com/Ks89';
 
     this.title.setTitle(title);
 

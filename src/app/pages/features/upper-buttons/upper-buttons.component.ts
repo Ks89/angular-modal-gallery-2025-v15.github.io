@@ -29,10 +29,10 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-upper-buttons-page',
-    templateUrl: 'upper-buttons.html',
-    styleUrls: ['upper-buttons.scss'],
-    imports: [RouterLink]
+  selector: 'app-upper-buttons-page',
+  templateUrl: 'upper-buttons.html',
+  styleUrls: ['upper-buttons.scss'],
+  imports: [RouterLink]
 })
 export class UpperButtonsComponent implements OnInit {
   constructor(private uiService: UiService,

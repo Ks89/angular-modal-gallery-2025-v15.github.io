@@ -40,9 +40,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-infinite-sliding-page',
-    templateUrl: 'infinite-sliding.html',
-    imports: [CodemirrorModule]
+  selector: 'app-infinite-sliding-page',
+  templateUrl: 'infinite-sliding.html',
+  imports: [CodemirrorModule]
 })
 export class InfiniteSlidingComponent implements OnInit {
 

@@ -37,9 +37,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-previews-not-clickable-page',
-    templateUrl: 'previews-not-clickable.html',
-    imports: [CodemirrorModule]
+  selector: 'app-previews-not-clickable-page',
+  templateUrl: 'previews-not-clickable.html',
+  imports: [CodemirrorModule]
 })
 export class PreviewsNotClickableComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];

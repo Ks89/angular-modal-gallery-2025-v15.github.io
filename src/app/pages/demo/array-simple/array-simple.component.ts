@@ -33,9 +33,9 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
 import { CodemirrorModule } from '@ks89/ngx-codemirror6';
 
 @Component({
-    selector: 'app-array-simple-page',
-    templateUrl: 'array-simple.html',
-    imports: [CodemirrorModule]
+  selector: 'app-array-simple-page',
+  templateUrl: 'array-simple.html',
+  imports: [CodemirrorModule]
 })
 export class ArraySimpleComponent implements OnInit {
   images: Image[] = [...IMAGES_ARRAY];
