@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, inject, viewChild } from '@angular/core';
 
 import {
   Image,
@@ -53,7 +53,11 @@ interface CustomModalImage extends ModalImage {
   imports: [NgTemplateOutlet, CodemirrorModule, DatePipe]
 })
 export class PreviewsTemplateAdditionalDataComponent implements OnInit {
-  @ViewChild('previewsTemplate') previewsTemplate?: TemplateRef<HTMLElement>;
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
+
+  readonly previewsTemplate = viewChild<TemplateRef<HTMLElement>>('previewsTemplate');
 
   images: Image[];
 
@@ -64,9 +68,7 @@ export class PreviewsTemplateAdditionalDataComponent implements OnInit {
   codeCss: string;
   codeTypescript: string;
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
 
     this.titleService.titleEvent.emit('Examples - Previews custom template');
 
@@ -173,7 +175,7 @@ export class MyComponent implements OnInit {
           visible: true
         } as PreviewConfig
       } as PlainLibConfig,
-      previewsTemplate: this.previewsTemplate
+      previewsTemplate: this.previewsTemplate()
     } as ModalGalleryConfig) as ModalGalleryRef;
   }
 

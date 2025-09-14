@@ -9,19 +9,17 @@
   <br>
   <ks-plain-gallery [id]="204" [images]="images"
                     [config]="libConfigPlainGalleryRowATags"
-                    (clickImage)="onShow(204, $event)"></ks-plain-gallery>
+                    (clickImage)="onShow(204, $event)" />
   <br><br>
 
   <section>
     <h3>Code</h3>
     <br>
     <h4>Template</h4>
-    <ks-codemirror [content]="codeHtml" [language]="'html'">
-    </ks-codemirror>
+    <ks-codemirror [content]="codeHtml" [language]="'html'" />
     <br>
     <h4>Typescript</h4>
-    <ks-codemirror [content]="codeTypescript" [language]="'typescript'">
-    </ks-codemirror>
+    <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   </section>
 
   <br><br>

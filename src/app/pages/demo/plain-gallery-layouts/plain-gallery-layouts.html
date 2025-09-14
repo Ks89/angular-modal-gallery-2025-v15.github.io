@@ -12,28 +12,28 @@
     <br>
     <ks-plain-gallery [id]="200" [images]="images"
                       [config]="libConfigPlainGalleryRow"
-                      (clickImage)="onShow(200, $event)"></ks-plain-gallery>
+                      (clickImage)="onShow(200, $event)" />
   </section>
   <section>
     <h4>Plain gallery row layout space around (limit 2)</h4>
     <br>
     <ks-plain-gallery [id]="201" [images]="images"
                       [config]="libConfigPlainGalleryRowSpaceAround"
-                      (clickImage)="onShow(201, $event)"></ks-plain-gallery>
+                      (clickImage)="onShow(201, $event)" />
   </section>
   <section>
     <h4>Plain gallery column layout (limit 3)</h4>
     <br>
     <ks-plain-gallery [id]="202" [images]="images"
                       [config]="libConfigPlainGalleryColumn"
-                      (clickImage)="onShow(202, $event)"></ks-plain-gallery>
+                      (clickImage)="onShow(202, $event)" />
   </section>
   <section>
     <h4>Plain gallery grid layout and custom size</h4>
     <br>
     <ks-plain-gallery [id]="203" [images]="images"
                       [config]="libConfigPlainGalleryGrid"
-                      (clickImage)="onShow(203, $event)"></ks-plain-gallery>
+                      (clickImage)="onShow(203, $event)" />
   </section>
   <br><br>
 
@@ -41,12 +41,10 @@
     <h3>Code</h3>
     <br>
     <h4>Template</h4>
-    <ks-codemirror [content]="codeHtml" [language]="'html'">
-    </ks-codemirror>
+    <ks-codemirror [content]="codeHtml" [language]="'html'" />
     <br>
     <h4>Typescript</h4>
-    <ks-codemirror [content]="codeTypescript" [language]="'typescript'">
-    </ks-codemirror>
+    <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   </section>
 
   <br><br>

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { IMAGES_RECT_ARRAY } from '../../../shared/images';
 import { TitleService } from '../../../core/services/title.service';
@@ -37,6 +37,9 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselMinimalComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+
   images: Image[] = [...IMAGES_RECT_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -45,8 +48,7 @@ export class CarouselMinimalComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService) {
+  constructor() {
 
     this.titleService.titleEvent.emit('Examples - Carousel minimal');
 

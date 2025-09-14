@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -35,8 +35,10 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink]
 })
 export class UpperButtonsComponent implements OnInit {
-  constructor(private uiService: UiService,
-              private titleService: TitleService) {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+
+  constructor() {
     this.titleService.titleEvent.emit('Features - UpperButtons');
   }
 

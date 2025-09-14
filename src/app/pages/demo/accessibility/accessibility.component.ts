@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import {
   AccessibilityConfig,
@@ -42,6 +42,10 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CodemirrorModule]
 })
 export class AccessibilityComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
+
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -95,9 +99,7 @@ export class AccessibilityComponent implements OnInit {
     carouselPreviewScrollNextTitle: 'Scroll next previews'
   };
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
 
     this.titleService.titleEvent.emit('Examples - Custom accessibility');
 

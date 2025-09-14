@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { Metadata, UiService } from '../../../core/services/ui.service';
@@ -33,9 +33,10 @@ import { Metadata, UiService } from '../../../core/services/ui.service';
   styleUrls: ['description.scss']
 })
 export class DescriptionComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService) {
+  constructor() {
     this.titleService.titleEvent.emit('Features - Description');
   }
 

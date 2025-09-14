@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { Accordion, AccordionService } from '../../../core/services/services';
@@ -35,12 +35,11 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [RouterLink, NgOptimizedImage]
 })
 export class SidebarDemoComponent implements OnInit {
+  private accordionService = inject(AccordionService);
+
   showCarousel = false;
   showModal = false;
   showPlain = false;
-
-  constructor(private accordionService: AccordionService) {
-  }
 
   ngOnInit(): void {
     const accordion: Accordion | undefined = this.accordionService.getAccordion();

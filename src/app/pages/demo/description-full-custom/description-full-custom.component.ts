@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import {
   CurrentImageConfig,
@@ -46,6 +46,10 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CodemirrorModule]
 })
 export class DescriptionFullCustomComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
+
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -54,9 +58,7 @@ export class DescriptionFullCustomComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
     this.titleService.titleEvent.emit('Examples - Description full custom');
 
     this.codeHtml =

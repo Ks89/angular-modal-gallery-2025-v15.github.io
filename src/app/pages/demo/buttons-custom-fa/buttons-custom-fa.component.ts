@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 
 import {
   ButtonEvent,
@@ -48,6 +48,10 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CodemirrorModule]
 })
 export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
+
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -95,9 +99,7 @@ export class ButtonsCustomFaComponent implements OnInit, OnDestroy {
   // REMEMBER TO call unsubscribe(); in ngOnDestroy (see below)
   private buttonBeforeHookSubscription: Subscription | undefined;
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
     this.titleService.titleEvent.emit('Examples - Custom buttons with Font Awesome 5');
 
     this.codeHtml =

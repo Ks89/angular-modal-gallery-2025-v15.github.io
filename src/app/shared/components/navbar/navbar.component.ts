@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
@@ -40,12 +40,16 @@ const PATH = environment.imgPath;
   styleUrls: ['navbar.scss']
 })
 export class NavbarComponent {
+  private router = inject(Router);
+
   navbarHeight = '56px';
   path: string = PATH + '/assets/amg.svg';
 
   collapsed = false;
 
-  constructor(private router: Router, breakpointObserver: BreakpointObserver) {
+  constructor() {
+    const breakpointObserver = inject(BreakpointObserver);
+
     breakpointObserver.observe(['(min-width: 990px)'])
       .subscribe(result => {
         if (result.matches) {

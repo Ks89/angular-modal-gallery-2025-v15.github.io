@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { TitleService } from '../../../core/services/title.service';
 import { environment } from '../../../../environments/environment';
@@ -38,12 +38,14 @@ const PATH = environment.imgPath;
   imports: [RouterLink]
 })
 export class OverviewComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+
   modalGalleryPath: string = PATH + '/assets/modalgallery.svg';
   plainGalleryPath: string = PATH + '/assets/plaingallery.svg';
   carouselPath: string = PATH + '/assets/carousel.svg';
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService) {
+  constructor() {
     this.titleService.titleEvent.emit('Features - Overview');
   }
 

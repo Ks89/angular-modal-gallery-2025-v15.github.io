@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { CarouselLibConfig, Image, CarouselComponent } from '@ks89/angular-modal-gallery';
 
@@ -38,6 +38,9 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CarouselComponent, CodemirrorModule]
 })
 export class CarouselNoAutoplayComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+
   images: Image[] = [...IMAGES_RECT_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -54,8 +57,7 @@ export class CarouselNoAutoplayComponent implements OnInit {
     }
   };
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService) {
+  constructor() {
     this.titleService.titleEvent.emit('Examples - Carousel no autoplay');
 
     this.codeHtml =

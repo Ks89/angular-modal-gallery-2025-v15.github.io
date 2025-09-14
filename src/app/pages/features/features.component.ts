@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { TitleService } from '../../core/services/title.service';
@@ -35,10 +35,11 @@ import { SidebarFeaturesComponent } from '../../shared/components/sidebar-featur
   imports: [SidebarFeaturesComponent, RouterOutlet]
 })
 export class FeaturesComponent {
+  private titleService = inject(TitleService);
 
   title = 'Features';
 
-  constructor(private titleService: TitleService) {
+  constructor() {
     this.titleService.titleEvent.subscribe((val: string) => {
       this.onUpdateTitle(val);
     });

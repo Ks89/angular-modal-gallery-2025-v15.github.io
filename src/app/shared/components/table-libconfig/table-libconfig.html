@@ -1,14 +1,14 @@
-@if (showModalGallery) {
+@if (showModalGallery()) {
   <h2 class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalLibConfig</a>
   </h2>
 }
-@if (showPlainGallery) {
+@if (showPlainGallery()) {
   <h2 class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainLibConfig</a>
   </h2>
 }
-@if (showCarousel) {
+@if (showCarousel()) {
   <h2 class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">CarouselLibConfig</a>
   </h2>
@@ -18,7 +18,7 @@
 <div class="table-responsive">
   <table class="table table-hover table-sm">
     <tbody>
-      @if (showModalGallery || showCarousel) {
+      @if (showModalGallery() || showCarousel()) {
         <tr>
           <td><small><code>previewConfig</code></small></td>
           <td>
@@ -36,7 +36,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery || showCarousel) {
+      @if (showModalGallery() || showCarousel()) {
         <tr>
           <td><small><code>dotsConfig</code></small></td>
           <td>
@@ -53,7 +53,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery || showCarousel) {
+      @if (showModalGallery() || showCarousel()) {
         <tr>
           <td><small><code>slideConfig</code></small></td>
           <td>
@@ -72,7 +72,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery || showPlainGallery || showCarousel) {
+      @if (showModalGallery() || showPlainGallery() || showCarousel()) {
         <tr>
           <td><small><code>accessibilityConfig</code></small></td>
           <td>
@@ -91,7 +91,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery) {
+      @if (showModalGallery()) {
         <tr>
           <td><small><code>enableCloseOutside</code></small></td>
           <td>
@@ -109,7 +109,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery) {
+      @if (showModalGallery()) {
         <tr>
           <td><small><code>keyboardConfig</code></small></td>
           <td>
@@ -127,7 +127,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery) {
+      @if (showModalGallery()) {
         <tr>
           <td><small><code>currentImageConfig</code></small></td>
           <td>
@@ -148,7 +148,7 @@
           </td>
         </tr>
       }
-      @if (showModalGallery) {
+      @if (showModalGallery()) {
         <tr>
           <td><small><code>buttonsConfig</code></small></td>
           <td>
@@ -166,7 +166,7 @@
           </td>
         </tr>
       }
-      @if (showPlainGallery) {
+      @if (showPlainGallery()) {
         <tr>
           <td><small><code>plainGalleryConfig</code></small></td>
           <td>
@@ -184,7 +184,7 @@
           </td>
         </tr>
       }
-      @if (showCarousel) {
+      @if (showCarousel()) {
         <tr>
           <td><small><code>carouselConfig</code></small></td>
           <td>
@@ -203,7 +203,7 @@
           </td>
         </tr>
       }
-      @if (showCarousel) {
+      @if (showCarousel()) {
         <tr>
           <td><small><code>carouselImageConfig</code></small></td>
           <td>
@@ -222,7 +222,7 @@
           </td>
         </tr>
       }
-      @if (showCarousel) {
+      @if (showCarousel()) {
         <tr>
           <td><small><code>carouselPreviewsConfig</code></small></td>
           <td>
@@ -240,7 +240,7 @@
           </td>
         </tr>
       }
-      @if (showCarousel) {
+      @if (showCarousel()) {
         <tr>
           <td><small><code>carouselPlayConfig</code></small></td>
           <td>
@@ -258,7 +258,7 @@
           </td>
         </tr>
       }
-      @if (showCarousel) {
+      @if (showCarousel()) {
         <tr>
           <td><small><code>carouselDotsConfig</code></small></td>
           <td>
@@ -276,7 +276,7 @@
           </td>
         </tr>
       }
-      @if (showCarousel) {
+      @if (showCarousel()) {
         <tr>
           <td><small><code>carouselSlideInfinite</code></small></td>
           <td>

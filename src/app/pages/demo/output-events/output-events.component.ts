@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
@@ -49,6 +49,10 @@ import { JsonPipe } from '@angular/common';
   imports: [CodemirrorModule, JsonPipe]
 })
 export class OutputEventsComponent implements OnInit, OnDestroy {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
+
   images: Image[] = [...IMAGES_ARRAY];
 
   imageLoaded: ImageModalEvent | undefined;
@@ -75,9 +79,7 @@ export class OutputEventsComponent implements OnInit, OnDestroy {
   private buttonBeforeHookSubscription: Subscription | undefined;
   private buttonAfterHookSubscription: Subscription | undefined;
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
 
     this.titleService.titleEvent.emit('Examples - Output events');
 

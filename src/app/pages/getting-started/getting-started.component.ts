@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 
@@ -35,11 +35,8 @@ import { Metadata, UiService } from '../../core/services/ui.service';
   imports: [RouterLink]
 })
 export class GettingStartedComponent implements OnInit {
-
-  constructor(private uiService: UiService,
-              private router: Router,
-              private viewPortScroller: ViewportScroller) {
-  }
+  private uiService = inject(UiService);
+  private viewPortScroller = inject(ViewportScroller);
 
   ngOnInit(): void {
     this.metaData();

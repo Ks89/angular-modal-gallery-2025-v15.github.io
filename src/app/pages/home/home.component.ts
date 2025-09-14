@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { Image, ModalGalleryRef, ModalGalleryService, PlainGalleryComponent } from '@ks89/angular-modal-gallery';
 
@@ -39,6 +39,8 @@ const PATH = environment.imgPath;
   imports: [IntroHeaderComponent, RouterLink, PlainGalleryComponent]
 })
 export class HomeComponent implements OnInit {
+  private uiService = inject(UiService);
+  private modalGalleryService = inject(ModalGalleryService);
 
   images: Image[] = [
     new Image(0, {
@@ -74,10 +76,6 @@ export class HomeComponent implements OnInit {
       img: `${PATH}/assets/images/gallery/thumbs/img5.jpg`
     })
   ];
-
-  constructor(private uiService: UiService,
-              private modalGalleryService: ModalGalleryService) {
-  }
 
   ngOnInit(): void {
     this.metaData();

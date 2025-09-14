@@ -10,7 +10,7 @@
 
   <h2>Live demo</h2>
   <ks-plain-gallery [id]="600" [images]="images"
-                    (clickImage)="onShow(600, $event)"></ks-plain-gallery>
+                    (clickImage)="onShow(600, $event)" />
   <br>
   <br>
 
@@ -20,14 +20,12 @@
     and pass the mandatory inputs <code>id</code>, <code>images</code>.</p>
   <p>The minimal plain gallery in your HTML file is:</p>
 
-  <ks-codemirror [content]="codeHtml" [language]="'html'">
-  </ks-codemirror>
+  <ks-codemirror [content]="codeHtml" [language]="'html'" />
   <br>
 
   <p>Then, in your Typescript component you have to init the images array with Image class instances and write the method to open modal gallery.</p>
 
-  <ks-codemirror [content]="codeTypescript" [language]="'typescript'">
-  </ks-codemirror>
+  <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   <br>
 
   <p>To customize the plain gallery exploring all possibilities, see the table below to pass your configuration. To listen for plain gallery events, check the Output table.</p>
@@ -102,10 +100,10 @@
   </section>
   <br>
 
-  <app-table-libconfig [showModalGallery]="false" [showPlainGallery]="true" [showCarousel]="false"></app-table-libconfig>
+  <app-table-libconfig [showModalGallery]="false" [showPlainGallery]="true" [showCarousel]="false" />
   <br>
 
-  <app-table-image></app-table-image>
+  <app-table-image />
 
   <h2 id="PlainImage" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">PlainImage</a>

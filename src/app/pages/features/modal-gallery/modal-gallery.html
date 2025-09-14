@@ -25,14 +25,12 @@
     exactly as the live demo above.
     So in the component HTML file you have to add this:</p>
 
-  <ks-codemirror [content]="codeHtml" [language]="'html'">
-  </ks-codemirror>
+  <ks-codemirror [content]="codeHtml" [language]="'html'" />
   <br>
 
   <p>Then, in your Typescript component you have to init the images array with Image class instances and invoke the open method to show the modal gallery in this way:</p>
 
-  <ks-codemirror [content]="codeTypescript" [language]="'typescript'">
-  </ks-codemirror>
+  <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   <br>
 
   <p>To customize the modal gallery exploring all possibilities, see the table below to pass your configuration. To listen for modal gallery events, check the Output table.</p>
@@ -208,10 +206,10 @@
   </section>
   <br>
 
-  <app-table-libconfig [showModalGallery]="true" [showPlainGallery]="false" [showCarousel]="false"></app-table-libconfig>
+  <app-table-libconfig [showModalGallery]="true" [showPlainGallery]="false" [showCarousel]="false" />
   <br>
 
-  <app-table-image></app-table-image>
+  <app-table-image />
 
   <h2 id="ModalImage" class="link clickable">
     <a class="link-title" href="https://github.com/Ks89/angular-modal-gallery">ModalImage</a>

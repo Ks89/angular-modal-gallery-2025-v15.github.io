@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { TitleService } from '../../core/services/title.service';
@@ -35,10 +35,12 @@ import { SidebarDemoComponent } from '../../shared/components/sidebar-demo/sideb
   imports: [SidebarDemoComponent, RouterOutlet]
 })
 export class DemoComponent {
+  private titleService = inject(TitleService);
+
 
   title = 'Modal Gallery';
 
-  constructor(private titleService: TitleService) {
+  constructor() {
     this.titleService.titleEvent.subscribe((val: string) => {
       this.onUpdateTitle(val);
     });

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import {
   Image,
@@ -43,6 +43,10 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CodemirrorModule]
 })
 export class PlainGalleryImagePointerComponent implements OnInit {
+  private uiService = inject(UiService);
+  private modalGalleryService = inject(ModalGalleryService);
+  private titleService = inject(TitleService);
+
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -52,9 +56,7 @@ export class PlainGalleryImagePointerComponent implements OnInit {
   codeTypescript: string;
   codeScss: string;
 
-  constructor(private uiService: UiService,
-              private modalGalleryService: ModalGalleryService,
-              private titleService: TitleService) {
+  constructor() {
 
     this.titleService.titleEvent.emit('Examples - Plain gallery with image pointer');
 

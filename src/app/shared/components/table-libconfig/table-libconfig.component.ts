@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -32,7 +32,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink]
 })
 export class TableLibconfigComponent {
-  @Input() showModalGallery = true;
-  @Input() showPlainGallery = true;
-  @Input() showCarousel = true;
+  readonly showModalGallery = input(true);
+  readonly showPlainGallery = input(true);
+  readonly showCarousel = input(true);
 }

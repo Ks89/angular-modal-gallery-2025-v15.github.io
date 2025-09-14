@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { Image, ModalGalleryConfig, ModalGalleryRef, ModalGalleryService, ModalLibConfig } from '@ks89/angular-modal-gallery';
 
@@ -42,6 +42,10 @@ import { TableImageComponent } from '../../../shared/components/table-image/tabl
   imports: [RouterLink, CodemirrorModule, TableLibconfigComponent, TableImageComponent]
 })
 export class ModalGalleryComponent implements OnInit {
+  private uiService = inject(UiService);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
+
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -50,9 +54,7 @@ export class ModalGalleryComponent implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
-  constructor(private uiService: UiService,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
     this.titleService.titleEvent.emit('Features - Modal Gallery');
 
     this.codeHtml = `<button (click)="openModal(500, 0)">Click to open modal gallery id=1 at index=0</button>`;

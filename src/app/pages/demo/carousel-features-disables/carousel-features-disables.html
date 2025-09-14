@@ -18,19 +18,17 @@
     <button class="btn btn-primary" (click)="onChangeShowDots()">{{ showDots ? 'Hide Dots' : 'Show Dots' }}</button>
   </p>
   <br>
-  <ks-carousel [id]="108" [images]="images" [config]="getLibConfig(autoPlay, showArrows, showDots)"></ks-carousel>
+  <ks-carousel [id]="108" [images]="images" [config]="getLibConfig(autoPlay, showArrows, showDots)" />
   <br><br>
 
   <section>
     <h3>Code</h3>
     <br>
     <h4>Template</h4>
-    <ks-codemirror [content]="codeHtml" [language]="'html'">
-    </ks-codemirror>
+    <ks-codemirror [content]="codeHtml" [language]="'html'" />
     <br>
     <h4>Typescript</h4>
-    <ks-codemirror [content]="codeTypescript" [language]="'typescript'">
-    </ks-codemirror>
+    <ks-codemirror [content]="codeTypescript" [language]="'typescript'" />
   </section>
 
   <br><br>

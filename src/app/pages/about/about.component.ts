@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 
@@ -33,9 +33,8 @@ import { Metadata, UiService } from '../../core/services/ui.service';
 })
 
 export class AboutComponent implements OnInit {
+  private uiService = inject(UiService);
 
-  constructor(private uiService: UiService) {
-  }
 
   ngOnInit(): void {
     this.metaData();

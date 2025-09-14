@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { Metadata, UiService } from '../../core/services/ui.service';
 
@@ -32,8 +32,7 @@ import { Metadata, UiService } from '../../core/services/ui.service';
   styleUrls: ['migration.scss']
 })
 export class MigrationComponent implements OnInit {
-  constructor(private uiService: UiService) {
-  }
+  private uiService = inject(UiService);
 
   ngOnInit(): void {
     this.metaData();

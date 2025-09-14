@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -47,6 +47,10 @@ import { CodemirrorModule } from '@ks89/ngx-codemirror6';
   imports: [CodemirrorModule]
 })
 export class Base64Component implements OnInit {
+  private uiService = inject(UiService);
+  private sanitizer = inject(DomSanitizer);
+  private titleService = inject(TitleService);
+  private modalGalleryService = inject(ModalGalleryService);
 
   // example of a png converted into base64 using https://www.base64-image.de/ or other similar websites
   base64String =
@@ -107,10 +111,7 @@ export class Base64Component implements OnInit {
   codeHtml: string;
   codeTypescript: string;
 
-  constructor(private uiService: UiService,
-              private sanitizer: DomSanitizer,
-              private titleService: TitleService,
-              private modalGalleryService: ModalGalleryService) {
+  constructor() {
 
     this.titleService.titleEvent.emit('Examples - Base64');
 

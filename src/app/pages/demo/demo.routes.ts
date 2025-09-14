@@ -1,120 +1,120 @@
 import { Routes } from '@angular/router';
 
-import { ArraySimpleComponent } from './array-simple/array-simple.component';
-import { DemoComponent } from './demo.component';
-import { DownloadSimpleComponent } from './download-simple/download-simple.component';
-import { DownloadAdvancedComponent } from './download-advanced/download-advanced.component';
-import { OutputEventsComponent } from './output-events/output-events.component';
-import { AddImageArrayComponent } from './add-image-array/add-image-array.component';
-import { DescriptionCustomComponent } from './description-custom/description-custom.component';
-import { DescriptionFullCustomComponent } from './description-full-custom/description-full-custom.component';
-import { CloseOusideComponent } from './close-outside/close-outside.component';
-import { KeyboardConfigComponent } from './keyboard-config/keyboard-config.component';
-import { InfiniteSlidingComponent } from './infinite-sliding/infinite-sliding.component';
-import { NoDotsAndPreviewsComponent } from './no-dots-and-previews/no-dots-and-previews.component';
-import { SidePreviewsHiddenComponent } from './side-previews-hidden/side-previews-hidden.component';
-import { OnlyCurrentImgComponent } from './only-current-img/only-current-img.component';
-import { PreviewsCustomSizeComponent } from './previews-custom-size/previews-custom-size.component';
-import { LoadingSpinnerDisableComponent } from './loading-spinner-disable/loading-spinner-disable.component';
-import { LoadingSpinnerTypeComponent } from './loading-spinner-type/loading-spinner-type.component';
-import { PreviewsLengthComponent } from './previews-length/previews-length.component';
-import { PreviewsNotClickableComponent } from './previews-not-clickable/previews-not-clickable.component';
-import { PreviewsNoArrowsComponent } from './previews-no-arrows/previews-no-arrows.component';
-import { AccessibilityComponent } from './accessibility/accessibility.component';
-import { ButtonsCustomFaComponent } from './buttons-custom-fa/buttons-custom-fa.component';
-import { ButtonsStrategiesComponent } from './buttons-strategies/buttons-strategies.component';
-import { ButtonsExturlNewtabComponent } from './buttons-exturl-newtab/buttons-exturl-newtab.component';
-import { PlainGalleryLayoutsComponent } from './plain-gallery-layouts/plain-gallery-layouts.component';
-import { PlainGalleryAtagsComponent } from './plain-gallery-atags/plain-gallery-atags.component';
-import { PlainGalleryImagePointerComponent } from './plain-gallery-image-pointer/plain-gallery-image-pointer.component';
-import { PlainGalleryCustomWithDescComponent } from './plain-gallery-custom-with-desc/plain-gallery-custom-with-desc.component';
-import { AutoCloseAndAutoUpdateComponent } from './auto-close-and-auto-update/auto-close-and-auto-update.component';
-import { Base64Component } from './base64/base64.component';
-import { DownloadCustomFilenameComponent } from './download-custom-filename/download-custom-filename.component';
-import { InvertSwipeComponent } from './invert-swipe/invert-swipe.component';
-import { CarouselMinimalComponent } from './carousel-minimal/carousel-minimal.component';
-import { CarouselFixedComponent } from './carousel-fixed/carousel-fixed.component';
-import { CarouselContentProjectionComponent } from './carousel-content-projection/carousel-content-projection.component';
-import { CarouselFeaturesDisablesComponent } from './carousel-features-disables/carousel-features-disables.component';
-import { CarouselNoAutoplayComponent } from './carousel-no-autoplay/carousel-no-autoplay.component';
-import { CarouselNoInfiniteComponent } from './carousel-no-infinite/carousel-no-infinite.component';
-import { CarouselCustomAutoplayComponent } from './carousel-custom-autoplay/carousel-custom-autoplay.component';
-import { CarouselCustomPreviewsComponent } from './carousel-custom-previews/carousel-custom-previews.component';
-import { CarouselWithDescriptionComponent } from './carousel-with-description/carousel-with-description.component';
-import { CarouselOutputsComponent } from './carousel-outputs/carousel-outputs.component';
-import { CarouselBreakpointsComponent } from './carousel-breakpoints/carousel-breakpoints.component';
-import { SameImagesComponent } from './same-images/same-images.component';
-import { ModalAutoplayMinimalComponent } from './modal-autoplay-minimal/modal-autoplay-minimal.component';
-import { ModalAutoplayCustomComponent } from './modal-autoplay-custom/modal-autoplay-custom.component';
-import { PreviewsTemplateComponent } from './previews-template/previews-template.component';
-import { PreviewsTemplateAdditionalDataComponent } from './previews-template-additional-data/previews-template-additional-data.component';
-import { CarouselLcpComponent } from './carousel-lcp/carousel-lcp.component';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const routes: Routes = [
   {
     path: '',
-    component: DemoComponent,
+    loadComponent: () => import('./demo.component').then(m => m.DemoComponent),
     children: [
-      {path: '', component: ArraySimpleComponent},
-      {path: 'array-simple', component: ArraySimpleComponent},
-      {path: 'output-events', component: OutputEventsComponent},
-      {path: 'add-image-array', component: AddImageArrayComponent},
+      {path: '', loadComponent: () => import('./array-simple/array-simple.component').then(m => m.ArraySimpleComponent)},
+      {path: 'array-simple', loadComponent: () => import('./array-simple/array-simple.component').then(m => m.ArraySimpleComponent)},
+      {path: 'output-events', loadComponent: () => import('./output-events/output-events.component').then(m => m.OutputEventsComponent)},
+      {path: 'add-image-array', loadComponent: () => import('./add-image-array/add-image-array.component').then(m => m.AddImageArrayComponent)},
 
-      {path: 'no-dots-and-previews', component: NoDotsAndPreviewsComponent},
-      {path: 'side-previews-hidden', component: SidePreviewsHiddenComponent},
-      {path: 'only-current-img', component: OnlyCurrentImgComponent},
+      {path: 'no-dots-and-previews', loadComponent: () => import('./no-dots-and-previews/no-dots-and-previews.component').then(m => m.NoDotsAndPreviewsComponent)},
+      {path: 'side-previews-hidden', loadComponent: () => import('./side-previews-hidden/side-previews-hidden.component').then(m => m.SidePreviewsHiddenComponent)},
+      {path: 'only-current-img', loadComponent: () => import('./only-current-img/only-current-img.component').then(m => m.OnlyCurrentImgComponent)},
 
-      {path: 'close-outside', component: CloseOusideComponent},
-      {path: 'download-simple', component: DownloadSimpleComponent},
-      {path: 'download-advanced', component: DownloadAdvancedComponent},
-      {path: 'download-custom-filename', component: DownloadCustomFilenameComponent},
+      {path: 'close-outside', loadComponent: () => import('./close-outside/close-outside.component').then(m => m.CloseOusideComponent)},
+      {path: 'download-simple', loadComponent: () => import('./download-simple/download-simple.component').then(m => m.DownloadSimpleComponent)},
+      {path: 'download-advanced', loadComponent: () => import('./download-advanced/download-advanced.component').then(m => m.DownloadAdvancedComponent)},
+      {path: 'download-custom-filename', loadComponent: () => import('./download-custom-filename/download-custom-filename.component').then(m => m.DownloadCustomFilenameComponent)},
 
-      {path: 'infinite-sliding', component: InfiniteSlidingComponent},
+      {path: 'infinite-sliding', loadComponent: () => import('./infinite-sliding/infinite-sliding.component').then(m => m.InfiniteSlidingComponent)},
 
-      {path: 'loading-spinner-disable', component: LoadingSpinnerDisableComponent},
-      {path: 'loading-spinner-type', component: LoadingSpinnerTypeComponent},
+      {path: 'loading-spinner-disable', loadComponent: () => import('./loading-spinner-disable/loading-spinner-disable.component').then(m => m.LoadingSpinnerDisableComponent)},
+      {path: 'loading-spinner-type', loadComponent: () => import('./loading-spinner-type/loading-spinner-type.component').then(m => m.LoadingSpinnerTypeComponent)},
 
-      {path: 'keyboard-config', component: KeyboardConfigComponent},
-      {path: 'description-strategy', component: DescriptionCustomComponent},
-      {path: 'description-full-custom', component: DescriptionFullCustomComponent},
+      {path: 'keyboard-config', loadComponent: () => import('./keyboard-config/keyboard-config.component').then(m => m.KeyboardConfigComponent)},
+      {path: 'description-strategy', loadComponent: () => import('./description-custom/description-custom.component').then(m => m.DescriptionCustomComponent)},
+      {path: 'description-full-custom', loadComponent: () => import('./description-full-custom/description-full-custom.component').then(m => m.DescriptionFullCustomComponent)},
 
-      {path: 'previews-custom-size', component: PreviewsCustomSizeComponent},
-      {path: 'previews-length', component: PreviewsLengthComponent},
-      {path: 'previews-no-arrows', component: PreviewsNoArrowsComponent},
-      {path: 'previews-not-clickable', component: PreviewsNotClickableComponent},
-      {path: 'previews-template', component: PreviewsTemplateComponent},
-      {path: 'previews-template-additional-data', component: PreviewsTemplateAdditionalDataComponent},
+      {path: 'previews-custom-size', loadComponent: () => import('./previews-custom-size/previews-custom-size.component').then(m => m.PreviewsCustomSizeComponent)},
+      {path: 'previews-length', loadComponent: () => import('./previews-length/previews-length.component').then(m => m.PreviewsLengthComponent)},
+      {path: 'previews-no-arrows', loadComponent: () => import('./previews-no-arrows/previews-no-arrows.component').then(m => m.PreviewsNoArrowsComponent)},
+      {path: 'previews-not-clickable', loadComponent: () => import('./previews-not-clickable/previews-not-clickable.component').then(m => m.PreviewsNotClickableComponent)},
+      {path: 'previews-template', loadComponent: () => import('./previews-template/previews-template.component').then(m => m.PreviewsTemplateComponent)},
+      {path: 'previews-template-additional-data', loadComponent: () => import('./previews-template-additional-data/previews-template-additional-data.component').then(m => m.PreviewsTemplateAdditionalDataComponent)},
 
-      {path: 'buttons-strategies', component: ButtonsStrategiesComponent},
-      {path: 'buttons-exturl-newtab', component: ButtonsExturlNewtabComponent},
-      {path: 'buttons-custom-fa', component: ButtonsCustomFaComponent},
+      {path: 'buttons-strategies', loadComponent: () => import('./buttons-strategies/buttons-strategies.component').then(m => m.ButtonsStrategiesComponent)},
+      {path: 'buttons-exturl-newtab', loadComponent: () => import('./buttons-exturl-newtab/buttons-exturl-newtab.component').then(m => m.ButtonsExturlNewtabComponent)},
+      {path: 'buttons-custom-fa', loadComponent: () => import('./buttons-custom-fa/buttons-custom-fa.component').then(m => m.ButtonsCustomFaComponent)},
 
-      {path: 'plain-layouts', component: PlainGalleryLayoutsComponent},
-      {path: 'plain-atags', component: PlainGalleryAtagsComponent},
-      {path: 'plain-image-pointer', component: PlainGalleryImagePointerComponent},
-      {path: 'plain-custom-desc', component: PlainGalleryCustomWithDescComponent},
+      {path: 'plain-layouts', loadComponent: () => import('./plain-gallery-layouts/plain-gallery-layouts.component').then(m => m.PlainGalleryLayoutsComponent)},
+      {path: 'plain-atags', loadComponent: () => import('./plain-gallery-atags/plain-gallery-atags.component').then(m => m.PlainGalleryAtagsComponent)},
+      {path: 'plain-image-pointer', loadComponent: () => import('./plain-gallery-image-pointer/plain-gallery-image-pointer.component').then(m => m.PlainGalleryImagePointerComponent)},
+      {path: 'plain-custom-desc', loadComponent: () => import('./plain-gallery-custom-with-desc/plain-gallery-custom-with-desc.component').then(m => m.PlainGalleryCustomWithDescComponent)},
 
-      {path: 'accessibility', component: AccessibilityComponent},
-      {path: 'auto-close-and-auto-update', component: AutoCloseAndAutoUpdateComponent},
-      {path: 'base64', component: Base64Component},
-      {path: 'invert-swipe', component: InvertSwipeComponent},
-      {path: 'same-images', component: SameImagesComponent},
+      {path: 'accessibility', loadComponent: () => import('./accessibility/accessibility.component').then(m => m.AccessibilityComponent)},
+      {path: 'auto-close-and-auto-update', loadComponent: () => import('./auto-close-and-auto-update/auto-close-and-auto-update.component').then(m => m.AutoCloseAndAutoUpdateComponent)},
+      {path: 'base64', loadComponent: () => import('./base64/base64.component').then(m => m.Base64Component)},
+      {path: 'invert-swipe', loadComponent: () => import('./invert-swipe/invert-swipe.component').then(m => m.InvertSwipeComponent)},
+      {path: 'same-images', loadComponent: () => import('./same-images/same-images.component').then(m => m.SameImagesComponent)},
 
-      {path: 'autoplay-minimal', component: ModalAutoplayMinimalComponent},
-      {path: 'autoplay-custom', component: ModalAutoplayCustomComponent},
+      {path: 'autoplay-minimal', loadComponent: () => import('./modal-autoplay-minimal/modal-autoplay-minimal.component').then(m => m.ModalAutoplayMinimalComponent)},
+      {path: 'autoplay-custom', loadComponent: () => import('./modal-autoplay-custom/modal-autoplay-custom.component').then(m => m.ModalAutoplayCustomComponent)},
 
-      {path: 'carousel', component: CarouselMinimalComponent},
-      {path: 'carousel-fixed', component: CarouselFixedComponent},
-      {path: 'carousel-content-projection', component: CarouselContentProjectionComponent},
-      {path: 'carousel-features-disable', component: CarouselFeaturesDisablesComponent},
-      {path: 'carousel-noautoplay', component: CarouselNoAutoplayComponent},
-      {path: 'carousel-noinfinite', component: CarouselNoInfiniteComponent},
-      {path: 'carousel-custom-autoplay', component: CarouselCustomAutoplayComponent},
-      {path: 'carousel-custom-previews', component: CarouselCustomPreviewsComponent},
-      {path: 'carousel-with-description', component: CarouselWithDescriptionComponent},
-      {path: 'carousel-outputs', component: CarouselOutputsComponent},
-      {path: 'carousel-breakpoints', component: CarouselBreakpointsComponent},
-      {path: 'carousel-lcp', component: CarouselLcpComponent}
+      {path: 'carousel', loadComponent: () => import('./carousel-minimal/carousel-minimal.component').then(m => m.CarouselMinimalComponent)},
+      {path: 'carousel-fixed', loadComponent: () => import('./carousel-fixed/carousel-fixed.component').then(m => m.CarouselFixedComponent)},
+      {path: 'carousel-content-projection', loadComponent: () => import('./carousel-content-projection/carousel-content-projection.component').then(m => m.CarouselContentProjectionComponent)},
+      {path: 'carousel-features-disable', loadComponent: () => import('./carousel-features-disables/carousel-features-disables.component').then(m => m.CarouselFeaturesDisablesComponent)},
+      {path: 'carousel-noautoplay', loadComponent: () => import('./carousel-no-autoplay/carousel-no-autoplay.component').then(m => m.CarouselNoAutoplayComponent)},
+      {path: 'carousel-noinfinite', loadComponent: () => import('./carousel-no-infinite/carousel-no-infinite.component').then(m => m.CarouselNoInfiniteComponent)},
+      {path: 'carousel-custom-autoplay', loadComponent: () => import('./carousel-custom-autoplay/carousel-custom-autoplay.component').then(m => m.CarouselCustomAutoplayComponent)},
+      {path: 'carousel-custom-previews', loadComponent: () => import('./carousel-custom-previews/carousel-custom-previews.component').then(m => m.CarouselCustomPreviewsComponent)},
+      {path: 'carousel-with-description', loadComponent: () => import('./carousel-with-description/carousel-with-description.component').then(m => m.CarouselWithDescriptionComponent)},
+      {path: 'carousel-outputs', loadComponent: () => import('./carousel-outputs/carousel-outputs.component').then(m => m.CarouselOutputsComponent)},
+      {path: 'carousel-breakpoints', loadComponent: () => import('./carousel-breakpoints/carousel-breakpoints.component').then(m => m.CarouselBreakpointsComponent)},
+      {path: 'carousel-lcp', loadComponent: () => import('./carousel-lcp/carousel-lcp.component').then(m => m.CarouselLcpComponent)}
     ]
   }
 ];

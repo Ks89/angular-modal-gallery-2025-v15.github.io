@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 
 export interface Metadata {
@@ -36,14 +36,13 @@ export interface Metadata {
   providedIn: 'root'
 })
 export class UiService {
+  private meta = inject(Meta);
+  private title = inject(Title);
 
   private appColor = '#252525';
   private appImage = '/assets/favicon.png';
   private appTitle = '@ks89/amg';
   private appDescription = 'Check angular-modal-gallery and build your awesome image galleries';
-
-  constructor(private meta: Meta, private title: Title) {
-  }
 
   setMetaData(config: Metadata) {
     const description = config.description || this.appDescription;
